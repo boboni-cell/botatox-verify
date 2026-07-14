@@ -9,9 +9,9 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-gray-50">
       <NavBar />
       <main className="flex-1 px-4 pt-24 pb-8">
+        <CodeVerification />
         <VerificationCard />
         <VerificationSteps />
-        <CodeVerification />
       </main>
       <Footer />
     </div>
