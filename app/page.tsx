@@ -1,5 +1,6 @@
 import BrandLogo from "@/components/BrandLogo";
 import VerificationCard from "@/components/VerificationCard";
+import VerificationSteps from "@/components/VerificationSteps";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <BrandLogo />
       <main className="flex-1 px-4 pb-8">
         <VerificationCard />
+        <VerificationSteps />
       </main>
       <Footer />
     </div>
