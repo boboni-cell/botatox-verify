@@ -1,11 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
+function GlobeIcon() {
+  return (
+    <svg
+      className="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+      />
+    </svg>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      strokeWidth={2.5}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langDropdownRef = useRef<HTMLDivElement>(null);
   const { locale, t, setLocale } = useLanguage();
 
   const NAV_ITEMS = [
@@ -14,6 +48,26 @@ export default function NavBar() {
     { label: t.nav.about, href: "#" },
     { label: t.nav.contact, href: "/contact" },
   ];
+
+  // Close language dropdown when clicking outside
+  useEffect(() => {
+    if (!langOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (
+        langDropdownRef.current &&
+        !langDropdownRef.current.contains(e.target as Node)
+      ) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [langOpen]);
+
+  const handleSetLocale = (l: "zh" | "en") => {
+    setLocale(l);
+    setLangOpen(false);
+  };
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm">
@@ -39,7 +93,7 @@ export default function NavBar() {
               {item.label}
             </Link>
           ))}
-          {/* Language Switcher */}
+          {/* Desktop Language Switcher */}
           <div className="ml-3 flex items-center rounded-lg border border-gray-200 bg-gray-50 p-0.5">
             <button
               onClick={() => setLocale("zh")}
@@ -64,22 +118,63 @@ export default function NavBar() {
           </div>
         </div>
 
-        {/* Hamburger (Mobile) */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="flex items-center justify-center rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 md:hidden"
-          aria-label="菜单"
-        >
-          {menuOpen ? (
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        {/* Right: Mobile Controls */}
+        <div className="flex items-center gap-1 md:hidden">
+          {/* Mobile Language Switcher (Globe Icon + Dropdown) */}
+          <div ref={langDropdownRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className={`flex items-center justify-center rounded-lg p-2 transition-colors ${
+                langOpen
+                  ? "bg-blue-50 text-[#2b6cb0]"
+                  : "text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+              }`}
+              aria-label="切换语言"
+            >
+              <GlobeIcon />
+            </button>
+
+            {langOpen && (
+              <div className="absolute right-0 top-full mt-1 w-36 rounded-xl border border-gray-100 bg-white py-1 shadow-lg shadow-gray-200/50 animate-[fadeIn_0.15s_ease-out]">
+                <button
+                  onClick={() => handleSetLocale("zh")}
+                  className="flex w-full items-center gap-2 px-4 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50"
+                >
+                  <span className="w-4 flex-shrink-0">
+                    {locale === "zh" && <CheckIcon />}
+                  </span>
+                  <span>中文</span>
+                </button>
+                <button
+                  onClick={() => handleSetLocale("en")}
+                  className="flex w-full items-center gap-2 px-4 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50"
+                >
+                  <span className="w-4 flex-shrink-0">
+                    {locale === "en" && <CheckIcon />}
+                  </span>
+                  <span>English</span>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex items-center justify-center rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100"
+            aria-label="菜单"
+          >
+            {menuOpen ? (
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -95,29 +190,6 @@ export default function NavBar() {
               {item.label}
             </Link>
           ))}
-          {/* Mobile Language Switcher */}
-          <div className="mt-2 flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 p-1">
-            <button
-              onClick={() => { setLocale("zh"); setMenuOpen(false); }}
-              className={`flex-1 rounded-md py-2 text-sm font-medium transition-all ${
-                locale === "zh"
-                  ? "bg-[#2b6cb0] text-white shadow-sm"
-                  : "text-gray-400"
-              }`}
-            >
-              中文
-            </button>
-            <button
-              onClick={() => { setLocale("en"); setMenuOpen(false); }}
-              className={`flex-1 rounded-md py-2 text-sm font-medium transition-all ${
-                locale === "en"
-                  ? "bg-[#2b6cb0] text-white shadow-sm"
-                  : "text-gray-400"
-              }`}
-            >
-              EN
-            </button>
-          </div>
         </div>
       )}
     </nav>
