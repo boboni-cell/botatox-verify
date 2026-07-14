@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar";
 import VerificationCard from "@/components/VerificationCard";
 import VerificationSteps from "@/components/VerificationSteps";
+import CodeVerification from "@/components/CodeVerification";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <main className="flex-1 px-4 pt-24 pb-8">
         <VerificationCard />
         <VerificationSteps />
+        <CodeVerification />
       </main>
       <Footer />
     </div>
