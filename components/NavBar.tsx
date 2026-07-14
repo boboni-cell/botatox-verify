@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { label: "首页", href: "/" },
   { label: "产品验证", href: "/verify" },
   { label: "关于我们", href: "#" },
-  { label: "联系方式", href: "#" },
+  { label: "联系方式", href: "/contact" },
 ];
 
 export default function NavBar() {
