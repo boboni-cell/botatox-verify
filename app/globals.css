@@ -2,12 +2,12 @@
 
 :root {
   --background: #f8f8f8;
-  --foreground: #1B2A3B;
-  --gold: #C8A45C;
-  --gold-light: #F5EDD6;
-  --gold-dark: #A8853E;
-  --navy: #1B2A3B;
-  --navy-light: #2C4158;
+  --foreground: #1a365d;
+  --gold: #2b6cb0;
+  --gold-light: #EBF4FF;
+  --gold-dark: #1a365d;
+  --navy: #1a365d;
+  --navy-light: #2a4a6b;
   --card-bg: #ffffff;
 }
 

@@ -142,7 +142,7 @@ export default function VerificationCard() {
       <button
         onClick={handleVerify}
         disabled={!hasInput || isVerifying}
-        className="w-full rounded-xl bg-gold py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-gold/20 transition-all hover:bg-gold-dark hover:shadow-lg hover:shadow-gold/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:hover:translate-y-0 disabled:hover:bg-gold"
+        className="w-full rounded-xl bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#2b6cb0]/20 transition-all hover:shadow-lg hover:shadow-[#2b6cb0]/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:hover:translate-y-0 disabled:from-[#2b6cb0] disabled:to-[#1a365d]"
       >
         {isVerifying ? (
           <span className="inline-flex items-center gap-2">
@@ -171,6 +171,27 @@ export default function VerificationCard() {
           "立即验证"
         )}
       </button>
+
+      {/* External Verification Link */}
+      <a
+        href="#"
+        className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-xl border-2 border-gray-200 py-3 text-sm font-medium text-gray-500 transition-all hover:border-[#2b6cb0] hover:text-[#2b6cb0]"
+      >
+        前往官方验证平台
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          />
+        </svg>
+      </a>
     </div>
   );
 }
