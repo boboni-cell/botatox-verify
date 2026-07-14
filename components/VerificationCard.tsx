@@ -8,7 +8,7 @@ export default function VerificationCard() {
   const g = t.home.guide;
 
   return (
-    <div className="mx-auto w-full max-w-md rounded-2xl bg-white shadow-lg shadow-gray-200/50 px-6 py-8 sm:px-8">
+    <div className="mx-auto w-full max-w-md rounded-2xl bg-white shadow-lg shadow-gray-200/50 px-6 py-8 sm:px-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-200/60">
       <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF]">
         <svg
           className="h-7 w-7 text-[#2b6cb0]"

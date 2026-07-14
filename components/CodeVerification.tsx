@@ -61,7 +61,7 @@ export default function CodeVerification() {
         {c.badge}
       </div>
 
-      <div className="rounded-2xl bg-white px-6 py-8 shadow-lg shadow-gray-200/50 sm:px-8">
+      <div className="rounded-2xl bg-white px-6 py-8 shadow-lg shadow-gray-200/50 sm:px-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-200/60">
         <div className="mb-6 text-center">
           <h2 className="text-lg font-semibold text-navy">{c.title}</h2>
           <p className="mt-1.5 text-sm text-gray-400">{c.subtitle}</p>

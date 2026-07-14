@@ -9,6 +9,27 @@ const en: Translations = {
   },
 
   home: {
+    hero: {
+      brand: "BOTATOX",
+      subtitle: "Premium Medical Aesthetics",
+      cta: "Learn About Verification",
+      videoPlaceholder: "Brand Video",
+    },
+    trust: {
+      title: "Why BOTATOX",
+      authentic: {
+        title: "Authentic Guarantee",
+        desc: "Powered by HiddenTag anti-counterfeiting technology, every product is traceable and verifiable to ensure authenticity.",
+      },
+      rnd: {
+        title: "Professional R&D",
+        desc: "Developed by a top-tier medical aesthetics research team, rigorously following international quality standards.",
+      },
+      global: {
+        title: "Global Certification",
+        desc: "Certified by multiple international authorities, sold in countries and regions worldwide.",
+      },
+    },
     codeVerification: {
       badge: "Coming Soon",
       title: "Direct Anti-counterfeiting Verification",

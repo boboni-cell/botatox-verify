@@ -7,6 +7,27 @@ const zh = {
   },
 
   home: {
+    hero: {
+      brand: "BOTATOX",
+      subtitle: "高端医美产品",
+      cta: "了解产品验证",
+      videoPlaceholder: "品牌宣传视频",
+    },
+    trust: {
+      title: "为什么选择 BOTATOX",
+      authentic: {
+        title: "正品保障",
+        desc: "采用 HiddenTag 防伪技术，每件产品均可追溯验证，确保您使用的是正品。",
+      },
+      rnd: {
+        title: "专业研发",
+        desc: "由顶尖医美研究团队倾力打造，严格遵循国际质量标准。",
+      },
+      global: {
+        title: "全球认证",
+        desc: "通过多项国际权威认证，畅销全球多个国家和地区。",
+      },
+    },
     codeVerification: {
       badge: "即将上线",
       title: "防伪码直接验证",
