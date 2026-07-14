@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ function AppStoreBadge({ store }: { store: "appstore" | "googleplay" }) {
 export default function VerifyPage() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
+      <NavBar />
       <main className="flex-1 px-4 pt-24 pb-8">
         {/* Page Header */}
         <div className="mx-auto max-w-2xl text-center">
