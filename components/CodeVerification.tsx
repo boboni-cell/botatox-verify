@@ -1,8 +1,12 @@
 "use client";
 
 import { useState, useRef, type ChangeEvent, type DragEvent } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function CodeVerification() {
+  const { t } = useLanguage();
+  const c = t.home.codeVerification;
+
   const [code, setCode] = useState("");
   const [image, setImage] = useState<string | null>(null);
   const [showToast, setShowToast] = useState(false);
@@ -53,26 +57,19 @@ export default function CodeVerification() {
 
   return (
     <div className="relative mx-auto mt-10 w-full max-w-md">
-      {/* "即将上线" Badge */}
       <div className="absolute -top-3 right-4 z-10 rounded-full bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] px-4 py-1 text-xs font-semibold text-white shadow-md">
-        即将上线
+        {c.badge}
       </div>
 
       <div className="rounded-2xl bg-white px-6 py-8 shadow-lg shadow-gray-200/50 sm:px-8">
-        {/* Header */}
         <div className="mb-6 text-center">
-          <h2 className="text-lg font-semibold text-navy">
-            防伪码直接验证
-          </h2>
-          <p className="mt-1.5 text-sm text-gray-400">
-            输入产品防伪码或上传防伪标签图片，快速验证产品真伪
-          </p>
+          <h2 className="text-lg font-semibold text-navy">{c.title}</h2>
+          <p className="mt-1.5 text-sm text-gray-400">{c.subtitle}</p>
         </div>
 
-        {/* Code Input */}
         <div className="mb-5">
           <label className="mb-1.5 block text-sm font-medium text-navy-light">
-            防伪码
+            {c.codeLabel}
           </label>
           <div className="relative">
             <svg
@@ -92,23 +89,21 @@ export default function CodeVerification() {
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              placeholder="请输入防伪码"
+              placeholder={c.codePlaceholder}
               className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-4 text-sm text-navy placeholder:text-gray-300 outline-none transition-all focus:border-[#2b6cb0] focus:bg-white focus:ring-2 focus:ring-[#EBF4FF]"
             />
           </div>
         </div>
 
-        {/* Divider */}
         <div className="mb-5 flex items-center gap-3">
           <div className="h-px flex-1 bg-gray-100" />
-          <span className="text-xs text-gray-300">或者</span>
+          <span className="text-xs text-gray-300">{c.or}</span>
           <div className="h-px flex-1 bg-gray-100" />
         </div>
 
-        {/* Image Upload */}
         <div className="mb-6">
           <label className="mb-1.5 block text-sm font-medium text-navy-light">
-            上传防伪标签图片
+            {c.uploadLabel}
           </label>
 
           {image ? (
@@ -116,7 +111,7 @@ export default function CodeVerification() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={image}
-                alt="防伪标签预览"
+                alt={c.uploadLabel}
                 className="h-40 w-full object-contain bg-gray-50"
               />
               <button
@@ -152,12 +147,8 @@ export default function CodeVerification() {
                   d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
                 />
               </svg>
-              <span className="text-sm text-gray-500">
-                上传防伪标签图片
-              </span>
-              <span className="text-xs text-gray-300">
-                支持拍照或从相册选择
-              </span>
+              <span className="text-sm text-gray-500">{c.uploadButton}</span>
+              <span className="text-xs text-gray-300">{c.uploadHint}</span>
             </button>
           )}
 
@@ -171,19 +162,17 @@ export default function CodeVerification() {
           />
         </div>
 
-        {/* Submit Button */}
         <button
           onClick={handleVerify}
           disabled={!hasInput}
           className="w-full rounded-xl bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#2b6cb0]/20 transition-all hover:shadow-lg hover:shadow-[#2b6cb0]/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:hover:translate-y-0 disabled:from-[#2b6cb0] disabled:to-[#1a365d]"
         >
-          立即验证
+          {c.verifyButton}
         </button>
 
-        {/* Toast */}
         {showToast && (
           <div className="mt-4 animate-[fadeIn_0.3s_ease-out] rounded-xl border border-[#2b6cb0]/20 bg-[#EBF4FF] px-4 py-3 text-center text-sm font-medium text-[#1a365d]">
-            功能开发中，敬请期待
+            {c.toast}
           </div>
         )}
       </div>

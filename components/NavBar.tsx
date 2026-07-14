@@ -2,16 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-const NAV_ITEMS = [
-  { label: "首页", href: "/" },
-  { label: "产品验证", href: "/verify" },
-  { label: "关于我们", href: "#" },
-  { label: "联系方式", href: "/contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { locale, t, setLocale } = useLanguage();
+
+  const NAV_ITEMS = [
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.verification, href: "/verify" },
+    { label: t.nav.about, href: "#" },
+    { label: t.nav.contact, href: "/contact" },
+  ];
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm">
@@ -26,7 +28,7 @@ export default function NavBar() {
           </span>
         </Link>
 
-        {/* Right: Desktop Nav */}
+        {/* Right: Desktop Nav + Language Switcher */}
         <div className="hidden items-center gap-1 md:flex">
           {NAV_ITEMS.map((item) => (
             <Link
@@ -37,6 +39,29 @@ export default function NavBar() {
               {item.label}
             </Link>
           ))}
+          {/* Language Switcher */}
+          <div className="ml-3 flex items-center rounded-lg border border-gray-200 bg-gray-50 p-0.5">
+            <button
+              onClick={() => setLocale("zh")}
+              className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition-all ${
+                locale === "zh"
+                  ? "bg-[#2b6cb0] text-white shadow-sm"
+                  : "text-gray-400 hover:text-gray-600"
+              }`}
+            >
+              中文
+            </button>
+            <button
+              onClick={() => setLocale("en")}
+              className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition-all ${
+                locale === "en"
+                  ? "bg-[#2b6cb0] text-white shadow-sm"
+                  : "text-gray-400 hover:text-gray-600"
+              }`}
+            >
+              EN
+            </button>
+          </div>
         </div>
 
         {/* Hamburger (Mobile) */}
@@ -70,6 +95,29 @@ export default function NavBar() {
               {item.label}
             </Link>
           ))}
+          {/* Mobile Language Switcher */}
+          <div className="mt-2 flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 p-1">
+            <button
+              onClick={() => { setLocale("zh"); setMenuOpen(false); }}
+              className={`flex-1 rounded-md py-2 text-sm font-medium transition-all ${
+                locale === "zh"
+                  ? "bg-[#2b6cb0] text-white shadow-sm"
+                  : "text-gray-400"
+              }`}
+            >
+              中文
+            </button>
+            <button
+              onClick={() => { setLocale("en"); setMenuOpen(false); }}
+              className={`flex-1 rounded-md py-2 text-sm font-medium transition-all ${
+                locale === "en"
+                  ? "bg-[#2b6cb0] text-white shadow-sm"
+                  : "text-gray-400"
+              }`}
+            >
+              EN
+            </button>
+          </div>
         </div>
       )}
     </nav>

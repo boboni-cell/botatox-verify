@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function VerificationCard() {
+  const { t } = useLanguage();
+  const g = t.home.guide;
+
   return (
     <div className="mx-auto w-full max-w-md rounded-2xl bg-white shadow-lg shadow-gray-200/50 px-6 py-8 sm:px-8">
-      {/* Icon */}
       <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF]">
         <svg
           className="h-7 w-7 text-[#2b6cb0]"
@@ -20,20 +25,18 @@ export default function VerificationCard() {
         </svg>
       </div>
 
-      {/* Header */}
       <div className="mb-6 text-center">
-        <h2 className="text-xl font-semibold text-navy">产品真伪验证</h2>
+        <h2 className="text-xl font-semibold text-navy">{g.title}</h2>
         <p className="mt-2 text-sm leading-relaxed text-gray-500">
-          BOTATOX 产品采用 HiddenTag 防伪技术，请通过官方渠道验证
+          {g.description}
         </p>
       </div>
 
-      {/* CTA Button */}
       <Link
         href="/verify"
         className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#2b6cb0]/20 transition-all hover:shadow-lg hover:shadow-[#2b6cb0]/30 hover:-translate-y-0.5 active:translate-y-0"
       >
-        查看验证方法
+        {g.button}
         <svg
           className="h-4 w-4"
           fill="none"
