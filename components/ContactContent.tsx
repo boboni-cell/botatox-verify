@@ -146,7 +146,7 @@ export default function ContactContent() {
                     {item.label}
                   </p>
                   <p
-                    className={`mt-0.5 truncate text-sm font-medium ${
+                    className={`mt-0.5 break-words text-sm font-medium ${
                       item.href ? "text-[#2b6cb0]" : "text-navy"
                     }`}
                   >
