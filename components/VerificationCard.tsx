@@ -1,183 +1,39 @@
-"use client";
-
-import { useState, useRef, type ChangeEvent } from "react";
+import Link from "next/link";
 
 export default function VerificationCard() {
-  const [code, setCode] = useState("");
-  const [image, setImage] = useState<string | null>(null);
-  const [isVerifying, setIsVerifying] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const hasInput = code.trim().length > 0 || image !== null;
-
-  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => setImage(reader.result as string);
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleRemoveImage = () => {
-    setImage(null);
-    if (fileInputRef.current) fileInputRef.current.value = "";
-  };
-
-  const handleVerify = async () => {
-    if (!hasInput || isVerifying) return;
-    setIsVerifying(true);
-    // Mock verification — replace with real API later
-    await new Promise((r) => setTimeout(r, 1500));
-    setIsVerifying(false);
-    alert("验证中…\n请稍候，正在为您核实产品真伪");
-  };
-
   return (
     <div className="mx-auto w-full max-w-md rounded-2xl bg-white shadow-lg shadow-gray-200/50 px-6 py-8 sm:px-8">
+      {/* Icon */}
+      <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF]">
+        <svg
+          className="h-7 w-7 text-[#2b6cb0]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+          />
+        </svg>
+      </div>
+
       {/* Header */}
       <div className="mb-6 text-center">
         <h2 className="text-xl font-semibold text-navy">产品真伪验证</h2>
-        <p className="mt-1.5 text-sm text-gray-400">
-          输入防伪码或上传防伪码图片，验证产品真伪
+        <p className="mt-2 text-sm leading-relaxed text-gray-500">
+          BOTATOX 产品采用 HiddenTag 防伪技术，请通过官方渠道验证
         </p>
       </div>
 
-      {/* Verification Code Input */}
-      <div className="mb-5">
-        <label className="mb-1.5 block text-sm font-medium text-navy-light">
-          防伪码
-        </label>
-        <div className="relative">
-          <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
-          </svg>
-          <input
-            type="text"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            placeholder="请输入防伪码"
-            className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-4 text-sm text-navy placeholder:text-gray-300 outline-none transition-all focus:border-gold focus:bg-white focus:ring-2 focus:ring-gold-light"
-          />
-        </div>
-      </div>
-
-      {/* Divider */}
-      <div className="mb-5 flex items-center gap-3">
-        <div className="h-px flex-1 bg-gray-100" />
-        <span className="text-xs text-gray-300">或者</span>
-        <div className="h-px flex-1 bg-gray-100" />
-      </div>
-
-      {/* Image Upload */}
-      <div className="mb-6">
-        <label className="mb-1.5 block text-sm font-medium text-navy-light">
-          上传防伪码图片
-        </label>
-
-        {image ? (
-          /* Preview */
-          <div className="relative overflow-hidden rounded-xl border border-gray-200">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={image}
-              alt="防伪码预览"
-              className="h-40 w-full object-contain bg-gray-50"
-            />
-            <button
-              onClick={handleRemoveImage}
-              className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-black/50 text-white text-xs hover:bg-black/70 transition-colors"
-              aria-label="删除图片"
-            >
-              ✕
-            </button>
-          </div>
-        ) : (
-          /* Drop Zone */
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="flex w-full flex-col items-center gap-2 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 py-8 px-4 text-center transition-colors hover:border-gold hover:bg-gold-light/30 cursor-pointer"
-          >
-            <svg
-              className="h-8 w-8 text-gray-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              strokeWidth={1.2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
-              />
-            </svg>
-            <span className="text-sm text-gray-500">拍照或从相册选择</span>
-            <span className="text-xs text-gray-300">
-              支持上传防伪码图片，系统将自动识别
-            </span>
-          </button>
-        )}
-
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="image/*"
-          capture="environment"
-          onChange={handleImageChange}
-          className="hidden"
-        />
-      </div>
-
-      {/* Submit Button */}
-      <button
-        onClick={handleVerify}
-        disabled={!hasInput || isVerifying}
-        className="w-full rounded-xl bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#2b6cb0]/20 transition-all hover:shadow-lg hover:shadow-[#2b6cb0]/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:hover:translate-y-0 disabled:from-[#2b6cb0] disabled:to-[#1a365d]"
+      {/* CTA Button */}
+      <Link
+        href="/verify"
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#2b6cb0]/20 transition-all hover:shadow-lg hover:shadow-[#2b6cb0]/30 hover:-translate-y-0.5 active:translate-y-0"
       >
-        {isVerifying ? (
-          <span className="inline-flex items-center gap-2">
-            <svg
-              className="h-4 w-4 animate-spin"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                className="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-              />
-            </svg>
-            验证中…
-          </span>
-        ) : (
-          "立即验证"
-        )}
-      </button>
-
-      {/* External Verification Link */}
-      <a
-        href="#"
-        className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-xl border-2 border-gray-200 py-3 text-sm font-medium text-gray-500 transition-all hover:border-[#2b6cb0] hover:text-[#2b6cb0]"
-      >
-        前往官方验证平台
+        查看验证方法
         <svg
           className="h-4 w-4"
           fill="none"
@@ -191,7 +47,7 @@ export default function VerificationCard() {
             d="M13 7l5 5m0 0l-5 5m5-5H6"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }
