@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ProductsContent from "@/components/ProductsContent";
 
 export const metadata: Metadata = {
-  title: "BOTATOX 产品系列",
+  title: "产品系列 - HYUNDAIBIO",
   description:
-    "BOTATOX 医美产品系列，高纯度肉毒杆菌素，适用于面部皱纹改善、咬肌瘦脸等医学美容领域。",
+    "HYUNDAIBIO 产品系列，涵盖肉毒素、填充剂、皮肤管理等医学美容产品。自有品牌 BOTATOX 旗舰产品及多品牌代理。",
   openGraph: {
-    title: "BOTATOX 产品系列",
+    title: "HYUNDAIBIO 产品系列 - BOTATOX",
     description:
-      "BOTATOX 医美产品系列，高纯度肉毒杆菌素，适用于面部皱纹改善、咬肌瘦脸等医学美容领域。",
+      "HYUNDAIBIO 产品系列，涵盖肉毒素、填充剂、皮肤管理等医学美容产品。",
   },
 };
 
