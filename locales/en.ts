@@ -169,7 +169,7 @@ const en: Translations = {
   wechat: {
     tooltip: "WeChat",
     title: "Add WeChat",
-    wechatId: "WeChat ID: HYUNDAIBIO",
+    wechatId: "WeChat ID: Royalfill",
     qrPlaceholder: "WeChat QR Code",
     copyButton: "Copy WeChat ID",
     copied: "Copied",

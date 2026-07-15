@@ -37,7 +37,7 @@ export default function WhatsAppButton() {
 
   const handleCopyWechat = async () => {
     try {
-      await navigator.clipboard.writeText("HYUNDAIBIO");
+      await navigator.clipboard.writeText("Royalfill");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
