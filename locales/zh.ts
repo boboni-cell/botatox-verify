@@ -160,6 +160,14 @@ const zh = {
   whatsapp: {
     tooltip: "在线咨询",
   },
+  wechat: {
+    tooltip: "微信咨询",
+    title: "添加微信咨询",
+    wechatId: "WeChat ID: HYUNDAIBIO",
+    qrPlaceholder: "微信二维码",
+    copyButton: "复制微信号",
+    copied: "已复制",
+  },
 
   productDetail: {
     back: "← 返回产品列表",

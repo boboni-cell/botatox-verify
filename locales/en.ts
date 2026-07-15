@@ -166,6 +166,14 @@ const en: Translations = {
   whatsapp: {
     tooltip: "Chat with us",
   },
+  wechat: {
+    tooltip: "WeChat",
+    title: "Add WeChat",
+    wechatId: "WeChat ID: HYUNDAIBIO",
+    qrPlaceholder: "WeChat QR Code",
+    copyButton: "Copy WeChat ID",
+    copied: "Copied",
+  },
 
   productDetail: {
     back: "← Back to Products",
