@@ -42,6 +42,24 @@ export default function RootLayout({
       lang="zh-CN"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.$crisp=[];
+              window.CRISP_WEBSITE_ID="646e078a-eb34-4df2-9290-142e2b54b6f7";
+              (function(){
+                d=document;
+                s=d.createElement("script");
+                s.src="https://client.crisp.chat/l.js";
+                s.async=1;
+                d.getElementsByTagName("head")[0].appendChild(s);
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <ClientLayout>{children}</ClientLayout>
       </body>
