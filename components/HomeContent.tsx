@@ -14,7 +14,7 @@ export default function HomeContent() {
       <NavBar />
       <Hero />
       <main className="flex-1 px-4 pb-8" id="verify-section">
-        <div className="-mt-8 relative z-10">
+        <div className="pt-10">
           <CodeVerification />
         </div>
         <div className="mt-10">
