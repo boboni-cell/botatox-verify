@@ -9,55 +9,46 @@ const VIDEOS = [`${R2}/1.mp4`, `${R2}/2.mp4`];
 export default function Hero() {
   const { t } = useLanguage();
   const h = t.home.hero;
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [fading, setFading] = useState(false);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const prevIndex = useRef(0);
+  const [currentSrc, setCurrentSrc] = useState(VIDEOS[0]);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const indexRef = useRef(0);
+  const mountedRef = useRef(false);
 
-  const switchVideo = useCallback(() => {
-    setFading(true);
-    const next = (activeIndex + 1) % VIDEOS.length;
-    prevIndex.current = activeIndex;
-    setTimeout(() => {
-      setActiveIndex(next);
-      setFading(false);
-    }, 500);
-  }, [activeIndex]);
+  const switchToNext = useCallback(() => {
+    indexRef.current = (indexRef.current + 1) % VIDEOS.length;
+    setCurrentSrc(VIDEOS[indexRef.current]);
+  }, []);
 
-  // Play active video, pause & reset old one
+  // When src changes, play the new video
   useEffect(() => {
-    const active = videoRefs.current[activeIndex];
-    const prev = videoRefs.current[prevIndex.current];
-    if (prev && prev !== active) {
-      prev.pause();
-      prev.currentTime = 0;
+    if (!mountedRef.current) {
+      mountedRef.current = true;
+      return;
     }
-    if (active) {
-      active.currentTime = 0;
-      active.play().catch(() => {});
+    const video = videoRef.current;
+    if (video) {
+      video.load();
+      video.play().catch(() => {});
     }
-  }, [activeIndex]);
+  }, [currentSrc]);
 
   const handleEnded = useCallback(() => {
-    switchVideo();
-  }, [switchVideo]);
+    switchToNext();
+  }, [switchToNext]);
 
   return (
     <section className="relative flex h-[50vh] min-h-[360px] items-center justify-center overflow-hidden md:h-[70vh] md:min-h-[500px]">
-      {/* Video Backgrounds */}
-      {VIDEOS.map((src, i) => (
-        <video
-          key={src}
-          ref={(el) => { videoRefs.current[i] = el; }}
-          autoPlay
-          muted
-          playsInline
-          onEnded={i === activeIndex ? handleEnded : undefined}
-          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
-          style={{ opacity: i === activeIndex && !fading ? 1 : 0 }}
-          src={src}
-        />
-      ))}
+      {/* Single Video Background */}
+      <video
+        ref={videoRef}
+        key={currentSrc}
+        autoPlay
+        muted
+        playsInline
+        onEnded={handleEnded}
+        className="absolute inset-0 h-full w-full object-cover"
+        src={currentSrc}
+      />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40" />

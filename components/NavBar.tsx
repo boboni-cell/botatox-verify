@@ -72,13 +72,13 @@ export default function NavBar() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#e2e8f0] bg-white/90 backdrop-blur-[10px]">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5 sm:px-6">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5 md:py-3 sm:px-6">
         {/* Left: Logo + Brand */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-[60px] w-[60px] items-center justify-center rounded-xl bg-gray-100 text-xs font-semibold text-gray-400">
+          <div className="flex h-[60px] w-[60px] md:h-9 md:w-9 items-center justify-center rounded-xl bg-gray-100 text-xs font-semibold text-gray-400">
             LOGO
           </div>
-          <span className="text-lg font-bold tracking-[0.15em] text-[#1B6BAA]">
+          <span className="text-lg md:text-base font-bold tracking-[0.15em] text-[#1B6BAA]">
             HYUNDAIBIO
           </span>
         </Link>
@@ -89,16 +89,16 @@ export default function NavBar() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-lg px-3.5 py-2 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
+              className="rounded-lg px-3 py-1.5 md:px-3 md:py-1.5 text-sm md:text-[13px] font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
             >
               {item.label}
             </Link>
           ))}
           {/* Desktop Language Switcher */}
-          <div className="ml-3 flex items-center rounded-lg border border-gray-200 bg-gray-50 p-0.5">
+          <div className="ml-3 flex items-center rounded-md border border-gray-200 bg-gray-50 p-0.5">
             <button
               onClick={() => setLocale("zh")}
-              className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition-all ${
+              className={`rounded-sm px-2 py-1 md:px-2 md:py-1 text-xs md:text-[11px] font-medium transition-all ${
                 locale === "zh"
                   ? "bg-[#3B9FDA] text-white shadow-sm"
                   : "text-gray-400 hover:text-gray-600"
@@ -108,7 +108,7 @@ export default function NavBar() {
             </button>
             <button
               onClick={() => setLocale("en")}
-              className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition-all ${
+              className={`rounded-sm px-2 py-1 md:px-2 md:py-1 text-xs md:text-[11px] font-medium transition-all ${
                 locale === "en"
                   ? "bg-[#3B9FDA] text-white shadow-sm"
                   : "text-gray-400 hover:text-gray-600"
