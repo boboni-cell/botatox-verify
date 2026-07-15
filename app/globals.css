@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --botatox-blue: #0072CE;
-  --botatox-dark: #003A70;
-  --botatox-light: #4DA8E8;
+  --botatox-blue: #3B9FDA;
+  --botatox-dark: #1B6BAA;
+  --botatox-light: #7FC4F5;
   --bg-page: #f7f9fc;
   --bg-card: #ffffff;
-  --text-heading: #003A70;
+  --text-heading: #1B6BAA;
   --text-body: #334155;
   --text-muted: #64748b;
   --placeholder-bg: #edf2f7;

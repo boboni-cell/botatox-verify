@@ -138,7 +138,7 @@ export default function ContactContent() {
           {contacts.map((item) => {
             const content = (
               <div className="flex items-center gap-4 rounded-xl bg-white px-5 py-4 shadow-sm shadow-gray-200/50 transition-colors hover:bg-gray-50/80">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#EBF4FF] text-[#0072CE]">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#EBF4FF] text-[#3B9FDA]">
                   {item.icon}
                 </div>
                 <div className="min-w-0 flex-1">
@@ -147,7 +147,7 @@ export default function ContactContent() {
                   </p>
                   <p
                     className={`mt-0.5 break-words text-sm font-medium ${
-                      item.href ? "text-[#0072CE]" : "text-navy"
+                      item.href ? "text-[#3B9FDA]" : "text-navy"
                     }`}
                   >
                     {item.value}

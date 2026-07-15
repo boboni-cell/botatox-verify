@@ -11,7 +11,7 @@ export default function VerificationCard() {
     <div className="mx-auto w-full max-w-md rounded-xl bg-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] px-6 py-8 sm:px-8 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]">
       <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF]">
         <svg
-          className="h-7 w-7 text-[#0072CE]"
+          className="h-7 w-7 text-[#3B9FDA]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ export default function VerificationCard() {
 
       <Link
         href="/verify"
-        className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0072CE] to-[#003A70] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#0072CE]/20 transition-all hover:shadow-lg hover:shadow-[#0072CE]/30 hover:-translate-y-0.5 active:translate-y-0"
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#3B9FDA] to-[#1B6BAA] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#3B9FDA]/20 transition-all hover:shadow-lg hover:shadow-[#3B9FDA]/30 hover:-translate-y-0.5 active:translate-y-0"
       >
         {g.button}
         <svg

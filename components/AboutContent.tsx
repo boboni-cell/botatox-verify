@@ -29,7 +29,7 @@ export default function AboutContent() {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-xl font-bold tracking-wide text-navy sm:text-2xl">{a.title}</h1>
-          <div className="mx-auto mt-3 h-[1px] w-12 bg-gradient-to-r from-transparent via-[#0072CE] to-transparent" />
+          <div className="mx-auto mt-3 h-[1px] w-12 bg-gradient-to-r from-transparent via-[#3B9FDA] to-transparent" />
         </div>
 
         {/* Company Intro */}
@@ -48,7 +48,7 @@ export default function AboutContent() {
                 key={m.title}
                 className="group rounded-xl bg-white px-6 py-8 text-center shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
               >
-                <p className="text-xs font-medium uppercase tracking-widest text-[#0072CE]">
+                <p className="text-xs font-medium uppercase tracking-widest text-[#3B9FDA]">
                   {m.sub}
                 </p>
                 <h3 className="mt-3 text-base font-semibold tracking-wide text-navy">

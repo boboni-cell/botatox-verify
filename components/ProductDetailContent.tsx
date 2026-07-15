@@ -85,7 +85,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
           <p className="mt-2 text-sm text-gray-400">{pd.notFoundDesc}</p>
           <Link
             href="/products"
-            className="mt-6 rounded-xl bg-[#0072CE] px-6 py-2.5 text-sm font-medium text-white"
+            className="mt-6 rounded-xl bg-[#3B9FDA] px-6 py-2.5 text-sm font-medium text-white"
           >
             {pd.back}
           </Link>
@@ -111,7 +111,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
           {/* Back Button */}
           <Link
             href="/products"
-            className="inline-flex items-center gap-1 text-sm font-medium text-gray-400 transition-colors hover:text-[#0072CE]"
+            className="inline-flex items-center gap-1 text-sm font-medium text-gray-400 transition-colors hover:text-[#3B9FDA]"
           >
             {pd.back}
           </Link>
@@ -128,12 +128,12 @@ export default function ProductDetailContent({ id }: { id: string }) {
             {/* Right: Product Info */}
             <div className="flex flex-col justify-center">
               {product.isFlagship && (
-                <span className="mb-2 inline-flex w-fit items-center rounded-full bg-[#0072CE]/20 px-3 py-1 text-xs font-semibold text-[#0072CE]">
+                <span className="mb-2 inline-flex w-fit items-center rounded-full bg-[#3B9FDA]/20 px-3 py-1 text-xs font-semibold text-[#3B9FDA]">
                   {pd.flagship}
                 </span>
               )}
               <h1 className="text-2xl font-bold text-navy">{name}</h1>
-              <p className="mt-2 inline-flex w-fit items-center rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-medium text-[#0072CE]">
+              <p className="mt-2 inline-flex w-fit items-center rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-medium text-[#3B9FDA]">
                 {pd.categoryLabel}: {catLabel}
               </p>
               <p className="mt-4 text-sm leading-relaxed text-gray-500">
@@ -191,7 +191,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
           <div className="mt-10 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0072CE] to-[#003A70] px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#0072CE]/20 transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#3B9FDA] to-[#1B6BAA] px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#3B9FDA]/20 transition-all hover:shadow-lg hover:-translate-y-0.5"
             >
               {pd.contactCta}
               <svg

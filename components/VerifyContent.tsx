@@ -8,7 +8,7 @@ function Connector() {
   return (
     <div className="flex justify-center py-1">
       <svg
-        className="h-6 w-6 text-[#0072CE]/40"
+        className="h-6 w-6 text-[#3B9FDA]/40"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -80,7 +80,7 @@ export default function VerifyContent() {
           {/* STEP 1 */}
           <div className="rounded-2xl bg-white px-6 py-6 shadow-sm shadow-gray-200/50 sm:px-8">
             <div className="flex items-start gap-4">
-              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#0072CE]">
+              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#3B9FDA]">
                 {v.step1.label}
               </span>
               <div className="flex-1">
@@ -100,7 +100,7 @@ export default function VerifyContent() {
           {/* STEP 2 */}
           <div className="rounded-2xl bg-white px-6 py-6 shadow-sm shadow-gray-200/50 sm:px-8">
             <div className="flex items-start gap-4">
-              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#0072CE]">
+              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#3B9FDA]">
                 {v.step2.label}
               </span>
               <div className="flex-1">
@@ -133,7 +133,7 @@ export default function VerifyContent() {
           {/* STEP 3 */}
           <div className="rounded-2xl bg-white px-6 py-6 shadow-sm shadow-gray-200/50 sm:px-8">
             <div className="flex items-start gap-4">
-              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#0072CE]">
+              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#3B9FDA]">
                 {v.step3.label}
               </span>
               <div className="flex-1">
@@ -149,7 +149,7 @@ export default function VerifyContent() {
           {/* STEP 4 */}
           <div className="rounded-2xl bg-white px-6 py-6 shadow-sm shadow-gray-200/50 sm:px-8">
             <div className="flex items-start gap-4">
-              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#0072CE]">
+              <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#3B9FDA]">
                 {v.step4.label}
               </span>
               <div className="flex-1">
@@ -191,7 +191,7 @@ export default function VerifyContent() {
             href="https://www.hiddentag.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0072CE] to-[#003A70] px-6 py-4 text-base font-semibold text-white shadow-lg shadow-[#0072CE]/25 transition-all hover:shadow-xl hover:shadow-[#0072CE]/35 hover:-translate-y-0.5 active:translate-y-0 sm:w-auto sm:px-10"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#3B9FDA] to-[#1B6BAA] px-6 py-4 text-base font-semibold text-white shadow-lg shadow-[#3B9FDA]/25 transition-all hover:shadow-xl hover:shadow-[#3B9FDA]/35 hover:-translate-y-0.5 active:translate-y-0 sm:w-auto sm:px-10"
           >
             {v.cta}
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>

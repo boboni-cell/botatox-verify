@@ -47,7 +47,7 @@ export default function TrustBadges() {
             key={badge.title}
             className="group rounded-xl bg-white px-6 py-8 text-center shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
           >
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF] text-[#0072CE] ring-1 ring-[#0072CE]/20 transition-all group-hover:ring-[#0072CE]/50">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF] text-[#3B9FDA] ring-1 ring-[#3B9FDA]/20 transition-all group-hover:ring-[#3B9FDA]/50">
               {badge.icon}
             </div>
             <h3 className="mt-4 text-sm font-semibold tracking-wide text-navy">

@@ -29,22 +29,22 @@ function FlagshipCard({ product }: { product: Product }) {
       className="group block cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-[#EBF4FF] to-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
       <div className="grid sm:grid-cols-2">
-        <div className="flex items-center justify-center bg-[#003A70]/5 p-6">
-          <div className="flex aspect-square w-full max-w-[200px] items-center justify-center rounded-xl bg-[#003A70]/10">
-            <span className="text-center text-sm font-bold text-[#003A70]/60">
+        <div className="flex items-center justify-center bg-[#1B6BAA]/5 p-6">
+          <div className="flex aspect-square w-full max-w-[200px] items-center justify-center rounded-xl bg-[#1B6BAA]/10">
+            <span className="text-center text-sm font-bold text-[#1B6BAA]/60">
               {product.nameEn}
             </span>
           </div>
         </div>
         <div className="flex flex-col justify-center p-6">
-          <span className="inline-flex w-fit items-center rounded-full bg-[#0072CE]/20 px-3 py-1 text-xs font-semibold text-[#0072CE]">
+          <span className="inline-flex w-fit items-center rounded-full bg-[#3B9FDA]/20 px-3 py-1 text-xs font-semibold text-[#3B9FDA]">
             {locale === "zh" ? "旗舰产品" : "Flagship Product"}
           </span>
           <h3 className="mt-3 text-lg font-bold text-navy">{name}</h3>
           <p className="mt-2 text-xs leading-relaxed text-gray-500 line-clamp-2">
             {desc}
           </p>
-          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#0072CE]">
+          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#3B9FDA]">
             {locale === "zh" ? "了解详情" : "View Details"}
             <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -141,7 +141,7 @@ export default function ProductsContent() {
               ? "HYUNDAIBIO 产品系列"
               : "HYUNDAIBIO Product Line"}
           </h1>
-          <div className="mx-auto mt-3 h-[1px] w-12 bg-gradient-to-r from-transparent via-[#0072CE] to-transparent" />
+          <div className="mx-auto mt-3 h-[1px] w-12 bg-gradient-to-r from-transparent via-[#3B9FDA] to-transparent" />
         </div>
 
         <div className="mx-auto mt-8 flex max-w-sm justify-center rounded-xl bg-gray-100 p-1">

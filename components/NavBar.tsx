@@ -78,7 +78,7 @@ export default function NavBar() {
           <div className="flex h-[60px] w-[60px] items-center justify-center rounded-xl bg-gray-100 text-xs font-semibold text-gray-400">
             LOGO
           </div>
-          <span className="text-lg font-bold tracking-[0.15em] text-[#003A70]">
+          <span className="text-lg font-bold tracking-[0.15em] text-[#1B6BAA]">
             HYUNDAIBIO
           </span>
         </Link>
@@ -89,7 +89,7 @@ export default function NavBar() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-lg px-3.5 py-2 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#0072CE]"
+              className="rounded-lg px-3.5 py-2 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
             >
               {item.label}
             </Link>
@@ -100,7 +100,7 @@ export default function NavBar() {
               onClick={() => setLocale("zh")}
               className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition-all ${
                 locale === "zh"
-                  ? "bg-[#0072CE] text-white shadow-sm"
+                  ? "bg-[#3B9FDA] text-white shadow-sm"
                   : "text-gray-400 hover:text-gray-600"
               }`}
             >
@@ -110,7 +110,7 @@ export default function NavBar() {
               onClick={() => setLocale("en")}
               className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition-all ${
                 locale === "en"
-                  ? "bg-[#0072CE] text-white shadow-sm"
+                  ? "bg-[#3B9FDA] text-white shadow-sm"
                   : "text-gray-400 hover:text-gray-600"
               }`}
             >
@@ -127,7 +127,7 @@ export default function NavBar() {
               onClick={() => setLangOpen(!langOpen)}
               className={`flex items-center justify-center rounded-lg p-2 transition-colors ${
                 langOpen
-                  ? "bg-blue-50 text-[#0072CE]"
+                  ? "bg-blue-50 text-[#3B9FDA]"
                   : "text-gray-400 hover:bg-gray-100 hover:text-gray-600"
               }`}
               aria-label="切换语言"
@@ -186,7 +186,7 @@ export default function NavBar() {
               key={item.label}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#0072CE]"
+              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
             >
               {item.label}
             </Link>

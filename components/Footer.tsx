@@ -7,7 +7,7 @@ export default function Footer() {
   const f = t.footer;
 
   return (
-    <footer className="mt-auto bg-[#003A70] py-8 px-4">
+    <footer className="mt-auto bg-[#1B6BAA] py-8 px-4">
       <div className="mx-auto flex max-w-md flex-col items-center gap-2 text-center text-xs text-white/50">
         <p>{f.copyright}</p>
         <div className="flex gap-4">
