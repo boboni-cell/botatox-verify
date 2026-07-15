@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -121,11 +122,15 @@ export default function ProductDetailContent({ id }: { id: string }) {
             {/* Left: Product Image */}
             <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-[#edf2f7]">
               {product.id === "botatox-100u" ? (
-                <img
-                  src="/images/botatox100u.png"
-                  alt={product.nameEn}
-                  className="h-full w-full object-contain"
-                />
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/images/botatox100u.png"
+                    alt={product.nameEn}
+                    fill
+                    unoptimized
+                    className="object-contain"
+                  />
+                </div>
               ) : (
                 <span className="text-sm font-medium text-[#94a3b8]">
                   {product.nameEn}

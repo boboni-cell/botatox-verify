@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -32,11 +33,15 @@ function FlagshipCard({ product }: { product: Product }) {
         <div className="flex items-center justify-center bg-[#1B6BAA]/5 p-6">
           <div className="flex aspect-square w-full max-w-[200px] items-center justify-center overflow-hidden rounded-xl bg-[#1B6BAA]/10">
             {product.id === "botatox-100u" ? (
-              <img
-                src="/images/botatox100u.png"
-                alt={product.nameEn}
-                className="h-full w-full object-contain"
-              />
+              <div className="relative h-full w-full">
+                <Image
+                  src="/images/botatox100u.png"
+                  alt={product.nameEn}
+                  fill
+                  unoptimized
+                  className="object-contain"
+                />
+              </div>
             ) : (
               <span className="text-center text-sm font-bold text-[#1B6BAA]/60">
                 {product.nameEn}
