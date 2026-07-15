@@ -3,7 +3,8 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
-const VIDEOS = ["/video/1.mp4", "/video/2.mp4"];
+const R2 = "https://pub-8c4bce25bb3f4de4a3bf5425c0af5425.r2.dev";
+const VIDEOS = [`${R2}/1.mp4`, `${R2}/2.mp4`];
 
 export default function Hero() {
   const { t } = useLanguage();

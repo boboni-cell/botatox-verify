@@ -185,21 +185,22 @@ export default function ProductDetailContent({ id }: { id: string }) {
               <h2 className="mb-4 text-base font-semibold tracking-wide text-navy">
                 {pd.videos}
               </h2>
-              {locale === "zh" ? (
-                <div className="mx-auto overflow-hidden rounded-xl bg-black aspect-video">
-                  <video
-                    controls
-                    playsInline
-                    className="h-full w-full"
-                    src="/video/boatox-chinese.mp4"
-                  />
-                </div>
-              ) : (
-                <div className="mx-auto flex aspect-[3/4] flex-col items-center justify-center gap-3 rounded-xl bg-[#edf2f7]">
-                  <PlayIcon />
-                  <span className="text-sm text-[#94a3b8]">Video Coming Soon</span>
-                </div>
-              )}
+              <div
+                className={`mx-auto overflow-hidden rounded-xl bg-black ${
+                  locale === "zh" ? "aspect-video" : "aspect-[3/4]"
+                }`}
+              >
+                <video
+                  controls
+                  playsInline
+                  className="h-full w-full"
+                  src={
+                    locale === "zh"
+                      ? "https://pub-8c4bce25bb3f4de4a3bf5425c0af5425.r2.dev/boatox.chinese.mp4"
+                      : "https://pub-8c4bce25bb3f4de4a3bf5425c0af5425.r2.dev/botatox.en.mp4"
+                  }
+                />
+              </div>
             </section>
           )}
 
