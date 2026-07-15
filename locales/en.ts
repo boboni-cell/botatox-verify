@@ -167,6 +167,23 @@ const en: Translations = {
     tooltip: "Chat with us",
   },
 
+  productDetail: {
+    back: "← Back to Products",
+    description: "Product Description",
+    gallery: "Product Gallery",
+    galleryPlaceholder: "Product Image",
+    beforeAfter: "Before & After",
+    beforeAfterPlaceholder: "Comparison",
+    videos: "Product Videos",
+    unboxingVideo: "Unboxing Video",
+    demoVideo: "Product Demo",
+    contactCta: "Contact Us for More Info",
+    flagship: "Flagship Product",
+    notFound: "Product Not Found",
+    notFoundDesc: "Please return to the product list to browse other products.",
+    categoryLabel: "Category",
+  },
+
   footer: {
     copyright: "© 2025 HYUNDAIBIO. All rights reserved.",
     privacy: "Privacy Policy",

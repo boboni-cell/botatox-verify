@@ -161,6 +161,23 @@ const zh = {
     tooltip: "在线咨询",
   },
 
+  productDetail: {
+    back: "← 返回产品列表",
+    description: "产品介绍",
+    gallery: "产品图册",
+    galleryPlaceholder: "产品图片",
+    beforeAfter: "使用效果",
+    beforeAfterPlaceholder: "对比图",
+    videos: "产品视频",
+    unboxingVideo: "开箱视频",
+    demoVideo: "实拍视频",
+    contactCta: "联系我们了解更多",
+    flagship: "旗舰产品",
+    notFound: "产品未找到",
+    notFoundDesc: "请返回产品列表浏览其他产品。",
+    categoryLabel: "分类",
+  },
+
   footer: {
     copyright: "© 2025 HYUNDAIBIO. All rights reserved.",
     privacy: "隐私政策",
