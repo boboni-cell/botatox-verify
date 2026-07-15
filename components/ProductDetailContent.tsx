@@ -124,7 +124,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
               {product.id === "botatox-100u" ? (
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/botatox100u.png"
+                    src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"
                     alt={product.nameEn}
                     fill
                     unoptimized
@@ -196,8 +196,8 @@ export default function ProductDetailContent({ id }: { id: string }) {
                   className="h-full w-full"
                   src={
                     locale === "zh"
-                      ? "https://pub-8c4bce25bb3f4de4a3bf5425c0af5425.r2.dev/boatox.chinese.mp4"
-                      : "https://pub-8c4bce25bb3f4de4a3bf5425c0af5425.r2.dev/botatox.en.mp4"
+                      ? "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/boatox.chinese.mp4"
+                      : "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox.en.mp4"
                   }
                 />
               </div>

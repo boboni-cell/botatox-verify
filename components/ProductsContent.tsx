@@ -34,7 +34,7 @@ function FlagshipCard({ product }: { product: Product }) {
           {product.id === "botatox-100u" ? (
             <div className="relative h-full w-full">
               <Image
-                src="/images/botatox100u.png"
+                src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"
                 alt={product.nameEn}
                 fill
                 unoptimized
