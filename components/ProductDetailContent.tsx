@@ -120,7 +120,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
           {/* Product Main Area */}
           <div className="mt-6 grid gap-8 md:grid-cols-2">
             {/* Left: Product Image */}
-            <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-[#edf2f7]">
+            <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-white p-5">
               {product.id === "botatox-100u" ? (
                 <div className="relative h-full w-full">
                   <Image
@@ -128,7 +128,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
                     alt={product.nameEn}
                     fill
                     unoptimized
-                    className="object-contain"
+                    className="object-contain p-2"
                   />
                 </div>
               ) : (

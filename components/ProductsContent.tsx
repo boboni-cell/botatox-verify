@@ -29,25 +29,25 @@ function FlagshipCard({ product }: { product: Product }) {
       href={`/products/${product.id}`}
       className="group block cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-[#EBF4FF] to-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
-      <div className="grid sm:grid-cols-2">
-        <div className="flex items-center justify-center bg-[#1B6BAA]/5 p-6">
-          <div className="flex aspect-square w-full max-w-[200px] items-center justify-center overflow-hidden rounded-xl bg-[#1B6BAA]/10">
-            {product.id === "botatox-100u" ? (
-              <div className="relative h-full w-full">
-                <Image
-                  src="/images/botatox100u.png"
-                  alt={product.nameEn}
-                  fill
-                  unoptimized
-                  className="object-contain"
-                />
-              </div>
-            ) : (
+      <div className="grid items-center sm:grid-cols-2">
+        <div className="flex aspect-square items-center justify-center bg-white p-5">
+          {product.id === "botatox-100u" ? (
+            <div className="relative h-full w-full">
+              <Image
+                src="/images/botatox100u.png"
+                alt={product.nameEn}
+                fill
+                unoptimized
+                className="object-contain p-3"
+              />
+            </div>
+          ) : (
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-[#edf2f7]">
               <span className="text-center text-sm font-bold text-[#1B6BAA]/60">
                 {product.nameEn}
               </span>
-            )}
-          </div>
+            </div>
+          )}
         </div>
         <div className="flex flex-col justify-center p-6">
           <span className="inline-flex w-fit items-center rounded-full bg-[#3B9FDA]/20 px-3 py-1 text-xs font-semibold text-[#3B9FDA]">
@@ -79,8 +79,8 @@ function RegularCard({ product }: { product: Product }) {
       href={`/products/${product.id}`}
       className="group block cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
-      <div className="flex aspect-square items-center justify-center rounded-t-xl bg-[#edf2f7]">
-        <span className="text-center text-[10px] font-medium text-[#94a3b8] leading-tight px-2">
+      <div className="flex aspect-square items-center justify-center bg-white p-5">
+        <span className="text-center text-[10px] font-medium text-[#94a3b8] leading-tight">
           {product.nameEn}
         </span>
       </div>
