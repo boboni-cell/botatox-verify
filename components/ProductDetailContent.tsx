@@ -118,11 +118,19 @@ export default function ProductDetailContent({ id }: { id: string }) {
 
           {/* Product Main Area */}
           <div className="mt-6 grid gap-8 md:grid-cols-2">
-            {/* Left: Product Image Placeholder */}
-            <div className="flex aspect-square items-center justify-center rounded-xl bg-[#edf2f7]">
-              <span className="text-sm font-medium text-gray-400">
-                {product.nameEn}
-              </span>
+            {/* Left: Product Image */}
+            <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-[#edf2f7]">
+              {product.id === "botatox-100u" ? (
+                <img
+                  src="/images/botatox100u.png"
+                  alt={product.nameEn}
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <span className="text-sm font-medium text-[#94a3b8]">
+                  {product.nameEn}
+                </span>
+              )}
             </div>
 
             {/* Right: Product Info */}
@@ -167,25 +175,52 @@ export default function ProductDetailContent({ id }: { id: string }) {
           />
 
           {/* Product Videos */}
-          <section className="mt-8">
-            <h2 className="mb-4 text-base font-semibold tracking-wide text-navy">
-              {pd.videos}
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                { label: pd.unboxingVideo },
-                { label: pd.demoVideo },
-              ].map((v) => (
-                <div
-                  key={v.label}
-                  className="flex aspect-video flex-col items-center justify-center gap-2 rounded-xl bg-[#edf2f7] text-[#94a3b8]"
-                >
-                  <PlayIcon />
-                  <span className="text-xs">{v.label}</span>
-                </div>
-              ))}
-            </div>
-          </section>
+          {product.id === "botatox-100u" && (
+            <section className="mt-8">
+              <h2 className="mb-4 text-base font-semibold tracking-wide text-navy">
+                {pd.videos}
+              </h2>
+              <div
+                className={`mx-auto overflow-hidden rounded-xl bg-black ${
+                  locale === "zh" ? "aspect-video" : "aspect-[3/4]"
+                }`}
+              >
+                <video
+                  controls
+                  playsInline
+                  className="h-full w-full"
+                  src={
+                    locale === "zh"
+                      ? "/video/boatox-chinese.mp4"
+                      : "/video/botatox-en.mp4"
+                  }
+                />
+              </div>
+            </section>
+          )}
+
+          {/* Video Placeholders (non-BOTATOX products) */}
+          {product.id !== "botatox-100u" && (
+            <section className="mt-8">
+              <h2 className="mb-4 text-base font-semibold tracking-wide text-navy">
+                {pd.videos}
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  { label: pd.unboxingVideo },
+                  { label: pd.demoVideo },
+                ].map((v) => (
+                  <div
+                    key={v.label}
+                    className="flex aspect-video flex-col items-center justify-center gap-2 rounded-xl bg-[#edf2f7] text-[#94a3b8]"
+                  >
+                    <PlayIcon />
+                    <span className="text-xs">{v.label}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* CTA */}
           <div className="mt-10 text-center">
