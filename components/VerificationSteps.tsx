@@ -70,7 +70,7 @@ function StepCard({
   return (
     <div
       ref={ref}
-      className="rounded-2xl bg-white px-6 py-6 shadow-sm shadow-gray-200/50 transition-all duration-500 sm:px-8 hover:-translate-y-1 hover:shadow-md hover:shadow-gray-200/60"
+      className="rounded-xl bg-white px-6 py-6 shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 sm:px-8 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0)" : "translateY(24px)",
@@ -100,7 +100,7 @@ export default function VerificationSteps() {
         <h2 className="text-lg font-semibold tracking-wider text-navy">
           {s.title}
         </h2>
-        <div className="mx-auto mt-3 h-[1px] w-12 bg-gradient-to-r from-transparent via-[#2b6cb0] to-transparent" />
+        <div className="mx-auto mt-3 h-[1px] w-12 bg-[#e2e8f0]" />
       </div>
 
       <div className="space-y-0">

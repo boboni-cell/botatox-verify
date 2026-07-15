@@ -45,7 +45,7 @@ export default function TrustBadges() {
         {badges.map((badge) => (
           <div
             key={badge.title}
-            className="group rounded-2xl bg-white px-6 py-8 text-center shadow-sm shadow-gray-200/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-gray-200/60"
+            className="group rounded-xl bg-white px-6 py-8 text-center shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
           >
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#EBF4FF] text-[#2b6cb0] ring-1 ring-[#c9a96e]/20 transition-all group-hover:ring-[#c9a96e]/50">
               {badge.icon}

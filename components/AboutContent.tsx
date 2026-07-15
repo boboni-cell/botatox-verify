@@ -46,7 +46,7 @@ export default function AboutContent() {
             {missions.map((m) => (
               <div
                 key={m.title}
-                className="group rounded-2xl bg-white px-6 py-8 text-center shadow-sm shadow-gray-200/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-xl bg-white px-6 py-8 text-center shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
               >
                 <p className="text-xs font-medium uppercase tracking-widest text-[#c9a96e]">
                   {m.sub}

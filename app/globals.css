@@ -1,27 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f8fa;
-  --foreground: #1a365d;
-  --gold: #2b6cb0;
-  --gold-light: #EBF4FF;
-  --gold-dark: #1a365d;
-  --navy: #1a365d;
-  --navy-light: #2a4a6b;
-  --card-bg: #ffffff;
+  --bg-page: #f7f9fc;
+  --bg-card: #ffffff;
+  --text-heading: #1a365d;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --blue: #2b6cb0;
+  --blue-light: #EBF4FF;
+  --blue-dark: #1a365d;
   --accent: #c9a96e;
   --accent-light: #f7f3eb;
+  --border-light: #e2e8f0;
+  --placeholder-bg: #edf2f7;
+  --placeholder-text: #94a3b8;
+  --card-shadow: 0 2px 12px rgba(26, 54, 93, 0.06);
+  --card-shadow-hover: 0 4px 20px rgba(26, 54, 93, 0.10);
+  --card-border: 1px solid rgba(26, 54, 93, 0.06);
+  --card-radius: 12px;
+  --btn-radius: 8px;
+  --btn-gradient: linear-gradient(135deg, #2b6cb0, #1a365d);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-gold-dark: var(--gold-dark);
-  --color-navy: var(--navy);
-  --color-navy-light: var(--navy-light);
-  --color-card-bg: var(--card-bg);
+  --color-background: var(--bg-page);
+  --color-foreground: var(--text-body);
+  --color-gold: var(--blue);
+  --color-gold-light: var(--blue-light);
+  --color-gold-dark: var(--blue-dark);
+  --color-navy: var(--text-heading);
+  --color-navy-light: #2a4a6b;
+  --color-card-bg: var(--bg-card);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
   --font-sans: var(--font-geist-sans);
@@ -29,10 +38,23 @@
 }
 
 body {
-  background: linear-gradient(180deg, #f7f8fa 0%, #eef1f5 100%);
-  color: var(--foreground);
+  background: var(--bg-page);
+  color: var(--text-body);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
+}
+
+/* Card base style */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
 }
 
 @keyframes fadeIn {

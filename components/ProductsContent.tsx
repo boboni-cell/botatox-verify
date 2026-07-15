@@ -26,7 +26,7 @@ function FlagshipCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/products/${product.id}`}
-      className="group block cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-br from-[#EBF4FF] to-white shadow-md shadow-gray-200/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+      className="group block cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-[#EBF4FF] to-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
       <div className="grid sm:grid-cols-2">
         <div className="flex items-center justify-center bg-[#1a365d]/5 p-6">
@@ -64,10 +64,10 @@ function RegularCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/products/${product.id}`}
-      className="group block cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm shadow-gray-200/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+      className="group block cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
-      <div className="flex aspect-square items-center justify-center rounded-t-2xl bg-gray-100">
-        <span className="text-center text-[10px] font-medium text-gray-400 leading-tight px-2">
+      <div className="flex aspect-square items-center justify-center rounded-t-xl bg-[#edf2f7]">
+        <span className="text-center text-[10px] font-medium text-[#94a3b8] leading-tight px-2">
           {product.nameEn}
         </span>
       </div>

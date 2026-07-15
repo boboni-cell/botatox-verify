@@ -33,7 +33,7 @@ function GalleryGrid({
         {Array.from({ length: count }).map((_, i) => (
           <div
             key={i}
-            className="flex aspect-square items-center justify-center rounded-xl bg-gray-100 text-xs text-gray-400"
+            className="flex aspect-square items-center justify-center rounded-xl bg-[#edf2f7] text-xs text-[#94a3b8]"
           >
             {placeholder}
           </div>
@@ -61,7 +61,7 @@ function ComparisonPlaceholder({
         {Array.from({ length: count }).map((_, i) => (
           <div
             key={i}
-            className="flex aspect-[4/3] items-center justify-center rounded-xl bg-gray-100 text-xs text-gray-400"
+            className="flex aspect-[4/3] items-center justify-center rounded-xl bg-[#edf2f7] text-xs text-[#94a3b8]"
           >
             {placeholder}
           </div>
@@ -119,7 +119,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
           {/* Product Main Area */}
           <div className="mt-6 grid gap-8 md:grid-cols-2">
             {/* Left: Product Image Placeholder */}
-            <div className="flex aspect-square items-center justify-center rounded-2xl bg-gray-100">
+            <div className="flex aspect-square items-center justify-center rounded-xl bg-[#edf2f7]">
               <span className="text-sm font-medium text-gray-400">
                 {product.nameEn}
               </span>
@@ -178,7 +178,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
               ].map((v) => (
                 <div
                   key={v.label}
-                  className="flex aspect-video flex-col items-center justify-center gap-2 rounded-xl bg-gray-100 text-gray-400"
+                  className="flex aspect-video flex-col items-center justify-center gap-2 rounded-xl bg-[#edf2f7] text-[#94a3b8]"
                 >
                   <PlayIcon />
                   <span className="text-xs">{v.label}</span>
