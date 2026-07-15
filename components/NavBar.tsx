@@ -75,8 +75,12 @@ export default function NavBar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5 md:py-3 sm:px-6">
         {/* Left: Logo + Brand */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-[60px] w-[60px] md:h-9 md:w-9 items-center justify-center rounded-xl bg-gray-100 text-xs font-semibold text-gray-400">
-            LOGO
+          <div className="relative flex h-[60px] w-[60px] md:h-9 md:w-9 items-center justify-center overflow-hidden rounded-xl bg-white">
+            <img
+              src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/HYDUNDAIBIO-LOGO.png"
+              alt="HYUNDAIBIO Logo"
+              className="h-full w-full object-contain"
+            />
           </div>
           <span className="text-lg md:text-base font-bold tracking-[0.15em] text-[#1B6BAA]">
             HYUNDAIBIO
