@@ -6,10 +6,6 @@ export default function Hero() {
   const { t } = useLanguage();
   const h = t.home.hero;
 
-  const scrollToVerify = () => {
-    document.getElementById("verify-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative flex h-[50vh] min-h-[360px] items-center justify-center overflow-hidden md:h-[70vh] md:min-h-[500px]">
       {/* Video Background */}
@@ -19,7 +15,6 @@ export default function Hero() {
         loop
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
-        poster="/video/1.mp4"
       >
         <source src="/video/1.mp4" type="video/mp4" />
       </video>
@@ -54,13 +49,6 @@ export default function Hero() {
           className="animate-wave"
           style={{ animationDelay: "4s", animationDuration: "12s" }}
         />
-        <path
-          d="M0,0 C300,100 600,50 900,120 C1050,160 1200,140 1300,100 L1300,0 L0,0 Z"
-          fill="#3B9FDA"
-          opacity="0.08"
-          className="animate-wave"
-          style={{ animationDelay: "1s", animationDuration: "9s" }}
-        />
       </svg>
 
       {/* Light particles */}
@@ -81,34 +69,21 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Overlay content */}
-      <div className="relative z-10 px-4 text-center">
-        <h1 className="text-4xl font-bold tracking-[0.25em] text-white sm:text-5xl md:text-6xl">
+      {/* Brand Name */}
+      <div className="relative z-10 text-center">
+        <h1
+          className="text-[60px] font-black leading-none tracking-[0.3em] text-white md:text-[120px]"
+          style={{
+            textShadow: "0 2px 20px rgba(0,0,0,0.3)",
+            animation: "fadeInUp 1s ease-out forwards",
+          }}
+        >
           {h.brand}
         </h1>
-        <div className="mx-auto mt-4 h-[1px] w-16 bg-white/40" />
-        <p className="mt-4 text-base font-light tracking-[0.15em] text-white/80 sm:text-lg">
-          {h.subtitle}
-        </p>
-        <button
-          onClick={scrollToVerify}
-          className="mt-8 inline-flex items-center gap-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-white/20 hover:-translate-y-0.5 active:translate-y-0"
-        >
-          {h.cta}
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </button>
+        <div
+          className="mx-auto mt-4 h-[1px] w-20 bg-white/60"
+          style={{ animation: "fadeIn 0.8s ease-out 0.3s both" }}
+        />
       </div>
     </section>
   );
