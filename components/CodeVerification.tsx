@@ -57,7 +57,7 @@ export default function CodeVerification() {
 
   return (
     <div className="relative mx-auto mt-10 w-full max-w-md">
-      <div className="absolute -top-3 right-4 z-10 rounded-full bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] px-4 py-1 text-xs font-semibold text-white shadow-md">
+      <div className="absolute -top-3 right-4 z-10 rounded-full bg-gradient-to-r from-[#0072CE] to-[#003A70] px-4 py-1 text-xs font-semibold text-white shadow-md">
         {c.badge}
       </div>
 
@@ -90,7 +90,7 @@ export default function CodeVerification() {
               value={code}
               onChange={(e) => setCode(e.target.value)}
               placeholder={c.codePlaceholder}
-              className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-4 text-sm text-navy placeholder:text-gray-300 outline-none transition-all focus:border-[#2b6cb0] focus:bg-white focus:ring-2 focus:ring-[#EBF4FF]"
+              className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-4 text-sm text-navy placeholder:text-gray-300 outline-none transition-all focus:border-[#0072CE] focus:bg-white focus:ring-2 focus:ring-[#EBF4FF]"
             />
           </div>
         </div>
@@ -130,8 +130,8 @@ export default function CodeVerification() {
               onDrop={handleDrop}
               className={`flex w-full flex-col items-center gap-2 rounded-xl border-2 border-dashed px-4 py-8 text-center transition-colors cursor-pointer ${
                 isDragging
-                  ? "border-[#2b6cb0] bg-[#EBF4FF]"
-                  : "border-gray-200 bg-gray-50 hover:border-[#2b6cb0] hover:bg-[#EBF4FF]/50"
+                  ? "border-[#0072CE] bg-[#EBF4FF]"
+                  : "border-gray-200 bg-gray-50 hover:border-[#0072CE] hover:bg-[#EBF4FF]/50"
               }`}
             >
               <svg
@@ -165,13 +165,13 @@ export default function CodeVerification() {
         <button
           onClick={handleVerify}
           disabled={!hasInput}
-          className="w-full rounded-xl bg-gradient-to-r from-[#2b6cb0] to-[#1a365d] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#2b6cb0]/20 transition-all hover:shadow-lg hover:shadow-[#2b6cb0]/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:hover:translate-y-0 disabled:from-[#2b6cb0] disabled:to-[#1a365d]"
+          className="w-full rounded-xl bg-gradient-to-r from-[#0072CE] to-[#003A70] py-3.5 text-sm font-semibold text-white tracking-wide shadow-md shadow-[#0072CE]/20 transition-all hover:shadow-lg hover:shadow-[#0072CE]/30 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none disabled:hover:translate-y-0 disabled:from-[#0072CE] disabled:to-[#003A70]"
         >
           {c.verifyButton}
         </button>
 
         {showToast && (
-          <div className="mt-4 animate-[fadeIn_0.3s_ease-out] rounded-xl border border-[#2b6cb0]/20 bg-[#EBF4FF] px-4 py-3 text-center text-sm font-medium text-[#1a365d]">
+          <div className="mt-4 animate-[fadeIn_0.3s_ease-out] rounded-xl border border-[#0072CE]/20 bg-[#EBF4FF] px-4 py-3 text-center text-sm font-medium text-[#003A70]">
             {c.toast}
           </div>
         )}

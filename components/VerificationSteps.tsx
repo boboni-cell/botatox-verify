@@ -38,7 +38,7 @@ function Connector() {
   return (
     <div className="flex justify-center py-1">
       <svg
-        className="h-6 w-6 text-[#2b6cb0]/30"
+        className="h-6 w-6 text-[#0072CE]/30"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ function StepCard({
       }}
     >
       <div className="flex items-start gap-4">
-        <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#2b6cb0]">
+        <span className="mt-0.5 flex-shrink-0 rounded-full bg-[#EBF4FF] px-3 py-1 text-xs font-bold tracking-wider text-[#0072CE]">
           {label}
         </span>
         <div className="flex-1">
