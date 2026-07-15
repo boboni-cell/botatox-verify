@@ -187,7 +187,9 @@ export default function ProductDetailContent({ id }: { id: string }) {
               </h2>
               <div
                 className={`mx-auto overflow-hidden rounded-xl bg-black ${
-                  locale === "zh" ? "aspect-video" : "aspect-[3/4]"
+                  locale === "zh"
+                    ? "aspect-video"
+                    : "aspect-[3/4] md:max-h-[500px] md:w-auto"
                 }`}
               >
                 <video
