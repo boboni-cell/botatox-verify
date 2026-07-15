@@ -189,7 +189,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
                 className={`mx-auto overflow-hidden rounded-xl bg-black ${
                   locale === "zh"
                     ? "aspect-video"
-                    : "aspect-[3/4] md:max-h-[500px] md:w-auto"
+                    : "aspect-[3/4] md:max-h-[350px] md:max-w-[260px]"
                 }`}
               >
                 <video
