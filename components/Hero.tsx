@@ -1,23 +1,45 @@
 "use client";
 
+import { useState, useRef, useCallback } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+
+const VIDEOS = ["/video/1.mp4", "/video/2.mp4"];
 
 export default function Hero() {
   const { t } = useLanguage();
   const h = t.home.hero;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [fading, setFading] = useState(false);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const switchVideo = useCallback(() => {
+    setFading(true);
+    setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % VIDEOS.length);
+      setFading(false);
+    }, 500);
+  }, []);
+
+  const handleEnded = useCallback(() => {
+    switchVideo();
+  }, [switchVideo]);
 
   return (
     <section className="relative flex h-[50vh] min-h-[360px] items-center justify-center overflow-hidden md:h-[70vh] md:min-h-[500px]">
-      {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/video/1.mp4" type="video/mp4" />
-      </video>
+      {/* Video Backgrounds */}
+      {VIDEOS.map((src, i) => (
+        <video
+          key={src}
+          ref={(el) => { videoRefs.current[i] = el; }}
+          autoPlay
+          muted
+          playsInline
+          onEnded={i === activeIndex ? handleEnded : undefined}
+          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
+          style={{ opacity: i === activeIndex && !fading ? 1 : 0 }}
+          src={src}
+        />
+      ))}
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40" />
