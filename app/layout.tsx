@@ -14,8 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Botatox - 产品真伪验证",
-  description: "Botatox 医美产品防伪码验证平台，输入防伪码或上传图片即可验证产品真伪。",
+  title: {
+    default: "BOTATOX - Premium Medical Aesthetics | 高端医美产品",
+    template: "%s - BOTATOX",
+  },
+  description:
+    "BOTATOX 医美产品防伪码验证平台。采用 HiddenTag 防伪技术，确保正品保障。HYUNDAIBIO 旗下品牌。",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "BOTATOX - Premium Medical Aesthetics",
+    description:
+      "BOTATOX 医美产品防伪码验证平台。采用 HiddenTag 防伪技术，确保正品保障。",
+    siteName: "BOTATOX",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

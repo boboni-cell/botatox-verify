@@ -6,6 +6,7 @@ import VerificationCard from "@/components/VerificationCard";
 import VerificationSteps from "@/components/VerificationSteps";
 import CodeVerification from "@/components/CodeVerification";
 import TrustBadges from "@/components/TrustBadges";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 
 export default function HomeContent() {
@@ -24,6 +25,7 @@ export default function HomeContent() {
       </main>
       <TrustBadges />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

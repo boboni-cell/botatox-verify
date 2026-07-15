@@ -3,6 +3,7 @@ import type { Translations } from "./zh";
 const en: Translations = {
   nav: {
     home: "Home",
+    products: "Products",
     verification: "Verification",
     about: "About",
     contact: "Contact",
@@ -123,6 +124,47 @@ const en: Translations = {
     title: "Contact Us",
     subtitle:
       "If you have any questions, please contact HYUNDAIBIO through the following channels",
+  },
+
+  about: {
+    title: "About HYUNDAIBIO",
+    intro:
+      "HYUNDAIBIO is a medical aesthetics biotechnology company headquartered in Seoul, South Korea, dedicated to developing high-quality medical aesthetic products. The BOTATOX brand, known for its exceptional quality and innovative technology, is now distributed across multiple countries and regions worldwide, earning broad market recognition and customer trust.",
+    mission: {
+      title: "Our Mission",
+      innovation: { title: "Innovation", sub: "R&D", desc: "Continuous investment in R&D, advancing the frontiers of medical aesthetic technology" },
+      quality: { title: "Quality", sub: "Assurance", desc: "Rigorous quality control processes, every product is traceable and verifiable" },
+      global: { title: "Global Service", sub: "Worldwide", desc: "Serving customers globally with professional medical aesthetic solutions" },
+    },
+    contactTitle: "Contact Information",
+  },
+
+  products: {
+    title: "BOTATOX Products",
+    subtitle: "Defining New Standards in Medical Aesthetics",
+    items: [
+      {
+        name: "BOTATOX 100U",
+        desc: "High-purity botulinum toxin for improving frown lines, crow's feet, and other facial wrinkles.",
+      },
+      {
+        name: "BOTATOX 200U",
+        desc: "High-concentration formula for deep wrinkle treatment and large-area muscle relaxation.",
+      },
+      {
+        name: "BOTATOX 50U",
+        desc: "Precise dosage for localized fine treatment with natural-looking results.",
+      },
+      {
+        name: "BOTATOX Slimming",
+        desc: "Specially developed for facial contouring, precisely targeting masseter muscles for a refined V-line face.",
+      },
+    ],
+    learnMore: "Learn More",
+  },
+
+  whatsapp: {
+    tooltip: "Chat with us",
   },
 
   footer: {

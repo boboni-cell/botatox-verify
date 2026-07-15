@@ -1,6 +1,7 @@
 const zh = {
   nav: {
     home: "首页",
+    products: "产品",
     verification: "产品验证",
     about: "关于我们",
     contact: "联系方式",
@@ -117,6 +118,47 @@ const zh = {
   contact: {
     title: "联系我们",
     subtitle: "如有任何疑问，请通过以下方式联系 HYUNDAIBIO",
+  },
+
+  about: {
+    title: "关于 HYUNDAIBIO",
+    intro:
+      "HYUNDAIBIO 是一家总部位于韩国首尔的医美生物科技公司，致力于研发高品质医美产品。旗下品牌 BOTATOX 以卓越的品质和创新的技术，已远销全球多个国家和地区，赢得了广泛的市场认可与客户信赖。",
+    mission: {
+      title: "品牌使命",
+      innovation: { title: "创新研发", sub: "Innovation", desc: "持续投入研发，推动医美技术前沿发展" },
+      quality: { title: "品质保证", sub: "Quality", desc: "严格品控流程，每件产品均可追溯验证" },
+      global: { title: "全球服务", sub: "Global Service", desc: "服务全球客户，提供专业医美解决方案" },
+    },
+    contactTitle: "联系方式",
+  },
+
+  products: {
+    title: "BOTATOX 产品系列",
+    subtitle: "以卓越品质定义医美新标准",
+    items: [
+      {
+        name: "BOTATOX 100U",
+        desc: "高纯度肉毒杆菌素，适用于改善眉间纹、鱼尾纹等面部皱纹。",
+      },
+      {
+        name: "BOTATOX 200U",
+        desc: "高浓度配方，适合深层皱纹治疗及大面积肌肉松弛。",
+      },
+      {
+        name: "BOTATOX 50U",
+        desc: "精准剂量，适用于局部精细化治疗，效果自然。",
+      },
+      {
+        name: "BOTATOX 瘦脸专用",
+        desc: "专为面部轮廓塑形研发，精准作用于咬肌，打造精致 V 脸。",
+      },
+    ],
+    learnMore: "了解更多",
+  },
+
+  whatsapp: {
+    tooltip: "在线咨询",
   },
 
   footer: {

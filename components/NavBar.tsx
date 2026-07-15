@@ -44,8 +44,9 @@ export default function NavBar() {
 
   const NAV_ITEMS = [
     { label: t.nav.home, href: "/" },
+    { label: t.nav.products, href: "/products" },
     { label: t.nav.verification, href: "/verify" },
-    { label: t.nav.about, href: "#" },
+    { label: t.nav.about, href: "/about" },
     { label: t.nav.contact, href: "/contact" },
   ];
 
