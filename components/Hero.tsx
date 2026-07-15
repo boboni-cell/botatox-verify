@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const VIDEOS = ["/video/1.mp4", "/video/2.mp4"];
@@ -11,14 +11,31 @@ export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [fading, setFading] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const prevIndex = useRef(0);
 
   const switchVideo = useCallback(() => {
     setFading(true);
+    const next = (activeIndex + 1) % VIDEOS.length;
+    prevIndex.current = activeIndex;
     setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % VIDEOS.length);
+      setActiveIndex(next);
       setFading(false);
     }, 500);
-  }, []);
+  }, [activeIndex]);
+
+  // Play active video, pause & reset old one
+  useEffect(() => {
+    const active = videoRefs.current[activeIndex];
+    const prev = videoRefs.current[prevIndex.current];
+    if (prev && prev !== active) {
+      prev.pause();
+      prev.currentTime = 0;
+    }
+    if (active) {
+      active.currentTime = 0;
+      active.play().catch(() => {});
+    }
+  }, [activeIndex]);
 
   const handleEnded = useCallback(() => {
     switchVideo();
