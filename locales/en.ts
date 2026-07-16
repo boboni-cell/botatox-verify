@@ -128,15 +128,57 @@ const en: Translations = {
 
   about: {
     title: "About HYUNDAIBIO",
-    intro:
-      "HYUNDAIBIO is a medical aesthetics biotechnology company headquartered in Seoul, South Korea, dedicated to developing high-quality medical aesthetic products. The BOTATOX brand, known for its exceptional quality and innovative technology, is now distributed across multiple countries and regions worldwide, earning broad market recognition and customer trust.",
+    overview: {
+      title: "Company Overview",
+      desc: "HYUNDAIBIO is a biotechnology company headquartered in Seoul, South Korea, specializing in the research, development, and global distribution of premium medical aesthetic products. Our flagship brand BOTATOX, along with a comprehensive portfolio of dermal fillers, skin boosters, and biostimulators, serves medical professionals and aesthetic clinics worldwide.",
+      imagePlaceholder: "Company Image",
+    },
     mission: {
       title: "Our Mission",
-      innovation: { title: "Innovation", sub: "R&D", desc: "Continuous investment in R&D, advancing the frontiers of medical aesthetic technology" },
-      quality: { title: "Quality", sub: "Assurance", desc: "Rigorous quality control processes, every product is traceable and verifiable" },
-      global: { title: "Global Service", sub: "Worldwide", desc: "Serving customers globally with professional medical aesthetic solutions" },
+      innovation: {
+        title: "Innovation",
+        desc: "Continuously investing in R&D to create safe and effective medical aesthetic products based on cutting-edge biotechnology.",
+      },
+      quality: {
+        title: "Quality Assurance",
+        desc: "Strictly adhering to international quality standards with rigorous quality control for every product.",
+      },
+      global: {
+        title: "Global Reach",
+        desc: "Our products are distributed worldwide, providing reliable solutions for medical aesthetic professionals across the globe.",
+      },
+    },
+    certifications: {
+      title: "Certifications",
+      placeholder: "Certificate",
     },
     contactTitle: "Contact Information",
+  },
+
+  faq: {
+    title: "FAQ",
+    items: [
+      {
+        q: "How to verify BOTATOX product authenticity?",
+        a: "Please download the HiddenTag APP and scan the anti-counterfeiting label on the product. For detailed steps, please visit our Verification page.",
+      },
+      {
+        q: "Where is the anti-counterfeiting label on the product?",
+        a: "The anti-counterfeiting label is located on the outside of the product packaging. Please look for the label with the HiddenTag logo.",
+      },
+      {
+        q: "What if scanning the label fails?",
+        a: "Please make sure to scan in a well-lit environment without glare. If the issue persists, please contact us through our Contact page.",
+      },
+      {
+        q: "Which countries do you sell to?",
+        a: "HYUNDAIBIO's distribution network covers Asia, Europe, the Middle East, South America, and more. For specific market information, please contact us.",
+      },
+      {
+        q: "How to become a distributor?",
+        a: "Please submit your inquiry through our Contact page. Our business team will get back to you as soon as possible.",
+      },
+    ],
   },
 
   products: {
@@ -194,7 +236,7 @@ const en: Translations = {
 
   footer: {
     copyright: "© 2025 HYUNDAIBIO. All rights reserved.",
-    privacy: "Privacy Policy",
+    faq: "FAQ",
     contact: "Contact Us",
   },
 

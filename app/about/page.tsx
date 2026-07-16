@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import AboutContent from "@/components/AboutContent";
 
 export const metadata: Metadata = {
-  title: "关于 HYUNDAIBIO - BOTATOX",
-  description:
-    "HYUNDAIBIO 是一家总部位于韩国首尔的医美生物科技公司，旗下品牌 BOTATOX 以卓越品质和创新技术远销全球。",
+  title: "About - HYUNDAIBIO",
+  description: "HYUNDAIBIO 是一家总部位于韩国首尔的生物科技公司，专注于高端医美产品的研发与全球销售。旗下旗舰品牌 BOTATOX。",
   openGraph: {
-    title: "关于 HYUNDAIBIO - BOTATOX",
-    description:
-      "HYUNDAIBIO 是一家总部位于韩国首尔的医美生物科技公司，旗下品牌 BOTATOX 以卓越品质和创新技术远销全球。",
+    title: "About - HYUNDAIBIO",
+    description: "HYUNDAIBIO 是一家总部位于韩国首尔的生物科技公司，专注于高端医美产品的研发与全球销售。",
   },
 };
 

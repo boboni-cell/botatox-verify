@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import HomeContent from "@/components/HomeContent";
 
 export const metadata: Metadata = {
-  title: "BOTATOX - Premium Medical Aesthetics | 高端医美产品",
+  title: "BOTATOX - Premium Medical Aesthetics by HYUNDAIBIO",
   description:
-    "BOTATOX 医美产品防伪码验证平台。采用 HiddenTag 防伪技术，输入防伪码或扫描标签即可验证产品真伪，确保正品保障。",
+    "BOTATOX by HYUNDAIBIO - Premium botulinum toxin and medical aesthetic products. Verify product authenticity and explore our full range of dermal fillers, skin boosters and more.",
   openGraph: {
-    title: "BOTATOX - Premium Medical Aesthetics | 高端医美产品",
+    title: "BOTATOX - Premium Medical Aesthetics",
     description:
-      "BOTATOX 医美产品防伪码验证平台。采用 HiddenTag 防伪技术，确保正品保障。",
+      "BOTATOX by HYUNDAIBIO - Premium botulinum toxin and medical aesthetic products.",
+    images: ["https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"],
+    type: "website",
   },
 };
 

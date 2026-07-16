@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
@@ -11,12 +12,12 @@ export default function Footer() {
       <div className="mx-auto flex max-w-md flex-col items-center gap-2 text-center text-xs text-white/50">
         <p>&copy; {new Date().getFullYear()} HYUNDAIBIO. All rights reserved.</p>
         <div className="flex gap-4">
-          <span className="hover:text-white/80 cursor-pointer transition-colors">
-            {f.privacy}
-          </span>
-          <span className="hover:text-white/80 cursor-pointer transition-colors">
+          <Link href="/faq" className="hover:text-white/80 transition-colors">
+            {f.faq}
+          </Link>
+          <Link href="/contact" className="hover:text-white/80 transition-colors">
             {f.contact}
-          </span>
+          </Link>
         </div>
       </div>
     </footer>

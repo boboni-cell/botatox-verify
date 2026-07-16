@@ -122,15 +122,57 @@ const zh = {
 
   about: {
     title: "关于 HYUNDAIBIO",
-    intro:
-      "HYUNDAIBIO 是一家总部位于韩国首尔的医美生物科技公司，致力于研发高品质医美产品。旗下品牌 BOTATOX 以卓越的品质和创新的技术，已远销全球多个国家和地区，赢得了广泛的市场认可与客户信赖。",
+    overview: {
+      title: "公司简介",
+      desc: "HYUNDAIBIO 是一家总部位于韩国首尔的生物科技公司，专注于高端医美产品的研发与全球销售。旗下旗舰品牌 BOTATOX 以及涵盖皮肤填充剂、皮肤焕活针剂和生物刺激剂在内的全系列产品，服务于全球医疗美容专业机构与诊所。",
+      imagePlaceholder: "公司图片",
+    },
     mission: {
-      title: "品牌使命",
-      innovation: { title: "创新研发", sub: "Innovation", desc: "持续投入研发，推动医美技术前沿发展" },
-      quality: { title: "品质保证", sub: "Quality", desc: "严格品控流程，每件产品均可追溯验证" },
-      global: { title: "全球服务", sub: "Global Service", desc: "服务全球客户，提供专业医美解决方案" },
+      title: "我们的使命",
+      innovation: {
+        title: "创新研发",
+        desc: "持续投入研发，以尖端生物科技为基础，打造安全高效的医美产品。",
+      },
+      quality: {
+        title: "品质保证",
+        desc: "严格遵循国际质量标准，每一款产品都经过严格的品控流程。",
+      },
+      global: {
+        title: "全球服务",
+        desc: "产品远销全球多个国家和地区，为世界各地的医美专业人士提供可靠选择。",
+      },
+    },
+    certifications: {
+      title: "资质认证",
+      placeholder: "资质证书",
     },
     contactTitle: "联系方式",
+  },
+
+  faq: {
+    title: "常见问题",
+    items: [
+      {
+        q: "如何验证 BOTATOX 产品真伪？",
+        a: "请下载 HiddenTag APP，扫描产品上的防伪标签即可验证。详细步骤请查看产品验证页面。",
+      },
+      {
+        q: "防伪码在产品哪个位置？",
+        a: "防伪标签位于产品包装盒的外侧，请仔细查找带有 HiddenTag 标识的标签。",
+      },
+      {
+        q: "扫描防伪标签失败怎么办？",
+        a: "请确保在光线充足且不反光的环境下扫描。如仍无法识别，请通过联系我们页面与客服沟通。",
+      },
+      {
+        q: "你们的产品销售到哪些国家？",
+        a: "HYUNDAIBIO 的产品销售网络覆盖亚洲、欧洲、中东、南美等多个国家和地区。如需了解具体市场信息，请联系我们。",
+      },
+      {
+        q: "如何成为经销商？",
+        a: "请通过联系我们页面提交您的合作意向，我们的商务团队将尽快与您联系。",
+      },
+    ],
   },
 
   products: {
@@ -188,7 +230,7 @@ const zh = {
 
   footer: {
     copyright: "© 2025 HYUNDAIBIO. All rights reserved.",
-    privacy: "隐私政策",
+    faq: "FAQ",
     contact: "联系我们",
   },
 

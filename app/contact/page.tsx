@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import ContactContent from "@/components/ContactContent";
 
 export const metadata: Metadata = {
-  title: "联系我们 - HYUNDAIBIO",
+  title: "Contact Us - HYUNDAIBIO",
   description:
-    "如有任何疑问，请通过电话、WhatsApp、Instagram 或邮件联系 HYUNDAIBIO。",
+    "如有任何疑问，请通过电话、WhatsApp、微信或邮件联系 HYUNDAIBIO。",
   openGraph: {
-    title: "联系我们 - HYUNDAIBIO",
-    description:
-      "如有任何疑问，请通过电话、WhatsApp、Instagram 或邮件联系 HYUNDAIBIO。",
+    title: "Contact Us - HYUNDAIBIO",
+    description: "如有任何疑问，请通过电话、WhatsApp、微信或邮件联系 HYUNDAIBIO。",
   },
 };
 
