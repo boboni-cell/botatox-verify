@@ -30,11 +30,17 @@ function FlagshipCard({ product }: { product: Product }) {
   const name = productDisplayName(product, locale);
   const desc = locale === "zh" ? product.descZh : product.descEn;
 
+  const flagLabel = locale === "zh" ? "旗舰产品" : locale === "ko" ? "플래그십 제품" : "Flagship Product";
+
   return (
     <Link
       href={`/products/${product.id}`}
-      className="group block cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-[#EBF4FF] to-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
+      className="group relative block cursor-pointer overflow-hidden rounded-xl border-2 border-[#D4AF37] bg-white shadow-[0_2px_12px_rgba(212,175,55,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(212,175,55,0.20)]"
     >
+      {/* Gold corner accent */}
+      <div className="absolute -right-4 -top-4 h-16 w-16 rotate-45 bg-gradient-to-br from-[#D4AF37] to-[#C5962C] shadow-lg" />
+      <div className="absolute right-1 top-1 text-[8px] font-bold text-white">★</div>
+
       <div className="grid items-center sm:grid-cols-2">
         <div className="flex aspect-square items-center justify-center bg-white p-5">
           {product.id === "botatox-100u" ? (
@@ -55,16 +61,17 @@ function FlagshipCard({ product }: { product: Product }) {
             </div>
           )}
         </div>
-        <div className="flex flex-col justify-center p-6">
-          <span className="inline-flex w-fit items-center rounded-full bg-[#3B9FDA]/20 px-3 py-1 text-xs font-semibold text-[#3B9FDA]">
-            {locale === "zh" ? "旗舰产品" : "Flagship Product"}
+        <div className="flex flex-col justify-center bg-gradient-to-r from-[rgba(212,175,55,0.03)] to-[rgba(212,175,55,0.08)] p-6">
+          <span className="inline-flex w-fit items-center rounded-full bg-gradient-to-r from-[#D4AF37] to-[#C5962C] px-3 py-1 text-xs font-semibold text-white shadow-sm">
+            {flagLabel}
           </span>
           <h3 className="mt-3 text-lg font-bold text-navy">{name}</h3>
+          <div className="mt-1 h-[2px] w-10 bg-gradient-to-r from-[#D4AF37] to-transparent" />
           <p className="mt-2 text-xs leading-relaxed text-gray-500 line-clamp-2">
             {desc}
           </p>
-          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#3B9FDA]">
-            {locale === "zh" ? "了解详情" : "View Details"}
+          <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#C5962C]">
+            {locale === "zh" ? "了解详情" : locale === "ko" ? "자세히 보기" : "View Details"}
             <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
