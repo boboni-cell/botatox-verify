@@ -6,6 +6,7 @@ const ko: Translations = {
     products: "제품",
     verification: "정품인증",
     about: "회사소개",
+    news: "뉴스",
     contact: "연락처",
   },
 
@@ -124,6 +125,7 @@ const ko: Translations = {
 
   about: {
     title: "HYUNDAIBIO 소개",
+    nav: { ceo: "CEO 인사말", intro: "회사 개요", network: "글로벌 네트워크" },
     overview: {
       title: "회사 개요",
       desc: "HYUNDAIBIO는 대한민국 서울에 본사를 둔 바이오테크놀로지 기업으로, 프리미엄 메디컬 에스테틱 제품의 연구개발 및 글로벌 유통을 전문으로 합니다. 플래그십 브랜드 BOTATOX를 비롯하여 필러, 스킨부스터, 바이오스티뮬레이터 등 종합적인 제품 포트폴리오를 통해 전 세계 의료 전문가 및 에스테틱 클리닉에 서비스를 제공하고 있습니다.",
@@ -131,24 +133,56 @@ const ko: Translations = {
     },
     mission: {
       title: "우리의 미션",
-      innovation: {
-        title: "혁신 연구개발",
-        desc: "최첨단 바이오테크놀로지를 기반으로 안전하고 효과적인 메디컬 에스테틱 제품을 만들기 위해 연구개발에 지속적으로 투자합니다.",
-      },
-      quality: {
-        title: "품질 보증",
-        desc: "국제 품질 기준을 엄격히 준수하며, 모든 제품은 철저한 품질 관리 프로세스를 거칩니다.",
-      },
-      global: {
-        title: "글로벌 서비스",
-        desc: "전 세계 여러 국가 및 지역에 제품을 공급하며, 세계 각지의 메디컬 에스테틱 전문가에게 신뢰할 수 있는 솔루션을 제공합니다.",
-      },
+      innovation: { title: "혁신 연구개발", desc: "최첨단 바이오테크놀로지를 기반으로 안전하고 효과적인 메디컬 에스테틱 제품을 만들기 위해 연구개발에 지속적으로 투자합니다." },
+      quality: { title: "품질 보증", desc: "국제 품질 기준을 엄격히 준수하며, 모든 제품은 철저한 품질 관리 프로세스를 거칩니다." },
+      global: { title: "글로벌 서비스", desc: "전 세계 여러 국가 및 지역에 제품을 공급하며, 세계 각지의 메디컬 에스테틱 전문가에게 신뢰할 수 있는 솔루션을 제공합니다." },
     },
-    certifications: {
-      title: "인증 자격",
-      placeholder: "인증서",
-    },
+    certifications: { title: "인증 자격", placeholder: "인증서" },
     contactTitle: "연락처",
+    ceo: {
+      title: "CEO 인사말",
+      name: "Zhang Yongnan",
+      role: "Chief Executive Officer, Hyundai Bio Co., Ltd.",
+      message: "파트너와 친구 여러분께,\n\nHyundai Bio에 오신 것을 환영합니다. 창립 이래로 우리는 최첨단 바이오 과학과 화장품 혁신의 예술을 연결하여 삶을 개선하고 자신감을 불어넣는 제품을 개발하는 데 전념해 왔습니다.\n\n우리의 연구 중심 접근 방식은 피부과 의사, 생화학자 및 제형 전문가를 하나로 모아 최고의 글로벌 표준을 충족하는 안전하고 효과적이며 과학적으로 뒷받침된 뷰티 솔루션을 만드는 단일 목적을 공유합니다.\n\n글로벌 네트워크를 계속 확장함에 따라 우리는 창립 가치인 정직, 혁신, 영향력에 확고히 전념하고 있습니다. 우리 시설을 떠나는 모든 제품은 약속을 담고 있습니다: 신뢰할 수 있는 품질과 눈에 보이는 결과에 대한 약속입니다.\n\n우리는 전 세계 파트너와 함께 성장하고 Hyundai Bio를 바이오 코스메틱 분야의 우수성과 동의어로 만들기를 기대합니다.\n\n감사와 비전을 담아,\nZhang Yongnan",
+      photoPlaceholder: "CEO Photo",
+    },
+    intro: {
+      subtitle: "Global Bio & Cosmetic Leading Group",
+      title: "Hyundai Bio Co., Ltd.",
+      heroDesc: "꿈을 실현하고 세상을 변화시키는 기업. 우리는 외적인 아름다움뿐만 아니라 내면의 아름다움과 성장에 집중하여 국내외 바이오 및 화장품 산업 트렌드를 선도하겠습니다.",
+      missionTitle: "Mission",
+      missionDesc: "경쟁력 있는 가격과 지속적인 고품질 의료 미용 제품을 통해 글로벌 의료 시장에 대한 접근성을 높이고 전 세계 파트너의 경쟁력을 강화합니다.",
+      values: {
+        title: "핵심 가치",
+        quality: { label: "01 Quality", title: "품질", desc: "경쟁력 있는 가격에서도 타협하지 않는 안전성과 안정성." },
+        reliability: { label: "02 Reliability", title: "신뢰성", desc: "모든 단계에서 유지되는 지속적인 공급과 변함없는 품질." },
+        scalability: { label: "03 Scalability", title: "확장성", desc: "국경과 시장을 초월하는 글로벌 비즈니스 구조." },
+      },
+      vision: {
+        title: "인간을 존중하고 자연을 사랑하는 기업",
+        desc: "글로벌 의료 미용 시장에서 가장 신뢰받고 접근하기 쉬운 선택지가 되어 선도적인 글로벌 의료 유통 플랫폼 브랜드로 성장합니다.",
+      },
+    },
+    network: {
+      title: "글로벌 네트워크",
+      desc: "Hyundai Bio의 제품과 파트너십은 전 세계에 걸쳐 있습니다. 신뢰할 수 있는 유통업체, 클리닉 및 소매업체와 협력하여 바이오 코스메틱 솔루션을 전 세계 소비자에게 제공합니다.",
+      asia: "베트남",
+      americas: "미국",
+      europe: "독일",
+      stats: { countries: "3+ 국가", regions: "3 지역", founded: "2024년 설립" },
+      cta: "귀하의 지역에서 Hyundai Bio 파트너가 되고 싶으신가요?",
+      ctaButton: "파트너 되기",
+    },
+  },
+
+  news: {
+    title: "뉴스",
+    items: [
+      { title: "HYUNDAIBIO, 2024 국제 메디컬 에스테틱 전시회 참가", date: "2024.12", summary: "HYUNDAIBIO가 플래그십 브랜드 BOTATOX와 함께 국제 메디컬 에스테틱 전시회에서 최신 제품과 기술을 선보였습니다." },
+      { title: "BOTATOX 신제품 출시 행사 성공적 개최", date: "2025.03", summary: "BOTATOX 신제품 출시 행사가 서울에서 성공적으로 개최되었습니다." },
+      { title: "HYUNDAIBIO 글로벌 파트너 30곳 돌파", date: "2025.06", summary: "HYUNDAIBIO의 글로벌 파트너 네트워크가 지속적으로 확장되어 30곳을 돌파했습니다." },
+    ],
+    videos: { title: "활동 영상", placeholder: "활동 영상" },
   },
 
   faq: {

@@ -36,9 +36,12 @@ function CheckIcon() {
   );
 }
 
+const ABOUT_SUB = ["ceo", "intro", "network"] as const;
+
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const langDropdownRef = useRef<HTMLDivElement>(null);
   const { locale, t, setLocale } = useLanguage();
 
@@ -46,7 +49,8 @@ export default function NavBar() {
     { label: t.nav.home, href: "/" },
     { label: t.nav.products, href: "/products" },
     { label: t.nav.verification, href: "/verify" },
-    { label: t.nav.about, href: "/about" },
+    { label: t.nav.about, href: "/about/intro", hasDropdown: true },
+    { label: t.nav.news, href: "/news" },
     { label: t.nav.contact, href: "/contact" },
   ];
 
@@ -87,15 +91,32 @@ export default function NavBar() {
 
         {/* Right: Desktop Nav + Language Switcher */}
         <div className="hidden items-center gap-1 md:flex">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="rounded-lg px-3 py-1.5 md:px-3 md:py-1.5 text-sm md:text-[13px] font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item) =>
+            item.hasDropdown ? (
+              <div key={item.label} className="relative" onMouseEnter={() => setAboutOpen(true)} onMouseLeave={() => setAboutOpen(false)}>
+                <Link
+                  href={item.href}
+                  className="flex items-center gap-1 rounded-lg px-3 py-1.5 text-sm md:text-[13px] font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
+                >
+                  {item.label}
+                  <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </Link>
+                {aboutOpen && (
+                  <div className="absolute left-0 top-full mt-1 w-36 rounded-xl border border-gray-100 bg-white py-1 shadow-lg">
+                    {ABOUT_SUB.map((key) => (
+                      <Link key={key} href={`/about/${key}`} className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#3B9FDA]">
+                        {t.about.nav[key]}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={item.label} href={item.href} className="rounded-lg px-3 py-1.5 md:px-3 md:py-1.5 text-sm md:text-[13px] font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]">
+                {item.label}
+              </Link>
+            )
+          )}
           {/* Desktop Language Switcher */}
           <div className="ml-3 flex items-center rounded-md border border-gray-200 bg-gray-50 p-0.5">
             <button
@@ -202,16 +223,29 @@ export default function NavBar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="border-t border-gray-100 bg-white px-4 pb-4 pt-2 md:hidden">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item) =>
+            item.hasDropdown ? (
+              <div key={item.label}>
+                <button onClick={() => setAboutOpen(!aboutOpen)} className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-gray-500 hover:bg-blue-50 hover:text-[#3B9FDA]">
+                  {item.label}
+                  <svg className={`h-3 w-3 transition-transform ${aboutOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                {aboutOpen && (
+                  <div className="ml-4 border-l border-gray-100 pl-3">
+                    {ABOUT_SUB.map((key) => (
+                      <Link key={key} href={`/about/${key}`} onClick={() => { setMenuOpen(false); setAboutOpen(false); }} className="block rounded-lg px-3 py-2 text-sm text-gray-500 hover:text-[#3B9FDA]">
+                        {t.about.nav[key]}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-500 transition-colors hover:bg-blue-50 hover:text-[#3B9FDA]">
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
       )}
     </nav>

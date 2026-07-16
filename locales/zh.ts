@@ -4,6 +4,7 @@ const zh = {
     products: "产品",
     verification: "产品验证",
     about: "关于我们",
+    news: "新闻",
     contact: "联系方式",
   },
 
@@ -122,6 +123,11 @@ const zh = {
 
   about: {
     title: "关于 HYUNDAIBIO",
+    nav: {
+      ceo: "CEO 致辞",
+      intro: "公司介绍",
+      network: "全球网络",
+    },
     overview: {
       title: "公司简介",
       desc: "HYUNDAIBIO 是一家总部位于韩国首尔的生物科技公司，专注于高端医美产品的研发与全球销售。旗下旗舰品牌 BOTATOX 以及涵盖皮肤填充剂、皮肤焕活针剂和生物刺激剂在内的全系列产品，服务于全球医疗美容专业机构与诊所。",
@@ -129,24 +135,59 @@ const zh = {
     },
     mission: {
       title: "我们的使命",
-      innovation: {
-        title: "创新研发",
-        desc: "持续投入研发，以尖端生物科技为基础，打造安全高效的医美产品。",
-      },
-      quality: {
-        title: "品质保证",
-        desc: "严格遵循国际质量标准，每一款产品都经过严格的品控流程。",
-      },
-      global: {
-        title: "全球服务",
-        desc: "产品远销全球多个国家和地区，为世界各地的医美专业人士提供可靠选择。",
-      },
+      innovation: { title: "创新研发", desc: "持续投入研发，以尖端生物科技为基础，打造安全高效的医美产品。" },
+      quality: { title: "品质保证", desc: "严格遵循国际质量标准，每一款产品都经过严格的品控流程。" },
+      global: { title: "全球服务", desc: "产品远销全球多个国家和地区，为世界各地的医美专业人士提供可靠选择。" },
     },
-    certifications: {
-      title: "资质认证",
-      placeholder: "资质证书",
-    },
+    certifications: { title: "资质认证", placeholder: "资质证书" },
     contactTitle: "联系方式",
+    ceo: {
+      title: "CEO 致辞",
+      name: "Zhang Yongnan",
+      role: "Chief Executive Officer, Hyundai Bio Co., Ltd.",
+      message: "尊敬的合作伙伴与朋友们，\n\n欢迎来到 Hyundai Bio。自创立以来，我们始终致力于将尖端生物科技与美容创新艺术相结合，开发改善生活、激发自信的产品。\n\n我们的研究驱动模式汇聚了皮肤科医生、生物化学家和配方专家，他们怀揣同一个目标：打造安全、有效、科学支撑的美容解决方案，满足最高国际标准。\n\n随着全球网络的不断扩展，我们始终坚守创始价值观——诚信、创新、影响力。每一件离开我们工厂的产品都承载着一份承诺：您可信赖的品质，以及看得见的效果。\n\n我们期待与全球合作伙伴共同成长，让 Hyundai Bio 成为生物化妆品领域卓越品质的代名词。\n\n满怀感恩与远见，\nZhang Yongnan",
+      photoPlaceholder: "CEO Photo",
+    },
+    intro: {
+      subtitle: "Global Bio & Cosmetic Leading Group",
+      title: "Hyundai Bio Co., Ltd.",
+      heroDesc: "一家让梦想成真、改变世界的公司。我们不仅关注外在美，更注重内在美与成长，引领国内外生物与化妆品行业潮流。",
+      missionTitle: "Mission",
+      missionDesc: "我们通过具有竞争力的价格和始终如一的优质医美产品，提升全球医疗市场的可及性，增强全球合作伙伴的竞争力。",
+      values: {
+        title: "核心价值观",
+        quality: { label: "01 Quality", title: "品质", desc: "在保持竞争力的价格下，绝不妥协的安全性与稳定性。" },
+        reliability: { label: "02 Reliability", title: "可靠", desc: "在各个阶段保持持续供应和坚定不移的品质。" },
+        scalability: { label: "03 Scalability", title: "拓展", desc: "超越国界与市场的全球化业务结构。" },
+      },
+      vision: {
+        title: "一家尊重人性、热爱自然的公司",
+        desc: "成为全球医美市场最值得信赖和最容易接触的选择——成长为全球领先的医疗流通平台品牌。",
+      },
+    },
+    network: {
+      title: "全球网络",
+      desc: "Hyundai Bio 的产品与合作伙伴遍布全球。我们与值得信赖的分销商、诊所和零售商合作，将生物美容解决方案带给世界各地的消费者。",
+      asia: "越南",
+      americas: "美国",
+      europe: "德国",
+      stats: { countries: "3+ 国家", regions: "3 大区域", founded: "成立于 2024" },
+      cta: "有兴趣成为您所在地区的 Hyundai Bio 合作伙伴吗？",
+      ctaButton: "成为合作伙伴",
+    },
+  },
+
+  news: {
+    title: "新闻动态",
+    items: [
+      { title: "HYUNDAIBIO 参加 2024 国际医美展览", date: "2024.12", summary: "HYUNDAIBIO 携旗下品牌 BOTATOX 参加国际医美展览，展示最新产品与技术。" },
+      { title: "BOTATOX 新品发布会圆满举行", date: "2025.03", summary: "BOTATOX 新品发布会在首尔圆满举行，多款新产品正式亮相。" },
+      { title: "HYUNDAIBIO 全球合作伙伴突破 30 家", date: "2025.06", summary: "HYUNDAIBIO 全球合作伙伴网络持续扩展，已突破 30 家。" },
+    ],
+    videos: {
+      title: "活动视频",
+      placeholder: "活动视频",
+    },
   },
 
   faq: {

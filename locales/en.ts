@@ -6,6 +6,7 @@ const en: Translations = {
     products: "Products",
     verification: "Verification",
     about: "About",
+    news: "News",
     contact: "Contact",
   },
 
@@ -128,6 +129,11 @@ const en: Translations = {
 
   about: {
     title: "About HYUNDAIBIO",
+    nav: {
+      ceo: "CEO Message",
+      intro: "Company Overview",
+      network: "Global Network",
+    },
     overview: {
       title: "Company Overview",
       desc: "HYUNDAIBIO is a biotechnology company headquartered in Seoul, South Korea, specializing in the research, development, and global distribution of premium medical aesthetic products. Our flagship brand BOTATOX, along with a comprehensive portfolio of dermal fillers, skin boosters, and biostimulators, serves medical professionals and aesthetic clinics worldwide.",
@@ -135,24 +141,59 @@ const en: Translations = {
     },
     mission: {
       title: "Our Mission",
-      innovation: {
-        title: "Innovation",
-        desc: "Continuously investing in R&D to create safe and effective medical aesthetic products based on cutting-edge biotechnology.",
-      },
-      quality: {
-        title: "Quality Assurance",
-        desc: "Strictly adhering to international quality standards with rigorous quality control for every product.",
-      },
-      global: {
-        title: "Global Reach",
-        desc: "Our products are distributed worldwide, providing reliable solutions for medical aesthetic professionals across the globe.",
-      },
+      innovation: { title: "Innovation", desc: "Continuously investing in R&D to create safe and effective medical aesthetic products based on cutting-edge biotechnology." },
+      quality: { title: "Quality Assurance", desc: "Strictly adhering to international quality standards with rigorous quality control for every product." },
+      global: { title: "Global Reach", desc: "Our products are distributed worldwide, providing reliable solutions for medical aesthetic professionals across the globe." },
     },
-    certifications: {
-      title: "Certifications",
-      placeholder: "Certificate",
-    },
+    certifications: { title: "Certifications", placeholder: "Certificate" },
     contactTitle: "Contact Information",
+    ceo: {
+      title: "CEO Message",
+      name: "Zhang Yongnan",
+      role: "Chief Executive Officer, Hyundai Bio Co., Ltd.",
+      message: "Dear Partners and Friends,\n\nWelcome to Hyundai Bio. Since our founding, we have been dedicated to bridging cutting-edge bio science with the art of cosmetic innovation — developing products that improve lives and inspire confidence.\n\nOur research-driven approach brings together dermatologists, biochemists, and formulation specialists who share a single purpose: to create safe, effective, and science-backed beauty solutions that meet the highest global standards.\n\nAs we continue to expand our global network, we remain firmly committed to our founding values — integrity, innovation, and impact. Every product that leaves our facilities carries a promise: the promise of quality that you can trust, and results you can see.\n\nWe look forward to growing alongside our partners worldwide and to making Hyundai Bio a name synonymous with excellence in bio cosmetics.\n\nWith gratitude and vision,\nZhang Yongnan",
+      photoPlaceholder: "CEO Photo",
+    },
+    intro: {
+      subtitle: "Global Bio & Cosmetic Leading Group",
+      title: "Hyundai Bio Co., Ltd.",
+      heroDesc: "A company that makes your dreams come true and changes the world. We will lead the bio and cosmetic industry trends at home and abroad by focusing not only on external beauty but also on internal beauty and growth.",
+      missionTitle: "Mission",
+      missionDesc: "We enhance access to global medical markets through competitively priced, consistently high-quality medical beauty products, strengthening the competitiveness of our partners worldwide.",
+      values: {
+        title: "Core Values",
+        quality: { label: "01 Quality", title: "Quality", desc: "Uncompromising safety and stability, even at competitive prices." },
+        reliability: { label: "02 Reliability", title: "Reliability", desc: "Consistent supply and unwavering quality maintained at every stage." },
+        scalability: { label: "03 Scalability", title: "Scalability", desc: "A global business structure that transcends borders and markets." },
+      },
+      vision: {
+        title: "A Company That Respects Humanity and Loves Nature",
+        desc: "To become the most trusted and accessible choice in the global medical beauty market — growing into a leading global medical distribution platform brand.",
+      },
+    },
+    network: {
+      title: "Global Network",
+      desc: "Hyundai Bio products and partnerships span across the globe. We work with trusted distributors, clinics, and retailers to bring our bio cosmetic solutions to consumers in every corner of the world.",
+      asia: "Vietnam",
+      americas: "USA",
+      europe: "Germany",
+      stats: { countries: "3+ Countries", regions: "3 Regions", founded: "Founded 2024" },
+      cta: "Interested in becoming a Hyundai Bio partner in your region?",
+      ctaButton: "Become a Partner",
+    },
+  },
+
+  news: {
+    title: "News",
+    items: [
+      { title: "HYUNDAIBIO at 2024 International Medical Aesthetics Exhibition", date: "2024.12", summary: "HYUNDAIBIO showcased its flagship brand BOTATOX at the International Medical Aesthetics Exhibition." },
+      { title: "BOTATOX New Product Launch Successfully Held", date: "2025.03", summary: "The BOTATOX new product launch event was successfully held in Seoul." },
+      { title: "HYUNDAIBIO Global Partners Exceed 30", date: "2025.06", summary: "HYUNDAIBIO's global partner network continues to expand, exceeding 30 partners." },
+    ],
+    videos: {
+      title: "Activity Videos",
+      placeholder: "Activity Video",
+    },
   },
 
   faq: {
