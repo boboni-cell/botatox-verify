@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function AboutIntroContent() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const a = t.about;
   const i = a.intro;
 
@@ -35,13 +35,16 @@ export default function AboutIntroContent() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       <NavBar />
-      <main className="flex-1 px-4 pt-24 pb-8">
+      <main className="flex-1 px-4 pt-28 pb-8">
         <div className="mx-auto max-w-4xl">
           {/* Hero */}
           <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-[#3B9FDA]">{i.subtitle}</p>
-          <h1 className="mt-2 text-center text-2xl font-bold tracking-wide text-navy sm:text-3xl">{i.title}</h1>
+          <h1 className="mt-6 text-center text-2xl font-bold tracking-wide text-navy sm:text-3xl">{i.title}</h1>
           <p className="mt-4 text-sm leading-relaxed text-gray-500">{i.heroDesc}</p>
           <div className="mx-auto mt-6 h-[1px] w-16 bg-[#e2e8f0]" />
+          <div className="mx-auto mt-8 flex h-[350px] w-full max-w-[800px] items-center justify-center rounded-xl bg-[#edf2f7] text-sm text-[#94a3b8]">
+            {locale === "ko" ? "회사 이미지" : locale === "zh" ? "公司形象图" : "Company Image"}
+          </div>
 
           {/* Mission */}
           <section className="mt-10">

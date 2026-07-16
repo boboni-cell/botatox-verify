@@ -24,7 +24,7 @@ export default function AboutCeoContent() {
             <div>
               <h2 className="text-lg font-bold text-navy">{c.name}</h2>
               <p className="mt-1 text-sm text-[#3B9FDA]">{c.role}</p>
-              <div className="mt-6 text-sm leading-relaxed text-gray-500 whitespace-pre-line">
+              <div className="mt-6 space-y-6 text-sm leading-[1.8] text-gray-500 whitespace-pre-line">
                 {c.message}
               </div>
             </div>
