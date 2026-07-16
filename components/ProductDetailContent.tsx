@@ -81,7 +81,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
     return (
       <div className="flex min-h-screen flex-col bg-gray-50">
         <NavBar />
-        <main className="flex flex-1 flex-col items-center justify-center px-4 pt-24">
+        <main className="flex flex-1 flex-col items-center justify-center px-4 pt-28">
           <h1 className="text-xl font-bold text-navy">{pd.notFound}</h1>
           <p className="mt-2 text-sm text-gray-400">{pd.notFoundDesc}</p>
           <Link
@@ -112,7 +112,7 @@ export default function ProductDetailContent({ id }: { id: string }) {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       <NavBar />
-      <main className="flex-1 px-4 pt-24 pb-8">
+      <main className="flex-1 px-4 pt-28 pb-8">
         <div className="mx-auto max-w-4xl">
           {/* Back Button */}
           <Link

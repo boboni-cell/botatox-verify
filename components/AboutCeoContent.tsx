@@ -12,7 +12,7 @@ export default function AboutCeoContent() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       <NavBar />
-      <main className="flex-1 px-4 pt-24 pb-8">
+      <main className="flex-1 px-4 pt-28 pb-8">
         <div className="mx-auto max-w-4xl">
           <h1 className="text-center text-xl font-bold tracking-wide text-navy sm:text-2xl">{c.title}</h1>
           <div className="mx-auto mt-3 h-[1px] w-12 bg-gradient-to-r from-transparent via-[#3B9FDA] to-transparent" />

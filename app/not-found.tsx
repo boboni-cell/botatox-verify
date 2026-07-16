@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col bg-[#f7f9fc]">
       <NavBar />
-      <main className="flex flex-1 items-center justify-center px-4 pt-24 pb-8">
+      <main className="flex flex-1 items-center justify-center px-4 pt-28 pb-8">
         <div className="relative text-center">
           {/* Wave decoration */}
           <svg

@@ -124,7 +124,7 @@ export default function ContactContent() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       <NavBar />
-      <main className="flex-1 px-4 pt-24 pb-8">
+      <main className="flex-1 px-4 pt-28 pb-8">
         <div className="mx-auto max-w-lg text-center">
           <h1 className="text-xl font-bold tracking-wide text-navy sm:text-2xl">
             {t.contact.title}
