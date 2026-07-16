@@ -11,12 +11,13 @@ export interface Product {
   isFlagship?: boolean;
   descEn: string;
   descZh: string;
+  descKo: string;
 }
 
-export const categoryLabels: Record<Category, { en: string; zh: string }> = {
-  1: { en: "Botulinum Toxin", zh: "肉毒素" },
-  2: { en: "Dermal Fillers", zh: "填充剂" },
-  3: { en: "Skin Care", zh: "皮肤管理" },
+export const categoryLabels: Record<Category, { en: string; zh: string; ko: string }> = {
+  1: { en: "Botulinum Toxin", zh: "肉毒素", ko: "보툴리눔 톡신" },
+  2: { en: "Dermal Fillers", zh: "填充剂", ko: "필러" },
+  3: { en: "Skin Care", zh: "皮肤管理", ko: "스킨케어" },
 };
 
 export const products: Product[] = [
@@ -33,7 +34,9 @@ export const products: Product[] = [
       "Premium botulinum toxin type A for aesthetic use. High-purity formulation for treating glabellar lines, crow's feet, and forehead wrinkles with natural-looking results.",
     descZh:
       "高端A型肉毒杆菌素，用于医学美容。高纯度配方，有效改善眉间纹、鱼尾纹及额纹，效果自然。",
+    descKo: "프리미엄 A형 보툴리눔 톡신. 미간 주름, 눈가 주름 및 이마 주름 치료를 위한 고순도 포뮬러로 자연스러운 결과를 제공합니다.",
   },
+
   {
     id: "jtox-100u",
     nameEn: "JTOX 100U",
@@ -45,7 +48,9 @@ export const products: Product[] = [
       "Botulinum toxin type A for facial wrinkle improvement. Reliable quality with consistent results.",
     descZh:
       "A型肉毒杆菌素，用于面部皱纹改善。质量可靠，效果稳定。",
+    descKo: "Botulinum toxin type A for facial wrinkle improvement. Reliable quality with consistent results.",
   },
+
   {
     id: "rollietox-100u",
     nameEn: "Rollietox 100U",
@@ -57,7 +62,9 @@ export const products: Product[] = [
       "Botulinum toxin type A for aesthetic treatments. Trusted formulation for professional use.",
     descZh:
       "A型肉毒杆菌素，用于医学美容治疗。专业信赖的配方。",
+    descKo: "Botulinum toxin type A for aesthetic treatments. Trusted formulation for professional use.",
   },
+
   {
     id: "ktox-100u",
     nameEn: "KTOX 100U",
@@ -69,7 +76,9 @@ export const products: Product[] = [
       "Korean botulinum toxin type A. High-quality formulation for various aesthetic indications.",
     descZh:
       "韩国A型肉毒杆菌素。高品质配方，适用于多种医学美容适应症。",
+    descKo: "Korean botulinum toxin type A. High-quality formulation for various aesthetic indications.",
   },
+
   {
     id: "botaone-200u",
     nameEn: "BOTAONE 200U",
@@ -81,7 +90,9 @@ export const products: Product[] = [
       "Botulinum toxin type A 200U. Higher dosage formulation for deeper and larger area treatments.",
     descZh:
       "A型肉毒杆菌素200U。高剂量配方，适用于深层及大面积治疗。",
+    descKo: "Botulinum toxin type A 200U. Higher dosage formulation for deeper and larger area treatments.",
   },
+
 
   // ==================== 自有品牌 - 填充剂 (2) ====================
   {
@@ -95,7 +106,9 @@ export const products: Product[] = [
       "Premium hyaluronic acid dermal filler. Advanced cross-linking technology for long-lasting volume restoration and wrinkle correction.",
     descZh:
       "高端透明质酸皮肤填充剂。采用先进交联技术，持久恢复容积、矫正皱纹。",
+    descKo: "Premium hyaluronic acid dermal filler. Advanced cross-linking technology for long-lasting volume restoration and wrinkle correction.",
   },
+
   {
     id: "royal-premium-collagen",
     nameEn: "ROYAL PREMIUM FAMILY (COLLAGEN)",
@@ -107,7 +120,9 @@ export const products: Product[] = [
       "Collagen-enhanced dermal filler combining the benefits of collagen and HA for comprehensive skin rejuvenation.",
     descZh:
       "胶原蛋白增强型皮肤填充剂，结合胶原蛋白与透明质酸双重功效，全面焕活肌肤。",
+    descKo: "Collagen-enhanced dermal filler combining the benefits of collagen and HA for comprehensive skin rejuvenation.",
   },
+
   {
     id: "royal-premium-234",
     nameEn: "ROYAL PREMIUM FAMILY 2/3/4",
@@ -119,7 +134,9 @@ export const products: Product[] = [
       "Advanced HA filler series with varying cross-linking densities for customized facial volumizing and contouring treatments.",
     descZh:
       "进阶透明质酸填充剂系列，不同交联密度，满足个性化面部填充与塑形需求。",
+    descKo: "Advanced HA filler series with varying cross-linking densities for customized facial volumizing and contouring treatments.",
   },
+
   {
     id: "cherry-lip",
     nameEn: "Cherry Lip",
@@ -131,7 +148,9 @@ export const products: Product[] = [
       "Specialized lip enhancement filler. Designed specifically for natural-looking lip volumizing and contour definition.",
     descZh:
       "专业唇部填充剂。专为自然唇部丰满与轮廓塑形而设计。",
+    descKo: "Specialized lip enhancement filler. Designed specifically for natural-looking lip volumizing and contour definition.",
   },
+
 
   // ==================== 自有品牌 - 皮肤管理 (3) ====================
   {
@@ -145,7 +164,9 @@ export const products: Product[] = [
       "Advanced exosome-based skin rejuvenation treatment. Promotes cellular regeneration for improved skin texture and elasticity.",
     descZh:
       "先进外泌体皮肤焕活治疗。促进细胞再生，改善肤质与弹性。",
+    descKo: "Advanced exosome-based skin rejuvenation treatment. Promotes cellular regeneration for improved skin texture and elasticity.",
   },
+
   {
     id: "pcl-power-booster",
     nameEn: "PCL POWER BOOSTER",
@@ -157,7 +178,9 @@ export const products: Product[] = [
       "PCL-based collagen stimulator. Stimulates natural collagen production for long-lasting skin firming and lifting effects.",
     descZh:
       "PCL基底胶原蛋白刺激剂。激发天然胶原蛋白生成，持久紧致提升。",
+    descKo: "PCL-based collagen stimulator. Stimulates natural collagen production for long-lasting skin firming and lifting effects.",
   },
+
 
   // ==================== 代理品牌 - 肉毒素 (1) ====================
   {
@@ -171,7 +194,9 @@ export const products: Product[] = [
       "Botulinum toxin type A 100U. Widely used in aesthetic clinics for wrinkle reduction and facial contouring.",
     descZh:
       "A型肉毒杆菌素100U。广泛用于医美诊所，减少皱纹、改善面部轮廓。",
+    descKo: "Botulinum toxin type A 100U. Widely used in aesthetic clinics for wrinkle reduction and facial contouring.",
   },
+
   {
     id: "nabota-200u",
     nameEn: "NABOTA 200U",
@@ -183,7 +208,9 @@ export const products: Product[] = [
       "Botulinum toxin type A 200U. Higher dosage for broader treatment areas and deeper muscle relaxation.",
     descZh:
       "A型肉毒杆菌素200U。高剂量用于更广泛治疗区域和深层肌肉放松。",
+    descKo: "Botulinum toxin type A 200U. Higher dosage for broader treatment areas and deeper muscle relaxation.",
   },
+
   {
     id: "botulax-100u",
     nameEn: "BOTULAX 100U",
@@ -195,7 +222,9 @@ export const products: Product[] = [
       "Botulinum toxin type A 100U. Established brand with proven efficacy for aesthetic treatments.",
     descZh:
       "A型肉毒杆菌素100U。成熟品牌，医学美容治疗效果经实践验证。",
+    descKo: "Botulinum toxin type A 100U. Established brand with proven efficacy for aesthetic treatments.",
   },
+
   {
     id: "botulax-200u",
     nameEn: "BOTULAX 200U",
@@ -207,7 +236,9 @@ export const products: Product[] = [
       "Botulinum toxin type A 200U. Higher potency for advanced aesthetic procedures.",
     descZh:
       "A型肉毒杆菌素200U。高剂量用于进阶医学美容治疗。",
+    descKo: "Botulinum toxin type A 200U. Higher potency for advanced aesthetic procedures.",
   },
+
 
   // ==================== 代理品牌 - 填充剂 (2) ====================
   {
@@ -221,7 +252,9 @@ export const products: Product[] = [
       "4D lifting filler for comprehensive facial rejuvenation. Multi-dimensional approach to volume restoration and skin tightening.",
     descZh:
       "4D提升填充剂，全面面部焕活。多维度容积恢复与紧肤。",
+    descKo: "4D lifting filler for comprehensive facial rejuvenation. Multi-dimensional approach to volume restoration and skin tightening.",
   },
+
   {
     id: "dermafillmd",
     nameEn: "DermafillMD",
@@ -233,7 +266,9 @@ export const products: Product[] = [
       "Specialized filler for neck wrinkle treatment. Designed to address horizontal neck lines effectively.",
     descZh:
       "专业颈部皱纹填充剂。专为有效改善颈部横纹而设计。",
+    descKo: "Specialized filler for neck wrinkle treatment. Designed to address horizontal neck lines effectively.",
   },
+
   {
     id: "regenovue",
     nameEn: "REGENOVUE",
@@ -245,7 +280,9 @@ export const products: Product[] = [
       "Advanced HA dermal filler with excellent viscoelastic properties for natural facial volumizing.",
     descZh:
       "先进透明质酸填充剂，具备卓越粘弹性，实现自然面部填充。",
+    descKo: "Advanced HA dermal filler with excellent viscoelastic properties for natural facial volumizing.",
   },
+
   {
     id: "elasty",
     nameEn: "ELASTY",
@@ -257,7 +294,9 @@ export const products: Product[] = [
       "Hyaluronic acid dermal filler with high elasticity for dynamic facial areas requiring flexibility.",
     descZh:
       "高弹性透明质酸填充剂，适用于需要灵活性的动态面部区域。",
+    descKo: "Hyaluronic acid dermal filler with high elasticity for dynamic facial areas requiring flexibility.",
   },
+
   {
     id: "yvoire",
     nameEn: "YVOIRE",
@@ -269,7 +308,9 @@ export const products: Product[] = [
       "Well-established HA filler brand from LG Chem. Trusted by practitioners worldwide for safe and effective results.",
     descZh:
       "LG化学旗下成熟透明质酸填充剂品牌。全球医生信赖，安全有效。",
+    descKo: "Well-established HA filler brand from LG Chem. Trusted by practitioners worldwide for safe and effective results.",
   },
+
   {
     id: "revolax",
     nameEn: "REVOLAX",
@@ -281,7 +322,9 @@ export const products: Product[] = [
       "High-density HA filler with excellent lifting capacity. Ideal for deep tissue volumizing and facial sculpting.",
     descZh:
       "高密度透明质酸填充剂，提升力强。适合深层组织填充与面部雕塑。",
+    descKo: "High-density HA filler with excellent lifting capacity. Ideal for deep tissue volumizing and facial sculpting.",
   },
+
   {
     id: "neuramis",
     nameEn: "Neuramis",
@@ -293,7 +336,9 @@ export const products: Product[] = [
       "HA filler manufactured with advanced SHAPE technology for minimal swelling and long-lasting results.",
     descZh:
       "采用先进SHAPE技术制造的透明质酸填充剂，肿胀少、效果持久。",
+    descKo: "HA filler manufactured with advanced SHAPE technology for minimal swelling and long-lasting results.",
   },
+
   {
     id: "volift",
     nameEn: "VOLIFT",
@@ -305,7 +350,9 @@ export const products: Product[] = [
       "Premium HA filler designed for natural-looking volume restoration and wrinkle correction.",
     descZh:
       "高端透明质酸填充剂，专为自然容积恢复与皱纹矫正而设计。",
+    descKo: "Premium HA filler designed for natural-looking volume restoration and wrinkle correction.",
   },
+
   {
     id: "lexyal",
     nameEn: "LEXYAL",
@@ -317,7 +364,9 @@ export const products: Product[] = [
       "Innovative HA filler with excellent tissue integration for smooth and natural aesthetic outcomes.",
     descZh:
       "创新透明质酸填充剂，组织融合性优异，效果平滑自然。",
+    descKo: "Innovative HA filler with excellent tissue integration for smooth and natural aesthetic outcomes.",
   },
+
   {
     id: "replengen",
     nameEn: "REPLENGEN",
@@ -329,7 +378,9 @@ export const products: Product[] = [
       "Next-generation dermal filler promoting tissue regeneration alongside immediate volumizing effects.",
     descZh:
       "新一代皮肤填充剂，在即刻填充同时促进组织再生。",
+    descKo: "Next-generation dermal filler promoting tissue regeneration alongside immediate volumizing effects.",
   },
+
   {
     id: "liporase",
     nameEn: "LIPORASE",
@@ -341,7 +392,9 @@ export const products: Product[] = [
       "Hyaluronidase enzyme for dissolving HA fillers. Essential tool for filler correction and reversal procedures.",
     descZh:
       "透明质酸酶，用于溶解透明质酸填充剂。填充剂修正与逆转操作的必备工具。",
+    descKo: "Hyaluronidase enzyme for dissolving HA fillers. Essential tool for filler correction and reversal procedures.",
   },
+
   {
     id: "lipo-lab",
     nameEn: "LIPO LAB",
@@ -353,7 +406,9 @@ export const products: Product[] = [
       "Lipolytic solution for localized fat reduction. Non-surgical approach to body contouring and fat dissolution.",
     descZh:
       "局部减脂溶脂液。非手术身体塑形与脂肪溶解方案。",
+    descKo: "Lipolytic solution for localized fat reduction. Non-surgical approach to body contouring and fat dissolution.",
   },
+
   {
     id: "rejuvenex-hydro",
     nameEn: "REJUVENEX HYDRO",
@@ -365,7 +420,9 @@ export const products: Product[] = [
       "Hydrating skin booster injection for deep moisturization and skin radiance enhancement.",
     descZh:
       "水光精华注射，深层补水保湿，提亮肤色光泽度。",
+    descKo: "Hydrating skin booster injection for deep moisturization and skin radiance enhancement.",
   },
+
 
   // ==================== 代理品牌 - 皮肤管理 (3) ====================
   {
@@ -379,7 +436,9 @@ export const products: Product[] = [
       "Exosome-infused topical cream for daily skin regeneration and anti-aging care.",
     descZh:
       "外泌体精华面霜，日常使用促进皮肤再生与抗衰老护理。",
+    descKo: "Exosome-infused topical cream for daily skin regeneration and anti-aging care.",
   },
+
   {
     id: "absorbable-lifting-thread",
     nameEn: "Absorbable Lifting Thread",
@@ -391,7 +450,9 @@ export const products: Product[] = [
       "PDO absorbable threads for non-surgical facial lifting. Stimulates collagen production for gradual skin tightening.",
     descZh:
       "PDO可吸收埋线，非手术面部提升。刺激胶原蛋白生成，逐步紧致肌肤。",
+    descKo: "PDO absorbable threads for non-surgical facial lifting. Stimulates collagen production for gradual skin tightening.",
   },
+
   {
     id: "olla-forte",
     nameEn: "Olla Forte",
@@ -403,7 +464,9 @@ export const products: Product[] = [
       "Advanced skin lifting treatment device for non-invasive facial and body contouring.",
     descZh:
       "先进皮肤提升治疗设备，非侵入式面部及身体塑形。",
+    descKo: "Advanced skin lifting treatment device for non-invasive facial and body contouring.",
   },
+
   {
     id: "olla-refines",
     nameEn: "Olla Refines",
@@ -415,7 +478,9 @@ export const products: Product[] = [
       "Microwave-based skin tightening and lifting treatment course for comprehensive rejuvenation.",
     descZh:
       "微波紧肤提拉疗程，全面焕活肌肤。",
+    descKo: "Microwave-based skin tightening and lifting treatment course for comprehensive rejuvenation.",
   },
+
   {
     id: "rejuran",
     nameEn: "REJURAN",
@@ -427,7 +492,9 @@ export const products: Product[] = [
       "Polynucleotide (PN) based skin healer. Promotes tissue regeneration for improved skin quality and elasticity.",
     descZh:
       "多核苷酸(PN)基底皮肤修复剂。促进组织再生，改善肤质与弹性。",
+    descKo: "Polynucleotide (PN) based skin healer. Promotes tissue regeneration for improved skin quality and elasticity.",
   },
+
   {
     id: "rejuran-s",
     nameEn: "REJURAN S",
@@ -439,7 +506,9 @@ export const products: Product[] = [
       "Specialized PN formulation for scar and acne scar treatment with tissue remodeling properties.",
     descZh:
       "专业多核苷酸配方，针对疤痕及痘疤治疗，具有组织重塑功效。",
+    descKo: "Specialized PN formulation for scar and acne scar treatment with tissue remodeling properties.",
   },
+
   {
     id: "rejuran-skin-booster",
     nameEn: "REJURAN SKIN BOOSTER",
@@ -451,7 +520,9 @@ export const products: Product[] = [
       "PN skin booster for overall skin rejuvenation. Improves hydration, elasticity, and skin barrier function.",
     descZh:
       "多核苷酸肌肤焕活针，全面改善水合度、弹性与皮肤屏障功能。",
+    descKo: "PN skin booster for overall skin rejuvenation. Improves hydration, elasticity, and skin barrier function.",
   },
+
   {
     id: "hyaron-prefilled",
     nameEn: "HYARON PREFILLED INJECTION",
@@ -463,7 +534,9 @@ export const products: Product[] = [
       "Prefilled sodium hyaluronate injection for convenient and precise skin hydration treatments.",
     descZh:
       "预填充透明质酸钠注射液，便捷精准的皮肤补水治疗。",
+    descKo: "Prefilled sodium hyaluronate injection for convenient and precise skin hydration treatments.",
   },
+
   {
     id: "xsome-skinbooster",
     nameEn: "XSOME SKINBOOSTER",
@@ -475,7 +548,9 @@ export const products: Product[] = [
       "Exosome-based skin booster for advanced cellular-level skin rejuvenation and repair.",
     descZh:
       "外泌体基底肌肤焕活剂，细胞级皮肤焕活与修复。",
+    descKo: "Exosome-based skin booster for advanced cellular-level skin rejuvenation and repair.",
   },
+
 ];
 
 export const FILTER_OWN = products.filter((p) => p.brand === "own");

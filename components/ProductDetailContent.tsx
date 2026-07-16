@@ -103,11 +103,13 @@ export default function ProductDetailContent({ id }: { id: string }) {
       : locale === "ko"
         ? `${product.nameKo} ${product.nameEn}`
         : product.nameEn;
-  const desc = locale === "zh" ? product.descZh : product.descEn;
+  const desc = locale === "zh" ? product.descZh : locale === "ko" ? product.descKo : product.descEn;
   const catLabel =
     locale === "zh"
       ? categoryLabels[product.category].zh
-      : categoryLabels[product.category].en;
+      : locale === "ko"
+        ? categoryLabels[product.category].ko
+        : categoryLabels[product.category].en;
 
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
