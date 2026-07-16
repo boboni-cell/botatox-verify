@@ -10,11 +10,13 @@ import {
 } from "react";
 import zh from "@/locales/zh";
 import en from "@/locales/en";
+import ko from "@/locales/ko";
 import type { Translations } from "@/locales/zh";
 
-type Locale = "zh" | "en";
+type Locale = "zh" | "en" | "ko";
+const ALL: Locale[] = ["zh", "en", "ko"];
 
-const translations: Record<Locale, Translations> = { zh, en };
+const translations: Record<Locale, Translations> = { zh, en, ko };
 
 interface LanguageContextType {
   locale: Locale;
@@ -24,20 +26,19 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  locale: "zh",
-  t: zh,
+  locale: "en",
+  t: en,
   toggleLanguage: () => {},
   setLocale: () => {},
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("zh");
+  const [locale, setLocaleState] = useState<Locale>("en");
 
-  // Load saved locale from localStorage on mount
   useEffect(() => {
     try {
       const saved = localStorage.getItem("locale") as Locale | null;
-      if (saved === "zh" || saved === "en") {
+      if (saved === "zh" || saved === "en" || saved === "ko") {
         setLocaleState(saved);
       }
     } catch {
@@ -56,7 +57,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const toggleLanguage = useCallback(() => {
     setLocaleState((prev) => {
-      const next = prev === "zh" ? "en" : "zh";
+      const idx = ALL.indexOf(prev);
+      const next = ALL[(idx + 1) % ALL.length];
       try {
         localStorage.setItem("locale", next);
       } catch {

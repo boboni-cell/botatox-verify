@@ -65,7 +65,7 @@ export default function NavBar() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [langOpen]);
 
-  const handleSetLocale = (l: "zh" | "en") => {
+  const handleSetLocale = (l: "zh" | "en" | "ko") => {
     setLocale(l);
     setLangOpen(false);
   };
@@ -118,6 +118,16 @@ export default function NavBar() {
             >
               EN
             </button>
+            <button
+              onClick={() => setLocale("ko")}
+              className={`rounded-sm px-2 py-1 md:px-2 md:py-1 text-xs md:text-[11px] font-medium transition-all ${
+                locale === "ko"
+                  ? "bg-[#3B9FDA] text-white shadow-sm"
+                  : "text-gray-400 hover:text-gray-600"
+              }`}
+            >
+              한
+            </button>
           </div>
         </div>
 
@@ -156,6 +166,15 @@ export default function NavBar() {
                     {locale === "en" && <CheckIcon />}
                   </span>
                   <span>English</span>
+                </button>
+                <button
+                  onClick={() => handleSetLocale("ko")}
+                  className="flex w-full items-center gap-2 px-4 py-2.5 text-sm text-gray-700 transition-colors hover:bg-gray-50"
+                >
+                  <span className="w-4 flex-shrink-0">
+                    {locale === "ko" && <CheckIcon />}
+                  </span>
+                  <span>한국어</span>
                 </button>
               </div>
             )}
