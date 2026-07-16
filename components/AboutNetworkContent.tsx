@@ -30,7 +30,7 @@ export default function AboutNetworkContent() {
             <img
               src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/global%20internet.png"
               alt="Global Network Map"
-              className="w-full max-w-[900px]"
+              className="aspect-video w-full max-w-[900px] rounded-xl object-cover"
             />
           </div>
 
