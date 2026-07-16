@@ -49,7 +49,7 @@ export default function WhatsAppButton() {
   const wc = t.wechat;
 
   return (
-    <div className="fixed bottom-[100px] right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-[130px] right-6 z-40 flex flex-col items-end gap-3">
       {/* Tooltip */}
       {showTooltip && (
         <div className="animate-[fadeIn_0.3s_ease-out] rounded-xl bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-lg">
