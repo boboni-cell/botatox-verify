@@ -78,7 +78,7 @@ export default function NavBar() {
           <img
             src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/HYDUNDAIBIO-LOGO.png"
             alt="HYUNDAIBIO Logo"
-            className="h-16 w-16 md:h-14 md:w-14 object-contain"
+            className="h-20 w-20 md:h-16 md:w-16 object-contain"
           />
           <span className="text-lg md:text-base font-bold tracking-[0.15em] text-[#1B6BAA]">
             HYUNDAIBIO
