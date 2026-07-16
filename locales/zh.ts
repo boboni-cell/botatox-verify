@@ -152,13 +152,13 @@ const zh = {
       subtitle: "Global Bio & Cosmetic Leading Group",
       title: "Hyundai Bio Co., Ltd.",
       heroDesc: "一家让梦想成真、改变世界的公司。我们不仅关注外在美，更注重内在美与成长，引领国内外生物与化妆品行业潮流。",
-      missionTitle: "Mission",
+      missionTitle: "企业使命",
       missionDesc: "我们通过具有竞争力的价格和始终如一的优质医美产品，提升全球医疗市场的可及性，增强全球合作伙伴的竞争力。",
       values: {
         title: "核心价值观",
-        quality: { label: "01 Quality", title: "品质", desc: "在保持竞争力的价格下，绝不妥协的安全性与稳定性。" },
-        reliability: { label: "02 Reliability", title: "可靠", desc: "在各个阶段保持持续供应和坚定不移的品质。" },
-        scalability: { label: "03 Scalability", title: "拓展", desc: "超越国界与市场的全球化业务结构。" },
+        quality: { label: "01", title: "品质", desc: "在保持竞争力的价格下，绝不妥协的安全性与稳定性。" },
+        reliability: { label: "02", title: "可靠", desc: "在各个阶段保持持续供应和坚定不移的品质。" },
+        scalability: { label: "03", title: "拓展", desc: "超越国界与市场的全球化业务结构。" },
       },
       vision: {
         title: "一家尊重人性、热爱自然的公司",

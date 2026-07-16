@@ -162,9 +162,9 @@ const en: Translations = {
       missionDesc: "We enhance access to global medical markets through competitively priced, consistently high-quality medical beauty products, strengthening the competitiveness of our partners worldwide.",
       values: {
         title: "Core Values",
-        quality: { label: "01 Quality", title: "Quality", desc: "Uncompromising safety and stability, even at competitive prices." },
-        reliability: { label: "02 Reliability", title: "Reliability", desc: "Consistent supply and unwavering quality maintained at every stage." },
-        scalability: { label: "03 Scalability", title: "Scalability", desc: "A global business structure that transcends borders and markets." },
+        quality: { label: "01", title: "Quality", desc: "Uncompromising safety and stability, even at competitive prices." },
+        reliability: { label: "02", title: "Reliability", desc: "Consistent supply and unwavering quality maintained at every stage." },
+        scalability: { label: "03", title: "Scalability", desc: "A global business structure that transcends borders and markets." },
       },
       vision: {
         title: "A Company That Respects Humanity and Loves Nature",

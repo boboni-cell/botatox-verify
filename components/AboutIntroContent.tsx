@@ -11,9 +11,18 @@ export default function AboutIntroContent() {
   const i = a.intro;
 
   const values = [
-    { label: i.values.quality.label, title: i.values.quality.title, desc: i.values.quality.desc },
-    { label: i.values.reliability.label, title: i.values.reliability.title, desc: i.values.reliability.desc },
-    { label: i.values.scalability.label, title: i.values.scalability.title, desc: i.values.scalability.desc },
+    {
+      ...i.values.quality,
+      icon: <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>,
+    },
+    {
+      ...i.values.reliability,
+      icon: <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+    },
+    {
+      ...i.values.scalability,
+      icon: <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>,
+    },
   ];
 
   const contacts = [
@@ -36,8 +45,10 @@ export default function AboutIntroContent() {
 
           {/* Mission */}
           <section className="mt-10">
-            <h2 className="text-base font-semibold tracking-wide text-navy">{i.missionTitle}</h2>
-            <p className="mt-3 text-sm leading-relaxed text-gray-500">{i.missionDesc}</p>
+            <div className="border-l-[3px] border-[#3B9FDA] pl-4">
+              <h2 className="text-base font-semibold tracking-wide text-navy">{i.missionTitle}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-gray-500">{i.missionDesc}</p>
+            </div>
           </section>
 
           {/* Core Values */}
@@ -46,7 +57,8 @@ export default function AboutIntroContent() {
             <div className="mt-6 grid gap-5 sm:grid-cols-3">
               {values.map((v) => (
                 <div key={v.label} className="rounded-xl bg-white px-6 py-8 text-center shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]">
-                  <span className="text-xs font-bold tracking-widest text-[#3B9FDA]">{v.label}</span>
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#EBF4FF] text-[#3B9FDA]">{v.icon}</div>
+                  <span className="mt-4 block text-xs font-bold tracking-widest text-[#3B9FDA]">{v.label}</span>
                   <h3 className="mt-2 text-sm font-semibold text-navy">{v.title}</h3>
                   <p className="mt-2 text-xs leading-relaxed text-gray-400">{v.desc}</p>
                 </div>

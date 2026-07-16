@@ -154,9 +154,9 @@ const ko: Translations = {
       missionDesc: "경쟁력 있는 가격과 지속적인 고품질 의료 미용 제품을 통해 글로벌 의료 시장에 대한 접근성을 높이고 전 세계 파트너의 경쟁력을 강화합니다.",
       values: {
         title: "핵심 가치",
-        quality: { label: "01 Quality", title: "품질", desc: "경쟁력 있는 가격에서도 타협하지 않는 안전성과 안정성." },
-        reliability: { label: "02 Reliability", title: "신뢰성", desc: "모든 단계에서 유지되는 지속적인 공급과 변함없는 품질." },
-        scalability: { label: "03 Scalability", title: "확장성", desc: "국경과 시장을 초월하는 글로벌 비즈니스 구조." },
+        quality: { label: "01", title: "품질", desc: "경쟁력 있는 가격에서도 타협하지 않는 안전성과 안정성." },
+        reliability: { label: "02", title: "신뢰성", desc: "모든 단계에서 유지되는 지속적인 공급과 변함없는 품질." },
+        scalability: { label: "03", title: "확장성", desc: "국경과 시장을 초월하는 글로벌 비즈니스 구조." },
       },
       vision: {
         title: "인간을 존중하고 자연을 사랑하는 기업",
