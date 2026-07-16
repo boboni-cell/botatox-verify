@@ -5,6 +5,7 @@ export interface Product {
   id: string;
   nameEn: string;
   nameZh: string;
+  nameKo: string;
   category: Category;
   brand: BrandType;
   isFlagship?: boolean;
@@ -24,6 +25,7 @@ export const products: Product[] = [
     id: "botatox-100u",
     nameEn: "BOTATOX 100U",
     nameZh: "新白",
+    nameKo: "보타톡스 100U",
     category: 1,
     brand: "own",
     isFlagship: true,
@@ -36,6 +38,7 @@ export const products: Product[] = [
     id: "jtox-100u",
     nameEn: "JTOX 100U",
     nameZh: "新绿",
+    nameKo: "JTOX 100U",
     category: 1,
     brand: "own",
     descEn:
@@ -47,6 +50,7 @@ export const products: Product[] = [
     id: "rollietox-100u",
     nameEn: "Rollietox 100U",
     nameZh: "新保",
+    nameKo: "Rollietox 100U",
     category: 1,
     brand: "own",
     descEn:
@@ -58,6 +62,7 @@ export const products: Product[] = [
     id: "ktox-100u",
     nameEn: "KTOX 100U",
     nameZh: "韩肉",
+    nameKo: "KTOX 100U",
     category: 1,
     brand: "own",
     descEn:
@@ -69,6 +74,7 @@ export const products: Product[] = [
     id: "botaone-200u",
     nameEn: "BOTAONE 200U",
     nameZh: "白肉200U",
+    nameKo: "BOTAONE 200U",
     category: 1,
     brand: "own",
     descEn:
@@ -82,6 +88,7 @@ export const products: Product[] = [
     id: "royal-fill",
     nameEn: "Royal Fill",
     nameZh: "洛伊菲玻尿酸",
+    nameKo: "Royal Fill",
     category: 2,
     brand: "own",
     descEn:
@@ -93,6 +100,7 @@ export const products: Product[] = [
     id: "royal-premium-collagen",
     nameEn: "ROYAL PREMIUM FAMILY (COLLAGEN)",
     nameZh: "洛伊双美玻尿酸",
+    nameKo: "ROYAL PREMIUM FAMILY (COLLAGEN)",
     category: 2,
     brand: "own",
     descEn:
@@ -104,6 +112,7 @@ export const products: Product[] = [
     id: "royal-premium-234",
     nameEn: "ROYAL PREMIUM FAMILY 2/3/4",
     nameZh: "红洛伊玻尿酸",
+    nameKo: "ROYAL PREMIUM FAMILY 2/3/4",
     category: 2,
     brand: "own",
     descEn:
@@ -115,6 +124,7 @@ export const products: Product[] = [
     id: "cherry-lip",
     nameEn: "Cherry Lip",
     nameZh: "樱桃嘴",
+    nameKo: "Cherry Lip",
     category: 2,
     brand: "own",
     descEn:
@@ -128,6 +138,7 @@ export const products: Product[] = [
     id: "mythexosome",
     nameEn: "MYTHEXOSOME",
     nameZh: "美思科外泌体",
+    nameKo: "MYTHEXOSOME",
     category: 3,
     brand: "own",
     descEn:
@@ -139,6 +150,7 @@ export const products: Product[] = [
     id: "pcl-power-booster",
     nameEn: "PCL POWER BOOSTER",
     nameZh: "胶原蛋白刺激剂",
+    nameKo: "PCL POWER BOOSTER",
     category: 3,
     brand: "own",
     descEn:
@@ -152,6 +164,7 @@ export const products: Product[] = [
     id: "nabota-100u",
     nameEn: "NABOTA 100U",
     nameZh: "NaBOTA100u",
+    nameKo: "NABOTA 100U",
     category: 1,
     brand: "distribution",
     descEn:
@@ -163,6 +176,7 @@ export const products: Product[] = [
     id: "nabota-200u",
     nameEn: "NABOTA 200U",
     nameZh: "NaBOTA200U",
+    nameKo: "NABOTA 200U",
     category: 1,
     brand: "distribution",
     descEn:
@@ -174,6 +188,7 @@ export const products: Product[] = [
     id: "botulax-100u",
     nameEn: "BOTULAX 100U",
     nameZh: "老白100U",
+    nameKo: "BOTULAX 100U",
     category: 1,
     brand: "distribution",
     descEn:
@@ -185,6 +200,7 @@ export const products: Product[] = [
     id: "botulax-200u",
     nameEn: "BOTULAX 200U",
     nameZh: "老白200U",
+    nameKo: "BOTULAX 200U",
     category: 1,
     brand: "distribution",
     descEn:
@@ -198,6 +214,7 @@ export const products: Product[] = [
     id: "urevs-4d-fill",
     nameEn: "UREVS 4D FILL",
     nameZh: "韩版瑞士4D提升针",
+    nameKo: "UREVS 4D FILL",
     category: 2,
     brand: "distribution",
     descEn:
@@ -209,6 +226,7 @@ export const products: Product[] = [
     id: "dermafillmd",
     nameEn: "DermafillMD",
     nameZh: "万提颈纹",
+    nameKo: "DermafillMD",
     category: 2,
     brand: "distribution",
     descEn:
@@ -220,6 +238,7 @@ export const products: Product[] = [
     id: "regenovue",
     nameEn: "REGENOVUE",
     nameZh: "瑞诺沃",
+    nameKo: "REGENOVUE",
     category: 2,
     brand: "distribution",
     descEn:
@@ -231,6 +250,7 @@ export const products: Product[] = [
     id: "elasty",
     nameEn: "ELASTY",
     nameZh: "玻尿酸填充剂",
+    nameKo: "ELASTY",
     category: 2,
     brand: "distribution",
     descEn:
@@ -242,6 +262,7 @@ export const products: Product[] = [
     id: "yvoire",
     nameEn: "YVOIRE",
     nameZh: "伊婉玻尿酸",
+    nameKo: "YVOIRE",
     category: 2,
     brand: "distribution",
     descEn:
@@ -253,6 +274,7 @@ export const products: Product[] = [
     id: "revolax",
     nameEn: "REVOLAX",
     nameZh: "Revolax玻尿酸",
+    nameKo: "REVOLAX",
     category: 2,
     brand: "distribution",
     descEn:
@@ -264,6 +286,7 @@ export const products: Product[] = [
     id: "neuramis",
     nameEn: "Neuramis",
     nameZh: "纽拉美斯玻尿酸",
+    nameKo: "Neuramis",
     category: 2,
     brand: "distribution",
     descEn:
@@ -275,6 +298,7 @@ export const products: Product[] = [
     id: "volift",
     nameEn: "VOLIFT",
     nameZh: "纽拉美斯玻尿酸",
+    nameKo: "VOLIFT",
     category: 2,
     brand: "distribution",
     descEn:
@@ -286,6 +310,7 @@ export const products: Product[] = [
     id: "lexyal",
     nameEn: "LEXYAL",
     nameZh: "Lexyal（莱克雅）",
+    nameKo: "LEXYAL",
     category: 2,
     brand: "distribution",
     descEn:
@@ -297,6 +322,7 @@ export const products: Product[] = [
     id: "replengen",
     nameEn: "REPLENGEN",
     nameZh: "Replensy（瑞普兰希）",
+    nameKo: "REPLENGEN",
     category: 2,
     brand: "distribution",
     descEn:
@@ -308,6 +334,7 @@ export const products: Product[] = [
     id: "liporase",
     nameEn: "LIPORASE",
     nameZh: "紫溶解酶",
+    nameKo: "LIPORASE",
     category: 2,
     brand: "distribution",
     descEn:
@@ -319,6 +346,7 @@ export const products: Product[] = [
     id: "lipo-lab",
     nameEn: "LIPO LAB",
     nameZh: "lipo溶脂针",
+    nameKo: "LIPO LAB",
     category: 2,
     brand: "distribution",
     descEn:
@@ -330,6 +358,7 @@ export const products: Product[] = [
     id: "rejuvenex-hydro",
     nameEn: "REJUVENEX HYDRO",
     nameZh: "水光精华针",
+    nameKo: "REJUVENEX HYDRO",
     category: 2,
     brand: "distribution",
     descEn:
@@ -343,6 +372,7 @@ export const products: Product[] = [
     id: "mythrachae-exocream",
     nameEn: "MYTHRACHAEXOCREAM",
     nameZh: "美思科外泌体面霜",
+    nameKo: "MYTHRACHAEXOCREAM",
     category: 3,
     brand: "distribution",
     descEn:
@@ -354,6 +384,7 @@ export const products: Product[] = [
     id: "absorbable-lifting-thread",
     nameEn: "Absorbable Lifting Thread",
     nameZh: "埋线提升",
+    nameKo: "Absorbable Lifting Thread",
     category: 3,
     brand: "distribution",
     descEn:
@@ -365,6 +396,7 @@ export const products: Product[] = [
     id: "olla-forte",
     nameEn: "Olla Forte",
     nameZh: "奥拉Forte提拉",
+    nameKo: "Olla Forte",
     category: 3,
     brand: "distribution",
     descEn:
@@ -376,6 +408,7 @@ export const products: Product[] = [
     id: "olla-refines",
     nameEn: "Olla Refines",
     nameZh: "奥拉微波紧肤/提拉疗程",
+    nameKo: "Olla Refines",
     category: 3,
     brand: "distribution",
     descEn:
@@ -387,6 +420,7 @@ export const products: Product[] = [
     id: "rejuran",
     nameEn: "REJURAN",
     nameZh: "丽珠兰",
+    nameKo: "REJURAN",
     category: 3,
     brand: "distribution",
     descEn:
@@ -398,6 +432,7 @@ export const products: Product[] = [
     id: "rejuran-s",
     nameEn: "REJURAN S",
     nameZh: "丽珠兰S",
+    nameKo: "REJURAN S",
     category: 3,
     brand: "distribution",
     descEn:
@@ -409,6 +444,7 @@ export const products: Product[] = [
     id: "rejuran-skin-booster",
     nameEn: "REJURAN SKIN BOOSTER",
     nameZh: "丽珠兰肌肤焕活针",
+    nameKo: "REJURAN SKIN BOOSTER",
     category: 3,
     brand: "distribution",
     descEn:
@@ -420,6 +456,7 @@ export const products: Product[] = [
     id: "hyaron-prefilled",
     nameEn: "HYARON PREFILLED INJECTION",
     nameZh: "HYARON透明质酸钠注射液",
+    nameKo: "HYARON PREFILLED INJECTION",
     category: 3,
     brand: "distribution",
     descEn:
@@ -431,6 +468,7 @@ export const products: Product[] = [
     id: "xsome-skinbooster",
     nameEn: "XSOME SKINBOOSTER",
     nameZh: "艾克索姆外泌体",
+    nameKo: "XSOME SKINBOOSTER",
     category: 3,
     brand: "distribution",
     descEn:

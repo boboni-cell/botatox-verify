@@ -19,9 +19,15 @@ const OWN = "own" as const;
 const DIST = "distribution" as const;
 type Tab = typeof OWN | typeof DIST;
 
+function productDisplayName(product: Product, locale: string) {
+  if (locale === "zh") return `${product.nameZh} ${product.nameEn}`;
+  if (locale === "ko") return `${product.nameKo} ${product.nameEn}`;
+  return product.nameEn;
+}
+
 function FlagshipCard({ product }: { product: Product }) {
   const { locale } = useLanguage();
-  const name = locale === "zh" ? product.nameZh : product.nameEn;
+  const name = productDisplayName(product, locale);
   const desc = locale === "zh" ? product.descZh : product.descEn;
 
   return (
@@ -71,7 +77,7 @@ function FlagshipCard({ product }: { product: Product }) {
 
 function RegularCard({ product }: { product: Product }) {
   const { locale } = useLanguage();
-  const name = locale === "zh" ? product.nameZh : product.nameEn;
+  const name = productDisplayName(product, locale);
   const desc = locale === "zh" ? product.descZh : product.descEn;
 
   return (

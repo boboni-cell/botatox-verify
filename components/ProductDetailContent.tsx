@@ -97,7 +97,12 @@ export default function ProductDetailContent({ id }: { id: string }) {
     );
   }
 
-  const name = locale === "zh" ? product.nameZh : product.nameEn;
+  const name =
+    locale === "zh"
+      ? `${product.nameZh} ${product.nameEn}`
+      : locale === "ko"
+        ? `${product.nameKo} ${product.nameEn}`
+        : product.nameEn;
   const desc = locale === "zh" ? product.descZh : product.descEn;
   const catLabel =
     locale === "zh"
