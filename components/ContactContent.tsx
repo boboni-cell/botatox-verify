@@ -2,6 +2,8 @@
 
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactForm from "@/components/ContactForm";
 import { useLanguage } from "@/context/LanguageContext";
 
 function PhoneIcon() {
@@ -187,8 +189,11 @@ export default function ContactContent() {
             return <div key={item.label}>{content}</div>;
           })}
         </div>
+
+        <ContactForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
