@@ -270,7 +270,7 @@ const ko: Translations = {
       mapPlaceholder: "지도",
       address: "강원도 횡성군 우천면 우천산업단지로 38-53",
       tel: "033-344-3700",
-      mail: "genetox@genetox.co.kr",
+      mail: "업데이트 예정",
     },
     back: "← 제품 목록으로 돌아가기",
     description: "제품 소개",

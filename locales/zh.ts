@@ -287,7 +287,7 @@ const zh = {
       mapPlaceholder: "地图",
       address: "韩国江原道横城郡雨川面 雨川产业园区路 38-53",
       tel: "033-344-3700",
-      mail: "genetox@genetox.co.kr",
+      mail: "即将更新",
     },
     back: "← 返回产品列表",
     description: "产品介绍",

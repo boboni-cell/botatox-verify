@@ -293,7 +293,7 @@ const en: Translations = {
       mapPlaceholder: "Map",
       address: "38-53, Ucheon Industrial Complex-ro, Ucheon-myeon, Hoengseong-gun, Gangwon-do, South Korea",
       tel: "033-344-3700",
-      mail: "genetox@genetox.co.kr",
+      mail: "Coming Soon",
     },
     back: "← Back to Products",
     description: "Product Description",
