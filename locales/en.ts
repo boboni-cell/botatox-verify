@@ -288,6 +288,13 @@ const en: Translations = {
       content: "BOTATOX is developed by Genetox Co., Ltd., a Korean pharmaceutical company specializing in botulinum toxin products with proprietary technology. Founded in June 2018 with the vision of pursuing healthy youthfulness.\n\nIn 2019, the company established a dedicated R&D department and high-risk pathogen handling facilities, continuously investing in product development. Currently, Genetox operates a GMP-certified factory spanning approximately 10,000㎡ in the Ucheon Industrial Complex, Gangwon-do, South Korea.\n\nStarting from aesthetic pharmaceuticals, the company has expanded into high-performance cosmetics, specialized pharmaceuticals, and medical devices.\n\nWith an exceptional research team and efficient production systems, Genetox is committed to delivering competitive products to the global market through professional expertise and transparent management.",
       timeline: ["Founded 2018", "R&D Center 2019", "GMP Factory"],
     },
+    facility: {
+      title: "Manufacturing Facility",
+      mapPlaceholder: "Map",
+      address: "38-53, Ucheon Industrial Complex-ro, Ucheon-myeon, Hoengseong-gun, Gangwon-do, South Korea",
+      tel: "033-344-3700",
+      mail: "genetox@genetox.co.kr",
+    },
     back: "← Back to Products",
     description: "Product Description",
     gallery: "Product Gallery",
