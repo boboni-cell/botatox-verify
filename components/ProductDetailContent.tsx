@@ -209,9 +209,16 @@ export default function ProductDetailContent({ id }: { id: string }) {
                 />
                 {/* Map + Info */}
                 <div className="flex flex-col gap-4">
-                  <div className="flex aspect-square items-center justify-center rounded-xl bg-[#edf2f7] text-sm text-[#94a3b8]">
-                    {pd.facility.mapPlaceholder}
-                  </div>
+                  <iframe
+                    src="https://maps.google.com/maps?q=37.467,127.985&output=embed"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0, borderRadius: 12 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={pd.facility.title}
+                  />
                   <div className="rounded-xl bg-white p-4 shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)]">
                     <div className="flex items-start gap-2 text-xs text-gray-500">
                       <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#3B9FDA]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
