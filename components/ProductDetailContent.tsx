@@ -200,25 +200,25 @@ export default function ProductDetailContent({ id }: { id: string }) {
           {product.id === "botatox-100u" && (
             <section className="mt-10">
               <h2 className="text-base font-semibold tracking-wide text-navy">{pd.facility.title}</h2>
-              <div className="mt-4 grid gap-4 md:grid-cols-[55%_45%]">
+              <div className="mt-4 grid items-stretch gap-4 md:grid-cols-[55%_45%]">
                 {/* Factory Image */}
                 <img
                   src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/gentox1.jpg"
                   alt={pd.facility.title}
-                  className="w-full rounded-xl object-cover"
+                  className="w-full rounded-xl object-cover md:h-full"
                 />
                 {/* Map + Info */}
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-3">
                   <iframe
                     src="https://maps.google.com/maps?q=37.467,127.985&output=embed"
-                    className="min-h-0 flex-1 rounded-xl"
-                    style={{ border: 0 }}
+                    className="h-[250px] w-full rounded-xl md:flex-1 md:h-auto"
+                    style={{ border: 0, pointerEvents: "auto" }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={pd.facility.title}
                   />
-                  <div className="mt-3 rounded-xl bg-white p-4 shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)]">
+                  <div className="rounded-xl bg-white p-4 shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)]">
                     <div className="flex items-start gap-2">
                       <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#3B9FDA]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                       <span className="break-all text-[13px] text-gray-500">{pd.facility.address}</span>
