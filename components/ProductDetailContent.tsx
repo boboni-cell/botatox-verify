@@ -172,6 +172,30 @@ export default function ProductDetailContent({ id }: { id: string }) {
             </p>
           </section>
 
+          {/* Brand Story (BOTATOX only) */}
+          {product.id === "botatox-100u" && (
+            <section className="mt-10">
+              <h2 className="text-base font-semibold tracking-wide text-navy">{pd.brandStory.title}</h2>
+              <div className="mt-4 border-l-[3px] border-[#3B9FDA] pl-5">
+                <div className="max-w-[800px] text-sm leading-[1.8] text-gray-500 whitespace-pre-line">
+                  {pd.brandStory.content}
+                </div>
+                {/* Timeline */}
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {pd.brandStory.timeline.map((item: string, i: number) => (
+                    <span key={i} className="inline-flex items-center gap-2 text-xs text-gray-400">
+                      <span className="h-2 w-2 rounded-full bg-[#3B9FDA]" />
+                      {item}
+                      {i < pd.brandStory.timeline.length - 1 && (
+                        <span className="h-[1px] w-6 bg-gray-200" />
+                      )}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
           {/* Product Gallery */}
           <GalleryGrid
             title={pd.gallery}
