@@ -200,20 +200,20 @@ export default function ProductDetailContent({ id }: { id: string }) {
           {product.id === "botatox-100u" && (
             <section className="mt-10">
               <h2 className="text-base font-semibold tracking-wide text-navy">{pd.facility.title}</h2>
-              <div className="mt-4 grid items-stretch gap-4 md:grid-cols-[55%_45%]">
+              <div className="mt-4 grid gap-5 md:grid-cols-2">
                 {/* Factory Image */}
-                <div className="aspect-video overflow-hidden rounded-xl">
+                <div className="overflow-hidden rounded-xl">
                   <img
                     src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/gentox1.jpg"
                     alt={pd.facility.title}
-                    className="h-full w-full object-cover"
+                    className="aspect-video w-full object-cover"
                   />
                 </div>
                 {/* Map + Info */}
                 <div className="flex flex-col gap-3">
                   <iframe
                     src="https://maps.google.com/maps?q=37.467,127.985&output=embed"
-                    className="h-[250px] w-full rounded-xl md:flex-1 md:h-auto"
+                    className="h-[250px] w-full rounded-xl"
                     style={{ border: 0, pointerEvents: "auto" }}
                     allowFullScreen
                     loading="lazy"
