@@ -94,9 +94,21 @@ function RegularCard({ product }: { product: Product }) {
       className="group block cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
       <div className="flex aspect-square items-center justify-center bg-white p-5">
-        <span className="text-center text-[10px] font-medium text-[#94a3b8] leading-tight">
-          {product.nameEn}
-        </span>
+        {product.id === "botatoxin-200u" ? (
+          <div className="relative h-full w-full">
+            <Image
+              src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png"
+              alt={product.nameEn}
+              fill
+              unoptimized
+              className="object-contain"
+            />
+          </div>
+        ) : (
+          <span className="text-center text-[10px] font-medium text-[#94a3b8] leading-tight">
+            {product.nameEn}
+          </span>
+        )}
       </div>
       <div className="p-4">
         <h3 className="text-sm font-semibold text-navy truncate">{name}</h3>
