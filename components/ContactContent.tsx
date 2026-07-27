@@ -119,7 +119,7 @@ export default function ContactContent() {
     {
       icon: <LocationIcon />,
       label: "Address",
-      value: "#Gasan Publik A08-0816, 60-26, Gasan-Dong, Geumcheon-Gu, Seoul, Korea",
+      value: "No.101, Digital-ro 9-gil-65, Geumcheon-gu, Seoul, Republic of Korea",
     },
   ];
 

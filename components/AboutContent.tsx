@@ -43,7 +43,7 @@ export default function AboutContent() {
     { label: "Tel", value: "+82-10-2114-8516", href: "tel:+82-10-2114-8516" },
     { label: "E-mail", value: "mariobio@naver.com", href: "mailto:mariobio@naver.com" },
     { label: "Website", value: "www.hyundai-bio.com", href: "https://www.hyundai-bio.com/" },
-    { label: "Address", value: "#Gasan Publik A08-0816, 60-26, Gasan-Dong, Geumcheon-Gu, Seoul, Korea" },
+    { label: "Address", value: "No.101, Digital-ro 9-gil-65, Geumcheon-gu, Seoul, Republic of Korea" },
   ];
 
   return (
