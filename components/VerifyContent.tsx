@@ -165,7 +165,13 @@ export default function VerifyContent() {
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-navy">{v.step3.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">{v.step3.desc}</p>
-                <PlaceholderImage label={v.step3.placeholder} />
+                <div className="mt-4 flex justify-center">
+                  <img
+                    src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/scan.png"
+                    alt={v.step3.title}
+                    className="w-full max-w-[300px] rounded-xl object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
