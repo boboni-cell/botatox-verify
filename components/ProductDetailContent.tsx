@@ -1,12 +1,35 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/context/LanguageContext";
-import { products, categoryLabels, type Product } from "@/data/products";
+import { products, categoryLabels, productImages, type Product } from "@/data/products";
+
+function ProductCarousel({ images, name }: { images: string[]; name: string }) {
+  const [idx, setIdx] = useState(0);
+  return (
+    <div className="relative h-full w-full">
+      <Image src={images[idx] ?? images[0]} alt={name} fill unoptimized className="object-contain p-2" />
+      {images.length > 1 && (
+        <>
+          <button onClick={(e) => { e.preventDefault(); setIdx((idx - 1 + images.length) % images.length); }} className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-1.5 shadow-sm hover:bg-white">
+            <svg className="h-4 w-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button onClick={(e) => { e.preventDefault(); setIdx((idx + 1) % images.length); }} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-1.5 shadow-sm hover:bg-white">
+            <svg className="h-4 w-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </button>
+          <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1">
+            {images.map((_, i) => (<span key={i} className={`h-1.5 w-1.5 rounded-full ${i === idx ? "bg-[#3B9FDA]" : "bg-gray-300"}`} />))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 function PlayIcon() {
   return (
@@ -128,24 +151,9 @@ export default function ProductDetailContent({ id }: { id: string }) {
           <div className="mt-6 grid gap-8 md:grid-cols-2">
             {/* Left: Product Image */}
             <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-white p-5">
-              {(() => {
-                const imgMap: Record<string, string> = {
-                  "botatox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png",
-                  "botatoxin-200u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png",
-                  "masetox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/MASETOX.png",
-                  "ytox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/YTOX.png",
-                  "botanad-nad": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botanad.PNG",
-                };
-                if (imgMap[product.id]) {
-                  return (
-                    <div className="relative h-full w-full">
-                      <Image src={imgMap[product.id]} alt={product.nameEn} fill unoptimized className="object-contain p-2" />
-                    </div>
-                  );
-                }
-                return null;
-              })()}
-              {!(product.id in {"botatox-100u":1,"botatoxin-200u":1,"masetox-100u":1,"ytox-100u":1,"botanad-nad":1}) && (
+              {productImages[product.id] ? (
+                <ProductCarousel images={productImages[product.id]} name={product.nameEn} />
+              ) : (
                 <span className="text-sm font-medium text-[#94a3b8]">
                   {product.nameEn}
                 </span>

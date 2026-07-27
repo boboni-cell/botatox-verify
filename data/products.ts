@@ -598,6 +598,27 @@ export const products: Product[] = [
 
 ];
 
+const R2 = "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev";
+
+export const productImages: Record<string, string[]> = {
+  "botatox-100u": [`${R2}/botatox100u.png`, `${R2}/botatox100u.2.png`, `${R2}/botatox100u.3.png`, `${R2}/botatox100u4.png`],
+  "botatoxin-200u": [`${R2}/BOTATOXIN.png`],
+  "jtox-100u": [`${R2}/JTOX.png`, `${R2}/JTOX2.png`],
+  "rollietox-100u": [`${R2}/ROLLIe%20tox.png`, `${R2}/Rollie.JPG`],
+  "ktox-100u": [`${R2}/KTOX.png`, `${R2}/ktox3.JPG`],
+  "masetox-100u": [`${R2}/MASETOX.png`],
+  "ytox-100u": [`${R2}/YTOX.png`],
+  "botanad-nad": [`${R2}/botanad.PNG`],
+  "nabota-100u": [`${R2}/nabota100u.png`, `${R2}/nabota100u2.png`],
+  "nabota-200u": [`${R2}/nabota200u.png`],
+  "botulax-100u": [`${R2}/botulax100u.png`, `${R2}/botulax100u2.png`],
+  "botulax-200u": [`${R2}/botulax200u.png`],
+};
+
+export function getProductImage(productId: string): string | null {
+  return productImages[productId]?.[0] ?? null;
+}
+
 export const FILTER_OWN = products.filter((p) => p.brand === "own");
 export const FILTER_DIST = products.filter((p) => p.brand === "distribution");
 
