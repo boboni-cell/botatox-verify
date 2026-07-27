@@ -120,16 +120,24 @@ export default function VerifyContent() {
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">{v.step2.desc}</p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   <div>
-                    <div className="flex h-36 items-center justify-center rounded-xl border-2 border-dashed border-green-200 bg-green-50/30 text-sm text-green-400">
-                      {v.step2.genuineLabel}
+                    <div className="flex h-36 items-center justify-center rounded-xl border-2 border-dashed border-green-200 bg-green-50/30 p-4">
+                      <img
+                        src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/qr.png"
+                        alt={v.step2.genuineLabel}
+                        className="h-full w-full object-contain"
+                      />
                     </div>
                     <p className="mt-1.5 text-center text-xs text-green-500">
                       ✓ {v.step2.genuineHint}
                     </p>
                   </div>
                   <div>
-                    <div className="flex h-36 items-center justify-center rounded-xl border-2 border-dashed border-red-200 bg-red-50/30 text-sm text-red-400">
-                      {v.step2.fakeLabel}
+                    <div className="flex h-36 items-center justify-center rounded-xl border-2 border-dashed border-red-200 bg-red-50/30 p-4">
+                      <img
+                        src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/fake%20qr.png"
+                        alt={v.step2.fakeLabel}
+                        className="h-full w-full object-contain"
+                      />
                     </div>
                     <p className="mt-1.5 text-center text-xs text-red-500">
                       ✗ {v.step2.fakeHint}
