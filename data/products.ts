@@ -80,10 +80,10 @@ export const products: Product[] = [
   },
 
   {
-    id: "botaone-200u",
-    nameEn: "BOTAONE 200U",
+    id: "botatoxin-200u",
+    nameEn: "BOTATOXIN 200U",
     nameZh: "白肉200U",
-    nameKo: "BOTAONE 200U",
+    nameKo: "보툴리눔 톡신",
     category: 1,
     brand: "own",
     descEn:

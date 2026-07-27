@@ -174,9 +174,9 @@ const en: Translations = {
     contactTitle: "Contact Information",
     ceo: {
       title: "CEO Message",
-      name: "Zhang Yongnan",
+      name: "",
       role: "Chief Executive Officer, Hyundai Bio Co., Ltd.",
-      message: "Dear Partners and Friends,\n\nWelcome to Hyundai Bio. Since our founding, we have dedicated ourselves to bridging cutting-edge bio science with cosmetic innovation — developing products that improve lives and inspire confidence.\n\nOur team of dermatologists, biochemists, and formulation specialists shares one purpose: creating safe, effective, science-backed beauty solutions that meet the highest global standards.\n\nAs we expand our global network, we remain committed to our core values — integrity, innovation, and impact. Every product carries our promise: quality you can trust, results you can see.\n\nWe look forward to growing with our partners worldwide.\n\nZhang Yongnan\nHyundai Bio Co., Ltd.",
+      message: "Dear Partners and Friends,\n\nWelcome to Hyundai Bio. Since our founding, we have dedicated ourselves to bridging cutting-edge bio science with cosmetic innovation — developing products that improve lives and inspire confidence.\n\nOur team of dermatologists, biochemists, and formulation specialists shares one purpose: creating safe, effective, science-backed beauty solutions that meet the highest global standards.\n\nAs we expand our global network, we remain committed to our core values — integrity, innovation, and impact. Every product carries our promise: quality you can trust, results you can see.\n\nWe look forward to growing with our partners worldwide.\n\nHyundai Bio Co., Ltd.",
       photoPlaceholder: "CEO Photo",
     },
     intro: {

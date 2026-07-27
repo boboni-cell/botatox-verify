@@ -166,9 +166,9 @@ const ko: Translations = {
     contactTitle: "연락처",
     ceo: {
       title: "CEO 인사말",
-      name: "Zhang Yongnan",
-      role: "Chief Executive Officer, Hyundai Bio Co., Ltd.",
-      message: "존경하는 파트너 및 관계자 여러분,\n\nHyundai Bio에 오신 것을 환영합니다. 창립 이래 저희는 첨단 바이오 과학과 뷰티 혁신을 결합하여 삶의 질을 높이고 자신감을 불어넣는 제품 개발에 전념해 왔습니다.\n\n피부과 전문의, 생화학자, 처방 전문가로 구성된 팀이 하나의 목표를 공유합니다: 최고의 글로벌 기준에 부합하는 안전하고 효과적인 뷰티 솔루션을 만드는 것입니다.\n\n글로벌 네트워크를 확장하면서도 성실, 혁신, 영향력이라는 핵심 가치를 굳건히 지켜나가겠습니다.\n\n전 세계 파트너분들과 함께 성장하기를 기대합니다.\n\nZhang Yongnan\nHyundai Bio Co., Ltd.",
+      name: "",
+      role: "대표이사, Hyundai Bio Co., Ltd.",
+      message: "존경하는 파트너 및 관계자 여러분,\n\nHyundai Bio에 오신 것을 환영합니다. 창립 이래 저희는 첨단 바이오 과학과 뷰티 혁신을 결합하여 삶의 질을 높이고 자신감을 불어넣는 제품 개발에 전념해 왔습니다.\n\n피부과 전문의, 생화학자, 처방 전문가로 구성된 팀이 하나의 목표를 공유합니다: 최고의 글로벌 기준에 부합하는 안전하고 효과적인 뷰티 솔루션을 만드는 것입니다.\n\n글로벌 네트워크를 확장하면서도 성실, 혁신, 영향력이라는 핵심 가치를 굳건히 지켜나가겠습니다.\n\n전 세계 파트너분들과 함께 성장하기를 기대합니다.\n\nHyundai Bio Co., Ltd.",
       photoPlaceholder: "CEO Photo",
     },
     intro: {

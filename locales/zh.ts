@@ -168,9 +168,9 @@ const zh = {
     contactTitle: "联系方式",
     ceo: {
       title: "CEO 致辞",
-      name: "Zhang Yongnan",
-      role: "Chief Executive Officer, Hyundai Bio Co., Ltd.",
-      message: "尊敬的合作伙伴与朋友们：\n\n欢迎来到 Hyundai Bio。自创立以来，我们始终致力于将前沿生物科技与美容创新相结合，开发出能够提升生活品质、激发自信的优质产品。\n\n我们汇聚皮肤科专家、生物化学家和配方专家，秉持同一目标：打造安全、高效、有科学依据的美容解决方案，达到国际最高标准。\n\n在持续拓展全球业务的同时，我们始终坚守创业初心——诚信、创新、影响力。每一款产品都承载着我们的承诺：值得信赖的品质，看得见的效果。\n\n期待与全球合作伙伴共同成长。\n\nZhang Yongnan\nHyundai Bio Co., Ltd.",
+      name: "",
+      role: "首席执行官，Hyundai Bio Co., Ltd.",
+      message: "尊敬的合作伙伴与朋友们：\n\n欢迎来到 Hyundai Bio。自创立以来，我们始终致力于将前沿生物科技与美容创新相结合，开发出能够提升生活品质、激发自信的优质产品。\n\n我们汇聚皮肤科专家、生物化学家和配方专家，秉持同一目标：打造安全、高效、有科学依据的美容解决方案，达到国际最高标准。\n\n在持续拓展全球业务的同时，我们始终坚守创业初心——诚信、创新、影响力。每一款产品都承载着我们的承诺：值得信赖的品质，看得见的效果。\n\n期待与全球合作伙伴共同成长。\n\nHyundai Bio Co., Ltd.",
       photoPlaceholder: "CEO Photo",
     },
     intro: {

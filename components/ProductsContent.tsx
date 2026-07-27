@@ -39,10 +39,14 @@ function FlagshipCard({ product }: { product: Product }) {
     >
       <div className="grid items-center sm:grid-cols-2">
         <div className="flex aspect-square items-center justify-center bg-white p-5">
-          {product.id === "botatox-100u" ? (
+          {product.id === "botatox-100u" || product.id === "botatoxin-200u" ? (
             <div className="relative h-full w-full">
               <Image
-                src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"
+                src={
+                  product.id === "botatoxin-200u"
+                    ? "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png"
+                    : "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"
+                }
                 alt={product.nameEn}
                 fill
                 unoptimized
