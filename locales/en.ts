@@ -211,14 +211,51 @@ const en: Translations = {
   news: {
     title: "News",
     items: [
-      { title: "HYUNDAIBIO at 2024 International Medical Aesthetics Exhibition", date: "2024.12", summary: "HYUNDAIBIO showcased its flagship brand BOTATOX at the International Medical Aesthetics Exhibition." },
-      { title: "BOTATOX New Product Launch Successfully Held", date: "2025.03", summary: "The BOTATOX new product launch event was successfully held in Seoul." },
-      { title: "HYUNDAIBIO Global Partners Exceed 30", date: "2025.06", summary: "HYUNDAIBIO's global partner network continues to expand, exceeding 30 partners." },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/2024%E8%8B%B1%E5%9B%BD%E5%B1%95.jpeg",
+        date: "2024.11",
+        title: "HYUNDAIBIO at London Beauty Expo 2024",
+        summary: "HYUNDAIBIO showcased its flagship BOTATOX product line and latest aesthetic innovations at the London Beauty Expo 2024, connecting with industry professionals from across Europe.",
+        event: "London Beauty Expo 2024",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E7%BE%8E%E5%9B%BD%E7%BA%BD%E7%BA%A6%E5%B1%95.jpeg",
+        date: "2024.09",
+        title: "HYUNDAIBIO at New York Aesthetic Conference 2024",
+        summary: "HYUNDAIBIO presented its comprehensive portfolio of botulinum toxins, dermal fillers, and skin boosters to the North American market at the New York Aesthetic Conference.",
+        event: "New York Aesthetic Conference 2024",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E6%B3%95%E5%9B%BD%E5%B7%B4%E9%BB%8E%E5%B1%95.jpeg",
+        date: "2024.06",
+        title: "HYUNDAIBIO at Paris Aesthetic World Expo 2024",
+        summary: "At one of Europe's premier beauty events, HYUNDAIBIO strengthened its presence in the European market and established new distribution partnerships.",
+        event: "Paris Aesthetic World Expo 2024",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E5%B7%B4%E8%A5%BF%E7%BE%8E%E5%8D%9A%E4%BC%9A.jpeg",
+        date: "2024.03",
+        title: "HYUNDAIBIO at Brazil Beauty Fair 2024",
+        summary: "HYUNDAIBIO made its debut in the South American market at Brazil Beauty Fair, introducing BOTATOX and its premium aesthetic product range to Latin American professionals.",
+        event: "Brazil Beauty Fair 2024",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/hk.jpeg",
+        date: "2023.11",
+        title: "HYUNDAIBIO at Hong Kong Cosmoprof Asia 2023",
+        summary: "HYUNDAIBIO participated in Asia's largest beauty trade show, showcasing its product innovations and expanding its network across the Asia-Pacific region.",
+        event: "Hong Kong Cosmoprof Asia 2023",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC%E5%B1%95.jpeg",
+        date: "2023.07",
+        title: "HYUNDAIBIO at Tokyo Beauty World 2023",
+        summary: "HYUNDAIBIO entered the Japanese market at Tokyo Beauty World, presenting its full range of medical aesthetic products to Japanese clinics and distributors.",
+        event: "Tokyo Beauty World 2023",
+      },
     ],
-    videos: {
-      title: "Activity Videos",
-      placeholder: "Activity Video",
-    },
+    gallery: { title: "Event Gallery" },
+    videos: { title: "Activity Videos", placeholder: "Activity Video" },
   },
 
   faq: {

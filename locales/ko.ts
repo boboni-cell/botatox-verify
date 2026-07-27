@@ -203,10 +203,50 @@ const ko: Translations = {
   news: {
     title: "뉴스",
     items: [
-      { title: "HYUNDAIBIO, 2024 국제 메디컬 에스테틱 전시회 참가", date: "2024.12", summary: "HYUNDAIBIO가 플래그십 브랜드 BOTATOX와 함께 국제 메디컬 에스테틱 전시회에서 최신 제품과 기술을 선보였습니다." },
-      { title: "BOTATOX 신제품 출시 행사 성공적 개최", date: "2025.03", summary: "BOTATOX 신제품 출시 행사가 서울에서 성공적으로 개최되었습니다." },
-      { title: "HYUNDAIBIO 글로벌 파트너 30곳 돌파", date: "2025.06", summary: "HYUNDAIBIO의 글로벌 파트너 네트워크가 지속적으로 확장되어 30곳을 돌파했습니다." },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/2024%E8%8B%B1%E5%9B%BD%E5%B1%95.jpeg",
+        date: "2024.11",
+        title: "HYUNDAIBIO, 2024 런던 뷰티 엑스포 참가",
+        summary: "HYUNDAIBIO가 2024 런던 뷰티 엑스포에서 플래그십 BOTATOX 제품 라인과 최신 에스테틱 혁신 제품을 선보이며 유럽 전역의 업계 전문가들과 교류했습니다.",
+        event: "2024 런던 뷰티 엑스포",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E7%BE%8E%E5%9B%BD%E7%BA%BD%E7%BA%A6%E5%B1%95.jpeg",
+        date: "2024.09",
+        title: "HYUNDAIBIO, 2024 뉴욕 에스테틱 컨퍼런스 참가",
+        summary: "HYUNDAIBIO가 뉴욕 에스테틱 컨퍼런스에서 보툴리눔 톡신, 필러, 스킨부스터 등 종합 포트폴리오를 북미 시장에 선보였습니다.",
+        event: "2024 뉴욕 에스테틱 컨퍼런스",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E6%B3%95%E5%9B%BD%E5%B7%B4%E9%BB%8E%E5%B1%95.jpeg",
+        date: "2024.06",
+        title: "HYUNDAIBIO, 2024 파리 에스테틱 월드 엑스포 참가",
+        summary: "유럽 최고의 뷰티 행사에서 HYUNDAIBIO가 유럽 시장에서의 입지를 강화하고 새로운 유통 파트너십을 구축했습니다.",
+        event: "2024 파리 에스테틱 월드 엑스포",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E5%B7%B4%E8%A5%BF%E7%BE%8E%E5%8D%9A%E4%BC%9A.jpeg",
+        date: "2024.03",
+        title: "HYUNDAIBIO, 2024 브라질 뷰티 페어 참가",
+        summary: "HYUNDAIBIO가 브라질 뷰티 페어에서 남미 시장에 첫 진출하며 BOTATOX와 프리미엄 에스테틱 제품 라인을 소개했습니다.",
+        event: "2024 브라질 뷰티 페어",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/hk.jpeg",
+        date: "2023.11",
+        title: "HYUNDAIBIO, 2023 홍콩 코스모프로프 아시아 참가",
+        summary: "HYUNDAIBIO가 아시아 최대 뷰티 무역 전시회에 참가하여 제품 혁신을 선보이고 아시아태평양 지역의 네트워크를 확장했습니다.",
+        event: "2023 홍콩 코스모프로프 아시아",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC%E5%B1%95.jpeg",
+        date: "2023.07",
+        title: "HYUNDAIBIO, 2023 도쿄 뷰티 월드 참가",
+        summary: "HYUNDAIBIO가 도쿄 뷰티 월드에서 일본 시장에 진출하며 일본 클리닉과 유통업체에 전체 메디컬 에스테틱 제품을 소개했습니다.",
+        event: "2023 도쿄 뷰티 월드",
+      },
     ],
+    gallery: { title: "활동 사진" },
     videos: { title: "활동 영상", placeholder: "활동 영상" },
   },
 

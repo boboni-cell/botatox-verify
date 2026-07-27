@@ -41,7 +41,7 @@ export default function AboutContent() {
 
   const contacts = [
     { label: "Tel", value: "+82-10-2114-8516", href: "tel:+82-10-2114-8516" },
-    { label: "E-mail", value: "mariobio@naver.com", href: "mailto:mariobio@naver.com" },
+    { label: "E-mail", value: "hyundai-bio816@naver.com", href: "mailto:hyundai-bio816@naver.com" },
     { label: "Website", value: "www.hyundai-bio.com", href: "https://www.hyundai-bio.com/" },
     { label: "Address", value: "No.101, Digital-ro 9-gil-65, Geumcheon-gu, Seoul, Republic of Korea" },
   ];

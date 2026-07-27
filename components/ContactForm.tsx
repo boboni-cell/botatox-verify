@@ -31,7 +31,7 @@ export default function ContactForm() {
 
     const body = `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCompany: ${form.company}\nCountry: ${form.country}\nInquiry: ${form.inquiryType}\n\nMessage:\n${form.message}`;
 
-    const mailto = `mailto:mariobio@naver.com?subject=${encodeURIComponent("Inquiry from " + form.name)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:hyundai-bio816@naver.com?subject=${encodeURIComponent("Inquiry from " + form.name)}&body=${encodeURIComponent(body)}`;
     window.open(mailto, "_blank");
 
     setSubmitted(true);

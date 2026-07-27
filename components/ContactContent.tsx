@@ -106,8 +106,8 @@ export default function ContactContent() {
     {
       icon: <EmailIcon />,
       label: "E-mail",
-      value: "mariobio@naver.com",
-      href: "mailto:mariobio@naver.com",
+      value: "hyundai-bio816@naver.com",
+      href: "mailto:hyundai-bio816@naver.com",
     },
     {
       icon: <GlobeIcon />,

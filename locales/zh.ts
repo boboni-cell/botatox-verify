@@ -205,14 +205,51 @@ const zh = {
   news: {
     title: "新闻动态",
     items: [
-      { title: "HYUNDAIBIO 参加 2024 国际医美展览", date: "2024.12", summary: "HYUNDAIBIO 携旗下品牌 BOTATOX 参加国际医美展览，展示最新产品与技术。" },
-      { title: "BOTATOX 新品发布会圆满举行", date: "2025.03", summary: "BOTATOX 新品发布会在首尔圆满举行，多款新产品正式亮相。" },
-      { title: "HYUNDAIBIO 全球合作伙伴突破 30 家", date: "2025.06", summary: "HYUNDAIBIO 全球合作伙伴网络持续扩展，已突破 30 家。" },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/2024%E8%8B%B1%E5%9B%BD%E5%B1%95.jpeg",
+        date: "2024.11",
+        title: "HYUNDAIBIO 亮相 2024 英国伦敦美博会",
+        summary: "HYUNDAIBIO 携旗下旗舰产品 BOTATOX 系列及最新医美创新产品亮相 2024 英国伦敦美博会，与来自欧洲各地的行业专业人士深入交流。",
+        event: "2024 英国伦敦美博会",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E7%BE%8E%E5%9B%BD%E7%BA%BD%E7%BA%A6%E5%B1%95.jpeg",
+        date: "2024.09",
+        title: "HYUNDAIBIO 参加 2024 美国纽约医美展",
+        summary: "HYUNDAIBIO 在纽约医美展上向北美市场展示了旗下肉毒素、填充剂及皮肤焕活针剂等全系列产品。",
+        event: "2024 美国纽约医美展",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E6%B3%95%E5%9B%BD%E5%B7%B4%E9%BB%8E%E5%B1%95.jpeg",
+        date: "2024.06",
+        title: "HYUNDAIBIO 参加 2024 法国巴黎美博会",
+        summary: "在欧洲顶级美容盛会上，HYUNDAIBIO 进一步巩固了在欧洲市场的布局，并建立了新的经销合作伙伴关系。",
+        event: "2024 法国巴黎美博会",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E5%B7%B4%E8%A5%BF%E7%BE%8E%E5%8D%9A%E4%BC%9A.jpeg",
+        date: "2024.03",
+        title: "HYUNDAIBIO 参加 2024 巴西美博会",
+        summary: "HYUNDAIBIO 首次亮相南美市场，在巴西美博会上向拉丁美洲的医美专业人士推介 BOTATOX 及旗下高端医美产品系列。",
+        event: "2024 巴西美博会",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/hk.jpeg",
+        date: "2023.11",
+        title: "HYUNDAIBIO 参加 2023 香港亚太美容展",
+        summary: "HYUNDAIBIO 参加了亚洲最大的美容贸易展，展示产品创新成果，进一步拓展亚太地区的合作网络。",
+        event: "2023 香港亚太美容展",
+      },
+      {
+        image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC%E5%B1%95.jpeg",
+        date: "2023.07",
+        title: "HYUNDAIBIO 参加 2023 日本东京美容展",
+        summary: "HYUNDAIBIO 在东京美容展上正式进军日本市场，向日本诊所和经销商展示了全系列医美产品。",
+        event: "2023 日本东京美容展",
+      },
     ],
-    videos: {
-      title: "活动视频",
-      placeholder: "活动视频",
-    },
+    gallery: { title: "活动照片" },
+    videos: { title: "活动视频", placeholder: "活动视频" },
   },
 
   faq: {
