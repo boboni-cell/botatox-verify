@@ -93,6 +93,36 @@ export const products: Product[] = [
     descKo: "Botulinum toxin type A 200U. Higher dosage formulation for deeper and larger area treatments.",
   },
 
+  {
+    id: "masetox-100u",
+    nameEn: "MASETOX 100U",
+    nameZh: "新粉",
+    nameKo: "마세톡스 100유닛",
+    category: 1,
+    brand: "own",
+    descEn:
+      "Premium botulinum toxin type A for dynamic wrinkle reduction. High-purity formulation with fast onset for treating glabellar lines, crow's feet, and forehead wrinkles with natural-looking results.",
+    descZh:
+      "高纯度 A 型肉毒毒素产品，适用于动态皱纹改善。快速起效，可有效改善眉间纹、鱼尾纹和额头纹，呈现自然平滑的治疗效果。",
+    descKo:
+      "프리미엄 보툴리눔 톡신 타입 A 제품으로, 고순도 제형으로 미간주름, 눈가주름, 이마주름 등 동적 주름 개선에 효과적이며, 자연스럽고 균형 잡힌 결과를 제공합니다.",
+  },
+
+  {
+    id: "ytox-100u",
+    nameEn: "YTOX 100U",
+    nameZh: "YTOX",
+    nameKo: "와이톡스 100유닛",
+    category: 1,
+    brand: "own",
+    descEn:
+      "Botulinum toxin type A designed for precise wrinkle reduction and facial contouring. Provides stable muscle relaxation with natural and balanced aesthetic results.",
+    descZh:
+      "A 型肉毒毒素产品，专为精准除皱和面部轮廓塑形而设计。提供稳定的肌肉放松效果，实现自然协调的美学效果。",
+    descKo:
+      "정밀한 주름 개선과 얼굴 윤곽 성형을 위해 설계된 보툴리눔 톡신 타입 A 제품입니다. 안정적인 근육 이완 효과로 자연스럽고 균형 잡힌 결과를 제공합니다.",
+  },
+
 
   // ==================== 自有品牌 - 填充剂 (2) ====================
   {
@@ -179,6 +209,21 @@ export const products: Product[] = [
     descZh:
       "PCL基底胶原蛋白刺激剂。激发天然胶原蛋白生成，持久紧致提升。",
     descKo: "PCL-based collagen stimulator. Stimulates natural collagen production for long-lasting skin firming and lifting effects.",
+  },
+
+  {
+    id: "botanad-nad",
+    nameEn: "BOTANAD NAD+ 3ml",
+    nameZh: "NAD+ 细胞焕活针",
+    nameKo: "보타나드 NAD+ 3ml",
+    category: 3,
+    brand: "own",
+    descEn:
+      "Advanced NAD+ skin booster formulated to promote cellular regeneration and rejuvenation. NAD+ supports cellular energy production, collagen synthesis, and skin repair, helping to restore skin vitality, firmness, and a youthful glow.",
+    descZh:
+      "先进的 NAD+ 皮肤焕活产品，通过补充细胞辅酶 NAD+，促进细胞能量生成与胶原蛋白合成，帮助修复受损肌肤，恢复肌肤活力、紧致度与年轻光泽。",
+    descKo:
+      "세포 재생과 활력 회복을 위한 프리미엄 NAD+ 스킨부스터입니다. NAD+ 성분이 세포 에너지 생산과 콜라겐 합성을 촉진하여 피부 탄력, 활력, 젊은 광채를 되찾아줍니다.",
   },
 
 

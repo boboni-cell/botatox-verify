@@ -39,21 +39,24 @@ function FlagshipCard({ product }: { product: Product }) {
     >
       <div className="grid items-center sm:grid-cols-2">
         <div className="flex aspect-square items-center justify-center bg-white p-5">
-          {product.id === "botatox-100u" || product.id === "botatoxin-200u" ? (
-            <div className="relative h-full w-full">
-              <Image
-                src={
-                  product.id === "botatoxin-200u"
-                    ? "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png"
-                    : "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"
-                }
-                alt={product.nameEn}
-                fill
-                unoptimized
-                className="object-contain p-3"
-              />
-            </div>
-          ) : (
+          {(() => {
+            const imgMap: Record<string, string> = {
+              "botatox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png",
+              "botatoxin-200u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png",
+              "masetox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/MASETOX.png",
+              "ytox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/YTOX.png",
+              "botanad-nad": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botanad.PNG",
+            };
+            if (imgMap[product.id]) {
+              return (
+                <div className="relative h-full w-full">
+                  <Image src={imgMap[product.id]} alt={product.nameEn} fill unoptimized className="object-contain p-3" />
+                </div>
+              );
+            }
+            return null;
+          })()}
+          {!(product.id in {"botatox-100u":1,"botatoxin-200u":1,"masetox-100u":1,"ytox-100u":1,"botanad-nad":1}) && (
             <div className="flex h-full w-full items-center justify-center rounded-lg bg-[#edf2f7]">
               <span className="text-center text-sm font-bold text-[#1B6BAA]/60">
                 {product.nameEn}
@@ -94,17 +97,23 @@ function RegularCard({ product }: { product: Product }) {
       className="group block cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_2px_12px_rgba(26,54,93,0.06)] border border-[rgba(26,54,93,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(26,54,93,0.10)]"
     >
       <div className="flex aspect-square items-center justify-center bg-white p-5">
-        {product.id === "botatoxin-200u" ? (
-          <div className="relative h-full w-full">
-            <Image
-              src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png"
-              alt={product.nameEn}
-              fill
-              unoptimized
-              className="object-contain"
-            />
-          </div>
-        ) : (
+        {(() => {
+          const imgMap: Record<string, string> = {
+            "botatoxin-200u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png",
+            "masetox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/MASETOX.png",
+            "ytox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/YTOX.png",
+            "botanad-nad": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botanad.PNG",
+          };
+          if (imgMap[product.id]) {
+            return (
+              <div className="relative h-full w-full">
+                <Image src={imgMap[product.id]} alt={product.nameEn} fill unoptimized className="object-contain" />
+              </div>
+            );
+          }
+          return null;
+        })()}
+        {!(product.id in {"botatoxin-200u":1,"masetox-100u":1,"ytox-100u":1,"botanad-nad":1}) && (
           <span className="text-center text-[10px] font-medium text-[#94a3b8] leading-tight">
             {product.nameEn}
           </span>

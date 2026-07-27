@@ -128,21 +128,24 @@ export default function ProductDetailContent({ id }: { id: string }) {
           <div className="mt-6 grid gap-8 md:grid-cols-2">
             {/* Left: Product Image */}
             <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-white p-5">
-              {product.id === "botatox-100u" || product.id === "botatoxin-200u" ? (
-                <div className="relative h-full w-full">
-                  <Image
-                    src={
-                      product.id === "botatoxin-200u"
-                        ? "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png"
-                        : "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png"
-                    }
-                    alt={product.nameEn}
-                    fill
-                    unoptimized
-                    className="object-contain p-2"
-                  />
-                </div>
-              ) : (
+              {(() => {
+                const imgMap: Record<string, string> = {
+                  "botatox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botatox100u.png",
+                  "botatoxin-200u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botulax200u2.png",
+                  "masetox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/MASETOX.png",
+                  "ytox-100u": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/YTOX.png",
+                  "botanad-nad": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/botanad.PNG",
+                };
+                if (imgMap[product.id]) {
+                  return (
+                    <div className="relative h-full w-full">
+                      <Image src={imgMap[product.id]} alt={product.nameEn} fill unoptimized className="object-contain p-2" />
+                    </div>
+                  );
+                }
+                return null;
+              })()}
+              {!(product.id in {"botatox-100u":1,"botatoxin-200u":1,"masetox-100u":1,"ytox-100u":1,"botanad-nad":1}) && (
                 <span className="text-sm font-medium text-[#94a3b8]">
                   {product.nameEn}
                 </span>
