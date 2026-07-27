@@ -118,6 +118,7 @@ const en: Translations = {
       fakeTitle: "WARNING",
       fakeDesc: "Possible counterfeit, please contact the seller",
     },
+    scanHint: "Scan to Verify Authenticity",
     cta: "Go to HiddenTag Official Verification Platform",
   },
 

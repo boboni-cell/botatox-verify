@@ -115,6 +115,7 @@ const ko: Translations = {
       fakeTitle: "WARNING",
       fakeDesc: "위조품 가능성, 구매처에 문의하세요",
     },
+    scanHint: "스캔하여 정품 인증",
     cta: "HiddenTag 공식 인증 플랫폼으로 이동",
   },
 

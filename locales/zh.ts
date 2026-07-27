@@ -113,6 +113,7 @@ const zh = {
       fakeTitle: "WARNING",
       fakeDesc: "可能为仿冒品，请向购买处咨询",
     },
+    scanHint: "扫描识别正品",
     cta: "前往 HiddenTag 官方验证平台",
   },
 
