@@ -86,17 +86,17 @@ export default function VerifyContent() {
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-navy">{v.step1.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">{v.step1.desc}</p>
-                <div className="mt-4 flex flex-col items-center gap-3 md:flex-row">
+                <div className="mt-4 flex items-end gap-4">
                   <img
                     src="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/hiddentag.png"
                     alt="HiddenTag"
-                    className="w-full max-w-[300px] rounded-xl"
+                    className="w-full max-w-[140px] rounded-xl md:max-w-[180px]"
                   />
-                  <div className="flex items-center gap-2 text-[#3B9FDA] md:flex-col">
-                    <svg className="h-8 w-8 md:rotate-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <div className="flex items-center gap-3 text-[#3B9FDA]">
+                    <svg className="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                    <span className="text-sm font-bold whitespace-nowrap">{v.scanHint}</span>
+                    <span className="text-lg font-bold whitespace-nowrap">{v.scanHint}</span>
                   </div>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-3">
