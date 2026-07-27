@@ -82,7 +82,7 @@ export const products: Product[] = [
   {
     id: "botatoxin-200u",
     nameEn: "BOTATOXIN 200U",
-    nameZh: "白肉200U",
+    nameZh: "新白200U",
     nameKo: "보툴리눔 톡신",
     category: 1,
     brand: "own",
