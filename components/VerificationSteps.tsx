@@ -28,7 +28,7 @@ function useInView(threshold = 0.2) {
 
 function PlaceholderImage({ label }: { label: string }) {
   return (
-    <div className="mt-4 flex h-36 items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 text-sm text-gray-300">
+    <div className="mt-4 flex aspect-[4/3] items-center justify-center rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 text-sm text-gray-300">
       {label}
     </div>
   );
