@@ -602,9 +602,9 @@ const R2 = "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev";
 
 export const productImages: Record<string, string[]> = {
   "botatox-100u": [
+    `${R2}/tox/botatox100u3.png`,
     `${R2}/tox/BOTATOX.png`,
     `${R2}/tox/botatox100u.3.png`,
-    `${R2}/tox/botatox100u3.png`,
     `${R2}/tox/botatox100u4.png`,
   ],
   "botatoxin-200u": [`${R2}/tox/botatoxin.JPG`],
