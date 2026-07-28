@@ -602,22 +602,22 @@ const R2 = "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev";
 
 export const productImages: Record<string, string[]> = {
   "botatox-100u": [
-    `${R2}/botatox100u.png`,
-    `${R2}/tox/botatox100u.2.png`,
+    `${R2}/tox/BOTATOX.png`,
     `${R2}/tox/botatox100u.3.png`,
+    `${R2}/tox/botatox100u3.png`,
     `${R2}/tox/botatox100u4.png`,
   ],
-  "botatoxin-200u": [`${R2}/tox/BOTATOXIN.png`],
-  "jtox-100u": [`${R2}/tox/JTOX.png`, `${R2}/tox/JTOX2.png`],
-  "rollietox-100u": [`${R2}/tox/ROLLIe%20tox.png`, `${R2}/tox/Rollie.JPG`],
-  "ktox-100u": [`${R2}/tox/KTOX.png`, `${R2}/tox/ktox3.JPG`],
-  "masetox-100u": [`${R2}/tox/MASETOX.png`],
-  "ytox-100u": [`${R2}/tox/YTOX.png`],
-  "botanad-nad": [`${R2}/tox/botanad.PNG`],
-  "nabota-100u": [`${R2}/tox/nabota100u.png`, `${R2}/tox/nabota100u2.png`],
-  "nabota-200u": [`${R2}/tox/nabota200u.png`],
-  "botulax-100u": [`${R2}/tox/botulax100u.png`, `${R2}/tox/botulax100u2.png`],
-  "botulax-200u": [`${R2}/tox/botulax200u.png`],
+  "botatoxin-200u": [`${R2}/tox/botatoxin.JPG`],
+  "jtox-100u": [`${R2}/tox/JTOX2.png`, `${R2}/tox/jtox3.PNG`],
+  "rollietox-100u": [`${R2}/tox/Rollie.JPG`],
+  "ktox-100u": [`${R2}/tox/ktox3.JPG`, `${R2}/tox/ktox2.PNG`],
+  "masetox-100u": [`${R2}/tox/MASETOX.png`, `${R2}/tox/masetox2.png`, `${R2}/tox/masetox2_3.PNG`],
+  "ytox-100u": [`${R2}/tox/YTOX.png`, `${R2}/tox/ytox.JPG`, `${R2}/tox/Ytox.PNG`],
+  "botanad-nad": [`${R2}/tox/botanad.PNG`, `${R2}/tox/botanad2.png`],
+  "nabota-100u": [`${R2}/tox/nabota100u2.png`, `${R2}/tox/nabota.PNG`],
+  "nabota-200u": [`${R2}/tox/nabota.PNG`],
+  "botulax-100u": [`${R2}/tox/botulax100u2.png`, `${R2}/tox/botulax100.jpg`],
+  "botulax-200u": [`${R2}/tox/botulax200u2.png`],
 };
 
 export function getProductImage(productId: string): string | null {
